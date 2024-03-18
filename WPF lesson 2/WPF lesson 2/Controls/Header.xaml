@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="WPF_lesson_2.Controls.Header"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_lesson_2.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Grid.Row="1" Grid.ColumnSpan="3" Background="LightBlue">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <Image Source="D:\programing\dotnet programming course\dotnet_dev\WPF lesson 2\WPF lesson 2\resourses\toyapuppy6.png" Width="80"/>
+            <TextBlock Text="My Customers Flufs" VerticalAlignment="Center" FontSize="30"/>
+            <TextBlock Text="v1.0" VerticalAlignment="Center" Margin="10 0 0 -15"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
