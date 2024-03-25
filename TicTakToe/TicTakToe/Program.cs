@@ -8,11 +8,6 @@ namespace TicTakToe
         {
             GameBoard board = new GameBoard();
 
-            board.Print();
-
-            char[,] boards = new char[3, 3];
-            string gg = Console.ReadLine();
-
         }
 }
 }

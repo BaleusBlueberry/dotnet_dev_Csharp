@@ -33,7 +33,7 @@ namespace TicTakToe.elemets
 
                     Console.ForegroundColor = value == 'X' ? ConsoleColor.Red : value == 'O' ? ConsoleColor.Blue : ConsoleColor.White;
                     Console.Write($" {value} ");
-                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.Write("|");
                 }
                 Console.WriteLine();
