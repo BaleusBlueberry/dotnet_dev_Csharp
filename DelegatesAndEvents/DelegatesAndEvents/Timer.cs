@@ -1,12 +1,11 @@
 ﻿using System;
 namespace DelegatesAndEvents;
 
-public delegate void TimerNotification(int time, string massage);
-public delegate void TimerCompleate(string massage);
+public delegate void TimerNotification(int time);
 
 public class Timer
 {
-    public event TimerCompleate TimerCompleted;
+    public event TimerNotification TimerCompleted;
     public event TimerNotification TimerTick;
 
 
@@ -15,30 +14,31 @@ public class Timer
 
         for (int i = 0; i < time; i++)
         {
-            Thread.Sleep(500);
-            OnTimerTick(i, "the time that has passed: ");
+            Thread.Sleep(1000);
+            OnTimerTick(i);
         }
 
-        OnTimerCompleted("the timer has finished");
+        OnTimerCompleted(time);
     }
 
-    private void OnTimerCompleted(string massage)
+    private void OnTimerCompleted(int time)
     {
         if (TimerCompleted == null)
         {
             return;
         }
 
-        TimerCompleted(massage);
+        TimerCompleted(time);
     }
-
-    private void OnTimerTick(int time, string massage)
+    private void OnTimerTick(int time)
     {
         if (TimerTick == null)
         {
             return;
         }
 
-        TimerTick(time, massage);
+        TimerTick(time);
     }
+
+
 }

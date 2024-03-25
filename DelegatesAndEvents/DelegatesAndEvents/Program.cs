@@ -17,14 +17,24 @@ namespace DelegatesAndEvents
 
             // make a list of functions
 
+            //exsursize 2
+
+            Timer myTimer1 = new Timer();
+            myTimer1.TimerTick += new TimerNotification(TickerEvent);
+            myTimer1.TimerCompleted += new TimerNotification(finishedWork);
+            myTimer1.Start(5);
+
+            Console.ReadLine();
+            return;
+
             MyBusnessLogic bl = new MyBusnessLogic();
 
             bl.FinishedWorking += new Notify(MyFunction);
             bl.DoingWork += new Update(HandleDoingWork);
             bl.StartWorking();
 
-            Console.ReadLine();
-            return;
+            
+            
 
             List<MenuAction> methods = new List<MenuAction>
             {
@@ -50,6 +60,11 @@ namespace DelegatesAndEvents
 
                 }
             }
+        }
+
+        private static void MyTimer1_TimerCompleted(int time)
+        {
+            throw new NotImplementedException();
         }
 
         private static void Bl_DoingWork(int precentComplete, string massage)
@@ -86,6 +101,16 @@ namespace DelegatesAndEvents
         {
             Console.WriteLine($"finished working: {precentComplete}% ");
             Console.WriteLine(massage);
+        }
+
+        public static void finishedWork(int time)
+        {
+            Console.WriteLine("Time is up! " + time + " seconds have passed!");
+        }
+
+        public static void TickerEvent(int time)
+        {
+            Console.WriteLine( time + " seconds have passed!");
         }
     }
 
