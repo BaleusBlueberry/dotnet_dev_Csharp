@@ -27,6 +27,7 @@ namespace DelegatesAndEvents
             Console.ReadLine();
             return;
 
+            // exsursize 1
             MyBusnessLogic bl = new MyBusnessLogic();
 
             bl.FinishedWorking += new Notify(MyFunction);

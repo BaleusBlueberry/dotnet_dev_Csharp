@@ -28,7 +28,7 @@ public class Timer
             return;
         }
 
-        TimerCompleted(time);
+        TimerCompleted(time+1);
     }
     private void OnTimerTick(int time)
     {
@@ -37,7 +37,7 @@ public class Timer
             return;
         }
 
-        TimerTick(time);
+        TimerTick(time+1);
     }
 
 
