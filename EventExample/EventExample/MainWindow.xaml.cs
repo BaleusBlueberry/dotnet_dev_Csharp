@@ -9,16 +9,31 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EventExample
-{
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+namespace EventExample;
+
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window {
+    public MainWindow() {
+        InitializeComponent();
+
+        List<Dog> dogs = Dog.GetListFromFile();
+
+        GridOfDogs.ItemsSource = dogs;
+    }
+
+    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
     {
-        public MainWindow()
+        Dog seletedDog = GridOfDogs.SelectedItem as Dog;
+
+        if (seletedDog == null)
         {
-            InitializeComponent();
+            MessageBox.Show("No dog selected");
+            return;
         }
+
+        DogDisplay dogDisplay = new DogDisplay(seletedDog);
+        dogDisplay.Show();
     }
 }
