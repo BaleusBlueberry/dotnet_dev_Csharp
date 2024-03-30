@@ -1,63 +1,73 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
-namespace TemperatureMonitor
+namespace TemperatureMonitor;
+
+public class TemperatureMonitor
 {
-    public class TemperatureMonitor
+    public event Action<int> TemperatureChange;
+    public event Action<int, string> LowTemperatureAlert;
+    public event Action<int, string> HighTemperatureAlert;
+
+    public void Start()
+
     {
-        public event Action<int> TemperatureChange;
-        public event Action<int, string> LowTemperatureAlert;
-        public event Action<int, string> HighTemperatureAlert;
-
-        public void Start()
-        
+        var rnd = new Random();
+        while (true)
         {
-            Random rnd = new Random();
-            while (true)
+            Thread.Sleep(200);
+
+            int currentTemperature = rnd.Next(-20, 50);
+
+            OnTemperatureChange(currentTemperature);
+
+            /*if (currentTemperature <= 0)
             {
-                Thread.Sleep(200);
-
-                int currentTemperature = rnd.Next(-20, 50);
-                TemperatureChange(currentTemperature);
+                OnLowTemperatureAlert(currentTemperature);
             }
+            else if (currentTemperature > 40)
+            {
+                OnHighTemperatureAlert(currentTemperature);
+            }*/
+        }
+    }
 
-            
+    private void OnTemperatureChange(int temperature)
+    {
+        if (TemperatureChange != null)
+        {
+            TemperatureChange.Invoke(temperature);
         }
 
-        private void OnTemperatureChange(int temperature)
+        OnAlert(temperature);
+    }
+
+    private void OnAlert(int temp) {
+
+        if (temp > 40 && HighTemperatureAlert != null)
         {
-            if (TemperatureChange != null)
-            {
-                return;
-            }
-            TemperatureChange(temperature);
-        }
+            HighTemperatureAlert.Invoke(temp, $"Look out the temperature is: {temp}");
 
-        private void OnLowTemperatureAlert(int temperature, string message)
+        } else if (temp < 0 && LowTemperatureAlert != null)
         {
-            if (LowTemperatureAlert != null)
-            {
-                return;
-            }
-            LowTemperatureAlert(temperature, message);
 
-
+            LowTemperatureAlert.Invoke(temp, $"Look out the temperature is: {temp}");
         }
-
-        private void OnHighTemperatureAlert(int temperature, string message)
-        {
-            if (HighTemperatureAlert != null)
-            {
-                return;
-            }
-            HighTemperatureAlert(temperature, message);
-        }
-
 
     }
 
 
+    /*
+    private void OnLowTemperatureAlert(int temperature)
+    {
+        LowTemperatureAlert?.Invoke(temperature, $"Look out the temperature is: {temperature}");
+    }
+
+    private void OnHighTemperatureAlert(int temperature)
+    {
+
+        HighTemperatureAlert?.Invoke(temperature, $"Look out the temperature is: {temperature}");
+    }
+
+    */
 }
