@@ -1,7 +1,8 @@
-﻿namespace MyLibrary
-{
-    public class Class1
-    {
+﻿namespace Myproject.MyLibrary;
 
-    }
+public class Class1
+{
+
 }
+
+

@@ -1,0 +1,41 @@
+﻿<Window x:Class="WPFTicTakToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Elemets="clr-namespace:WPF_lesson_2.Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <!--header-->
+        <Elemets:Header Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Loaded="Header_Loaded"></Elemets:Header>
+
+        <!--main menu-->
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="10">
+            <Label FontSize="20">Player 1:</Label>
+            <TextBox FontSize="20" Width="auto" Margin="0 10 0 10"/>
+            <CheckBox>Is a robot?</CheckBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="1" Margin="10">
+            <Label FontSize="20">Player 2:</Label>
+            <TextBox FontSize="20" Width="auto" Margin="0 10 0 10"/>
+            <CheckBox>Is a robot?</CheckBox>
+        </StackPanel>
+
+        <!--game start button-->
+
+
+
+    </Grid>
+</Window>

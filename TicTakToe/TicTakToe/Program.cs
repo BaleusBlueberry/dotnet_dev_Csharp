@@ -7,7 +7,10 @@ namespace TicTakToe
         static void Main(string[] args)
         {
             GameBoard board = new GameBoard();
+            board.MakeMove(1,2,'X');
+            board.MakeMove(1,1,'X');
 
+            board.Print();
         }
 }
 }
