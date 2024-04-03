@@ -19,25 +19,30 @@ namespace WPFTicTakToe
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Header_Loaded(object sender, RoutedEventArgs e)
-        {
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void GameStartButton_Loaded(object sender, RoutedEventArgs e)
         {
+            // Calculate the width for the button
+            double windowWidth = mainGrid.ActualWidth;
+            double buttonWidth = windowWidth * 0.75; // 75% of the window's width
 
+            // Set the width for the button
+            gameStartButton.Width = buttonWidth;
         }
 
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        private void GameStartButton_OnClick(object sender, RoutedEventArgs e)
         {
+            // Access the CheckBoxes and TextBoxes and get their values
+            bool player1IsRobot = checkBoxPlayer1.IsChecked ?? false;
+            bool player2IsRobot = checkBoxPlayer2.IsChecked ?? false;
 
-        }
+            string player1Name = textBoxPlayer1.Text=="" ? textBoxPlayer1.Text : "Player1";
+            string player2Name = textBoxPlayer2.Text=="" ? textBoxPlayer1.Text : "Player2";
 
-        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
-        {
+            GameWindow gameWindow = new GameWindow(player1Name, player2Name);
+            gameWindow.Show();
 
         }
     }
