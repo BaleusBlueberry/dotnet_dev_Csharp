@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF lesson 1,2", "..\WPF le
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF lesson 2", "..\WPF lesson 2\WPF lesson 2\WPF lesson 2.csproj", "{9E6A0F46-1A91-452F-9F12-238F662F7520}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTicTakToe", "WPFTicTakToe\WPFTicTakToe.csproj", "{2E4E3ED5-713A-45D7-8F67-E6A76CEAB949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFTicTakToe", "WPFTicTakToe\WPFTicTakToe.csproj", "{2E4E3ED5-713A-45D7-8F67-E6A76CEAB949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjctGalleryLesson", "ProjctGalleryLesson\ProjctGalleryLesson.csproj", "{7460CB7D-62CA-46F9-A570-23D55D32D13A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{2E4E3ED5-713A-45D7-8F67-E6A76CEAB949}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E4E3ED5-713A-45D7-8F67-E6A76CEAB949}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E4E3ED5-713A-45D7-8F67-E6A76CEAB949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7460CB7D-62CA-46F9-A570-23D55D32D13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7460CB7D-62CA-46F9-A570-23D55D32D13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7460CB7D-62CA-46F9-A570-23D55D32D13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7460CB7D-62CA-46F9-A570-23D55D32D13A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
