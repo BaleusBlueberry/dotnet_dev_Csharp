@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Tic_Tac_Toe.Controls
@@ -17,7 +18,7 @@ namespace Tic_Tac_Toe.Controls
     /// <summary>
     /// Interaction logic for Board.xaml
     /// </summary>
-    public partial class Board : Window
+    public partial class Board : UserControl
     {
         public Board()
         {
