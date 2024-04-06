@@ -9,7 +9,7 @@
     <Button Name="TicTakToeButton">
         <StackPanel Orientation="Vertical">
             <Image Source="{Binding Icon}" Width="60" Height="60"/>
-            <TextBlock Text="{Binding Name}" TextAlignment="Center"/>
+            <TextBlock Text="{Binding Vertical}" TextAlignment="Center"/>
         </StackPanel>
     </Button>
 </UserControl>

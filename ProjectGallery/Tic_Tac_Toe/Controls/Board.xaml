@@ -7,7 +7,7 @@
              xmlns:elements="clr-namespace:Tic_Tac_Toe.Elements"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Name="GameGrid">
+    <Grid x:Name="GameGridControl">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
@@ -19,4 +19,5 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
     </Grid>
+
 </UserControl>

@@ -11,11 +11,11 @@ namespace Tic_Tac_Toe.ElementControl;
 
 public class TicTakToeElement : TicTacToeInterface
 {
-    public double Horizontal { get; set; }
-    public double Vertical { get; set; }
+    public int Horizontal { get; set; }
+    public int Vertical { get; set; }
     public BitmapImage Icon { get; set; }
 
-    public TicTakToeElement(double horizontal, double vertical, string icon)
+    public TicTakToeElement(int horizontal, int vertical, string icon)
     {
         Horizontal = horizontal;
         Vertical = vertical;

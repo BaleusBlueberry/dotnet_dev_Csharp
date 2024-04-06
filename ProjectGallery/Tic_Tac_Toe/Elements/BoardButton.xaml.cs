@@ -27,7 +27,7 @@ namespace Tic_Tac_Toe.Elements
             InitializeComponent();
             DataContext = ticTakToeElement;
 
-            MainButton.Clickd += (sender, e) => ticTakToeElement.Clicked();
+            TicTakToeButton.Click += (sender, e) => ticTakToeElement.Clicked();
         }
     }
 }

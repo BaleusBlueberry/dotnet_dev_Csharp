@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Data.Common;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,9 +33,9 @@ public partial class MainWindow : Window
         
         int indexNum = 0;
         
-        for (double x = 0; x < 3; x++)
+        for (int x = 0; x < 3; x++)
         {
-            for (double y = 0; y < 3; y++)
+            for (int y = 0; y < 3; y++)
             {
                 ticTakToeBoard[indexNum] = new TicTakToeElement(x, y, "X");
                 indexNum++;
@@ -48,9 +49,20 @@ public partial class MainWindow : Window
             {
                 Margin = new Thickness(10),
                 Width = 100,
-                Height = 100
+                Height = 100,
             };
-            GameGrid.Children.Add(button);
+
+            Grid.SetRow(button, ticTakToeButton.Horizontal);
+            Grid.SetColumn(button, ticTakToeButton.Vertical);
+
+            Grid.SetRow(button, ticTakToeButton.Horizontal);
+            Grid.SetColumn(button, ticTakToeButton.Vertical);
+
+            // Access the GameGrid property from the Board UserControl
+            if (BoardControl.GameGrid != null)
+            {
+                BoardControl.GameGrid.Children.Add(button);
+            }
 
         }
 

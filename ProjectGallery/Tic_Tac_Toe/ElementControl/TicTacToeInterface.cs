@@ -9,9 +9,9 @@ namespace Tic_Tac_Toe.ElementControl;
 
 public interface TicTacToeInterface
 {
-    double Horizontal { get; }
+    int Horizontal { get; }
 
-    double Vertical { get; }
+    int Vertical { get; }
 
     BitmapImage Icon { get; }
 

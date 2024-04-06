@@ -20,6 +20,7 @@ namespace Tic_Tac_Toe.Controls
     /// </summary>
     public partial class Board : UserControl
     {
+        public Grid GameGrid => this.GameGridControl;
         public Board()
         {
             InitializeComponent();
