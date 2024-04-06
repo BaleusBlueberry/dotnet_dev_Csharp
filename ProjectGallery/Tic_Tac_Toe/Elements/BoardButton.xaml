@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Tic_Tac_Toe.Elements"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Button Name="MainButton">
+             d:DesignHeight="100" d:DesignWidth="100">
+    <Button Name="TicTakToeButton">
         <StackPanel Orientation="Vertical">
             <Image Source="{Binding Icon}" Width="60" Height="60"/>
             <TextBlock Text="{Binding Name}" TextAlignment="Center"/>

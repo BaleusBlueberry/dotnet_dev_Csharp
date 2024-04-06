@@ -9,7 +9,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tic_Tac_Toe.Controls;
 using Tic_Tac_Toe.ElementControl;
+using Tic_Tac_Toe.Elements;
 
 namespace Tic_Tac_Toe;
 
@@ -38,6 +40,18 @@ public partial class MainWindow : Window
                 indexNum++;
             }
                 
+        }
+
+        foreach (var ticTakToeButton in ticTakToeBoard)
+        {
+            BoardButton button = new BoardButton(ticTakToeButton)
+            {
+                Margin = new Thickness(10),
+                Width = 100,
+                Height = 100
+            };
+            GameGrid.Children.Add(button);
+
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tic_Tac_Toe.ElementControl;
 
 namespace Tic_Tac_Toe.Elements
 {
@@ -20,9 +22,12 @@ namespace Tic_Tac_Toe.Elements
     /// </summary>
     public partial class BoardButton : UserControl
     {
-        public BoardButton()
+        public BoardButton(TicTakToeElement ticTakToeElement)
         {
             InitializeComponent();
+            DataContext = ticTakToeElement;
+
+            MainButton.Clickd += (sender, e) => ticTakToeElement.Clicked();
         }
     }
 }
