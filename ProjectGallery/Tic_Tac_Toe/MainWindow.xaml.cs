@@ -11,8 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Tic_Tac_Toe.Controls;
-using Tic_Tac_Toe.ElementControl;
-using Tic_Tac_Toe.Elements;
+using Tic_Tac_Toe.Enums;
+
 
 namespace Tic_Tac_Toe;
 
@@ -24,50 +24,28 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        InitializeBoard();
     }
 
-    public void InitializeBoard()
+    private void NewGame_Click(object sender, RoutedEventArgs e)
     {
-        TicTakToeElement[] ticTakToeBoard = new TicTakToeElement[9];
-        
-        int indexNum = 0;
-        
-        for (int x = 0; x < 3; x++)
+        GameType gameType;
+        if (sender == Btn_PvP)
         {
-            for (int y = 0; y < 3; y++)
-            {
-                ticTakToeBoard[indexNum] = new TicTakToeElement(x, y, "X");
-                indexNum++;
-            }
-                
+            gameType = GameType.PvP;
+        }
+        else if (sender == Btn_PvC)
+        {
+            gameType = GameType.PvC;
+        }
+        else if (sender == Btn_CvC)
+        {
+            gameType = GameType.CvC;
+        }
+        else
+        {
+            return;
         }
 
-        foreach (var ticTakToeButton in ticTakToeBoard)
-        {
-            BoardButton button = new BoardButton(ticTakToeButton)
-            {
-                Margin = new Thickness(10),
-                Width = 100,
-                Height = 100,
-            };
-
-            Grid.SetRow(button, ticTakToeButton.Horizontal);
-            Grid.SetColumn(button, ticTakToeButton.Vertical);
-
-            Grid.SetRow(button, ticTakToeButton.Horizontal);
-            Grid.SetColumn(button, ticTakToeButton.Vertical);
-
-            // Access the GameGrid property from the Board UserControl
-            if (BoardControl.GameGrid != null)
-            {
-                BoardControl.GameGrid.Children.Add(button);
-            }
-
-        }
-
+        MyBoard.StartNewGame(gameType);
     }
-
-
-    public BitmapImage Icon => new BitmapImage(new Uri($"{AppDomain.CurrentDomain.BaseDirectory}/Resources/X.png", UriKind.Absolute));
 }

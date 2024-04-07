@@ -9,17 +9,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\Tic.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\O.png">
+    <Resource Include="resources\tic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="resources\O.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Tic.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\X.png">
+    <None Update="resources\X.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
