@@ -1,6 +1,6 @@
 ﻿namespace Tic_Tac_Toe.Enums;
 
-public enum GameResults
+public enum GameResult
 {
     PlayerOneWins, PlayerTwoWins, Draw
 }
