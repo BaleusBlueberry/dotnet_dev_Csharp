@@ -18,4 +18,9 @@
     <Folder Include="Resources\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" Version="25.1.39" />
+    <PackageReference Include="Syncfusion.Themes.Windows11Light.WPF" Version="25.1.39" />
+  </ItemGroup>
+
 </Project>

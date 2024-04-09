@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectGallery"
         mc:Ignorable="d"
+        xmlns:syncfusionskin= "clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <TextBlock Text="This is my ticTakToeElement Gallery" FontSize="35" TextAlignment="Center" Margin="10"/>

@@ -24,6 +24,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        SetTheme();
     }
 
     private void NewGame_Click(object sender, RoutedEventArgs e)
@@ -47,5 +48,13 @@ public partial class MainWindow : Window
         }
 
         MyBoard.StartNewGame(gameType);
+    }
+    private void SetTheme()
+    {
+        var windowsAppThemes = new ClassLibrary.WindowsAppThemes();
+        var appTheme = windowsAppThemes.GetWindowsAppTheme();
+
+        if (appTheme == WindowsAppTheme.Light) Syncfusion.SfSkinManager.SfSkinManager.SetVisualStyle(this, Syncfusion.SfSkinManager.VisualStyles.Windows11Light);
+        else if (appTheme == WindowsAppTheme.Dark) Syncfusion.SfSkinManager.SfSkinManager.SetVisualStyle(this, Syncfusion.SfSkinManager.VisualStyles.Windows11Dark);
     }
 }

@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
-namespace ClassLibrary
-{
+namespace ClassLibrary;
+
     public interface IProjectMeta
     {
         public string Name { get; }
@@ -24,4 +24,3 @@ namespace ClassLibrary
 
         public void Run();
     }
-}

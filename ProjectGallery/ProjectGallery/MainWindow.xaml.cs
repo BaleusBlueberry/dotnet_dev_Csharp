@@ -30,6 +30,17 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         InitializeProjectButtons();
+
+        SetTheme();
+    }
+
+    private void SetTheme()
+    {
+        var windowsAppThemes = new ClassLibrary.WindowsAppThemes();
+        var appTheme = windowsAppThemes.GetWindowsAppTheme();
+        
+        if (appTheme == WindowsAppTheme.Light) Syncfusion.SfSkinManager.SfSkinManager.SetVisualStyle(this, Syncfusion.SfSkinManager.VisualStyles.Windows11Light);
+        else if (appTheme == WindowsAppTheme.Dark) Syncfusion.SfSkinManager.SfSkinManager.SetVisualStyle(this, Syncfusion.SfSkinManager.VisualStyles.Windows11Dark);
     }
 
     private void InitializeProjectButtons()
@@ -62,12 +73,15 @@ public partial class MainWindow : Window
 
 
             ProjectButton button = new ProjectButton(project)
-           {
-               Margin = new Thickness(10),
-               Width = 160,
-               Height = 160
-           };
-           ProjectsPanel.Children.Add(button);
+            {
+                Margin = new Thickness(10),
+                Width = 160,
+                Height = 160
+            };
+            ProjectsPanel.Children.Add(button);
         }
     }
+
 }
+/*syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Dark}"*/
+
