@@ -6,17 +6,63 @@
              xmlns:local="clr-namespace:Tic_Tac_Toe.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Name="BoardControl">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+    <Grid>
+
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Border Grid.Row="0" 
+                Grid.Column="0"
+                Margin="10"
+                Padding="10"
+                BorderBrush="Indigo"
+                BorderThickness="3"
+                CornerRadius="3"
+                Background="DarkCyan">
+        </Border>
+
+        <Border Grid.Row="0" 
+                Grid.Column="1"
+                Margin="10"
+                Padding="10"
+                BorderBrush="Indigo"
+                BorderThickness="3"
+                CornerRadius="3"
+                Background="DarkCyan">
+        </Border>
+
+
+        <Border Grid.Row="1" 
+                Grid.Column="0" 
+                Grid.ColumnSpan="2"
+                Margin="10"
+                Padding="10"
+                BorderBrush="BlueViolet"
+                BorderThickness="3"
+                CornerRadius="3" >
+
+        
+        <Grid Name="BoardControl">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid></Border>
+        
     </Grid>
 
 </UserControl>
