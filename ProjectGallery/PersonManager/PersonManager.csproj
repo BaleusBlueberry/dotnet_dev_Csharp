@@ -9,19 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\manager.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
-    <ProjectReference Include="..\MemoryGame\MemoryGame.csproj" />
-    <ProjectReference Include="..\PersonManager\PersonManager.csproj" />
-    <ProjectReference Include="..\Tic_Tac_Toe\Tic_Tac_Toe.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Resource Include="resources\manager.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" Version="25.1.39" />
-    <PackageReference Include="Syncfusion.Themes.Windows11Light.WPF" Version="25.1.39" />
+    <None Update="people.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

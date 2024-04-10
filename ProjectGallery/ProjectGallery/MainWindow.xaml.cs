@@ -12,6 +12,7 @@ using ProjectGallery.Controls;
 using Tic_Tac_Toe;
 using MemoryGame;
 using ClassLibrary;
+using PersonManager;
 
 
 namespace ProjectGallery;
@@ -21,7 +22,7 @@ namespace ProjectGallery;
 public partial class MainWindow : Window
 {
     private IProjectMeta[] projects = new IProjectMeta[] {
-        new MemoryGame.Project(),
+        new PersonManager.Project(),
         new MemoryGame.Project(),
         new Tic_Tac_Toe.Project(),
     };

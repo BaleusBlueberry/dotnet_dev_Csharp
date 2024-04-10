@@ -1,4 +1,5 @@
-﻿using System.Data.Common;
+﻿using System.ComponentModel;
+using System.Data.Common;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows;
@@ -19,13 +20,73 @@ namespace Tic_Tac_Toe;
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
-public partial class MainWindow : Window
+public partial class MainWindow : Window, INotifyPropertyChanged
 {
     public MainWindow()
     {
         InitializeComponent();
         SetTheme();
     }
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+    private int playerOneScore = 0;
+    private int playerTwoScore = 0;
+    private string endGameState;
+
+    private void OnPropertyChanged(string name)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    }
+
+    private void HandleGameEnded(object? sender, GameEndEventArgs e)
+    {
+        switch (e.GameResult)
+        {
+            case GameResult.PlayerOneWins:
+                PlayerOneScore++;
+                EndGameState = "Player 1 won!";
+                break;
+            case GameResult.PlayerTwoWins:
+                PlayerTwoScore++;
+                EndGameState = "Player 2 won!";
+                break;
+            case GameResult.Draw:
+                EndGameState = "Draw!";
+                break;
+        }
+    }
+
+    public string EndGameState
+    {
+        get => endGameState;
+        set
+        {
+            endGameState = value;
+            OnPropertyChanged(nameof(EndGameState));
+        }
+    }
+
+    public int PlayerOneScore
+    {
+        get => playerOneScore;
+        set
+        {
+            playerOneScore = value;
+            OnPropertyChanged(nameof(PlayerOneScore));
+        }
+    }
+
+    public int PlayerTwoScore
+    {
+        get => playerTwoScore;
+        set
+        {
+            playerTwoScore = value;
+            OnPropertyChanged(nameof(PlayerTwoScore));
+        }
+    }
+
+
 
     private void NewGame_Click(object sender, RoutedEventArgs e)
     {
