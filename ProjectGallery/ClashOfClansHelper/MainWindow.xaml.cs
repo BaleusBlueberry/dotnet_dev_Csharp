@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Path = System.IO.Path;
 
 namespace ClashOfClansHelper
 {
@@ -26,34 +27,43 @@ namespace ClashOfClansHelper
             InitializeComponent();
 
             ThemeHelper.SetTheme(this);
-            PrintListBuilding();
+            /*PrintListBuilding();*/
+
+            ListBuilding();
         }
 
-        public void PrintListBuilding()
+        public void ListBuilding()
         {
+            string dataFolderPath = @".\Resources\Data\";
 
-            foreach (BuildingInfoBox buildingInfoBox in ListOfBuildings.Children)
+            // Get all files in the "Data" folder
+            string[] dataFiles = Directory.GetFiles(dataFolderPath);
+
+            foreach (string filePath in dataFiles)
             {
-                // Subscribe to the BuildingButtonClicked event
-                buildingInfoBox.BuildingButtonClicked += BuildingInfoBox_BuildingButtonClicked;
-            }
+                string ClearedName = Path.GetFileNameWithoutExtension(filePath);
 
+                DropListSelectLevel.Items.Add($"{ClearedName}");
+            }
+        }
+
+        public void PrintListBuilding(string path)
+        {
             // Get the levels array
-            JsonElement Cannon = ReadableElement("Cannon");
+            JsonElement Cannon = ReadableElement(path);
             JsonElement levels = Cannon.GetProperty("levels");
             // Populate ComboBox with level numbers
             foreach (JsonProperty level in levels.EnumerateObject())
             {
                 // Extract level data dynamically
                 JsonElement levelData = level.Value;
+
                 Dictionary<string, string> properties = new Dictionary<string, string>();
+
                 foreach (var property in levelData.EnumerateObject())
                 {
                     properties[property.Name] = GetPropertyValue(property.Value);
                 }
-
-                // Add level number to ComboBox
-                DropListSelectLevel.Items.Add($"Level: {properties["level"]}");
 
                 // Create BuildingInfoBox and set its properties dynamically
                 BuildingInfoBox buildingInfoBox = new BuildingInfoBox(properties)
@@ -99,38 +109,15 @@ namespace ClashOfClansHelper
             }
         }
 
-        private void CreateNewLine(Dictionary<string, string> properties)
+        private void DropListSelectLevel_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            foreach (var child in properties)
-            {
-                 // Access property.Key and property.Value here
-                    // For example:
-                    string key = child.Key;
-                    string value = child.Value;
 
-                    TextBox textBox = new TextBox();
+            ListOfBuildings.Children.Clear();
 
-                    // Set properties for the TextBox if needed
-                    textBox.Width = 150;
-                    textBox.Height = 30;
-                    textBox.Text = $"{key}: {value}";
-
-                    // Add the TextBox to the WrapPanel
-                    ListOfInfo.Children.Add(textBox);
-                
-            }
-
-                
-
-           
-        }
-        private void BuildingInfoBox_BuildingButtonClicked(object sender, EventArgs e)
-        {
-            // Handle the event by calling CreateNewLine
-            if (sender is BuildingInfoBox buildingInfoBox)
-            {
-                CreateNewLine(buildingInfoBox.DataContext as Dictionary<string, string>);
-            }
+            string selectedItem = DropListSelectLevel.SelectedItem.ToString();
+            string ClearedName = Path.GetFileNameWithoutExtension(selectedItem);
+            MessageBox.Show(ClearedName);
+            PrintListBuilding(ClearedName);
         }
     }
 }

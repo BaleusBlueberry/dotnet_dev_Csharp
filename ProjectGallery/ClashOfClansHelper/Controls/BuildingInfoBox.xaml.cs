@@ -29,11 +29,5 @@ namespace ClashOfClansHelper.Controls
             InitializeComponent();
             DataContext = project;
         }
-
-        private void BuildingButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Access the DataContext (dictionary of properties)
-            BuildingButtonClicked?.Invoke(this, EventArgs.Empty);
-        }
     }
 }
