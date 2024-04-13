@@ -19,7 +19,7 @@ public class Project : IProjectMeta
         get
         {
             string? assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
-            Uri uri = new Uri($"pack://application:,,,/{assemblyName};component/resources/manager.png");
+            Uri uri = new Uri($"pack://application:,,,/{assemblyName};component/resources/people.png");
             return new BitmapImage(uri);
         }
     }

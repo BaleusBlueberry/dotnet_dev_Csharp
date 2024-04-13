@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using ClassLibrary;
+using System.ComponentModel;
 using System.Data.Common;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -25,7 +26,8 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     public MainWindow()
     {
         InitializeComponent();
-        SetTheme();
+
+        ThemeHelper.SetTheme(this);
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
@@ -110,12 +112,13 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
         MyBoard.StartNewGame(gameType);
     }
-    private void SetTheme()
-    {
-        var windowsAppThemes = new ClassLibrary.WindowsAppThemes();
-        var appTheme = windowsAppThemes.GetWindowsAppTheme();
 
-        if (appTheme == WindowsAppTheme.Light) Syncfusion.SfSkinManager.SfSkinManager.SetVisualStyle(this, Syncfusion.SfSkinManager.VisualStyles.Windows11Light);
-        else if (appTheme == WindowsAppTheme.Dark) Syncfusion.SfSkinManager.SfSkinManager.SetVisualStyle(this, Syncfusion.SfSkinManager.VisualStyles.Windows11Dark);
+    private void fileExitMenuItem_Click(object sender, RoutedEventArgs e)
+    {
+        // Close the current window
+        this.Close();
     }
+
+
+
 }

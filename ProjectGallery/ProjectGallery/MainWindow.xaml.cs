@@ -25,6 +25,7 @@ public partial class MainWindow : Window
         new PersonManager.Project(),
         new MemoryGame.Project(),
         new Tic_Tac_Toe.Project(),
+        new ClashOfClansHelper.Project(),
     };
 
     public MainWindow()
@@ -32,16 +33,7 @@ public partial class MainWindow : Window
         InitializeComponent();
         InitializeProjectButtons();
 
-        SetTheme();
-    }
-
-    private void SetTheme()
-    {
-        var windowsAppThemes = new ClassLibrary.WindowsAppThemes();
-        var appTheme = windowsAppThemes.GetWindowsAppTheme();
-        
-        if (appTheme == WindowsAppTheme.Light) Syncfusion.SfSkinManager.SfSkinManager.SetVisualStyle(this, Syncfusion.SfSkinManager.VisualStyles.Windows11Light);
-        else if (appTheme == WindowsAppTheme.Dark) Syncfusion.SfSkinManager.SfSkinManager.SetVisualStyle(this, Syncfusion.SfSkinManager.VisualStyles.Windows11Dark);
+        ThemeHelper.SetTheme(this);
     }
 
     private void InitializeProjectButtons()

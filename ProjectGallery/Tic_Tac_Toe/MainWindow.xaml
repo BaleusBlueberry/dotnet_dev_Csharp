@@ -29,7 +29,7 @@
             <Button Content="PvC (Player Vs Computer)" Margin="10 0 10 0" Click="NewGame_Click" Name="Btn_PvC"/>
             <Button Content="CvC (Computer Vs Computer)" Margin="10" Click="NewGame_Click" Name="Btn_CvC"/>
 
-            <Button Content="Exit" Margin="10 20 10 10" />
+            <Button Content="Exit" Margin="10 20 10 10" Name="btn_Exit" Click="fileExitMenuItem_Click"/>
 		</StackPanel>
     </Grid>
 </Window>

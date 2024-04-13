@@ -9,15 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\tic.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Resources\tic.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" Version="25.1.39" />
+    <None Remove="Resources\coc.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,10 +17,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\O.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\X.png">
+    <Resource Include="Resources\coc.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Data\Cannon.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClashOfClansHelper\ClashOfClansHelper.csproj" />
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
     <ProjectReference Include="..\MemoryGame\MemoryGame.csproj" />
     <ProjectReference Include="..\PersonManager\PersonManager.csproj" />
