@@ -1,18 +1,9 @@
 ﻿using ClashOfClansHelper.Controls;
 using ClassLibrary;
-using System.ComponentModel;
 using System.IO;
-using System.Text;
 using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Path = System.IO.Path;
 
 namespace ClashOfClansHelper
@@ -32,51 +23,65 @@ namespace ClashOfClansHelper
             ListBuilding();
         }
 
+
         public void ListBuilding()
         {
             string dataFolderPath = @".\Resources\Data\";
-
             // Get all files in the "Data" folder
-            string[] dataFiles = Directory.GetFiles(dataFolderPath);
 
+            string[] dataFiles = Directory.GetFiles(dataFolderPath);
             foreach (string filePath in dataFiles)
             {
-                string ClearedName = Path.GetFileNameWithoutExtension(filePath);
-
-                DropListSelectLevel.Items.Add($"{ClearedName}");
+                try
+                {
+                    string ClearedName = Path.GetFileNameWithoutExtension(filePath);
+                    DropListSelectBuilding.Items.Add($"{ClearedName}");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
         public void PrintListBuilding(string path)
         {
             // Get the levels array
-            JsonElement Cannon = ReadableElement(path);
-            JsonElement levels = Cannon.GetProperty("levels");
+            JsonElement BuildingsList = ReadableElement(path);
+            JsonElement levels = BuildingsList.GetProperty("levels");
+
             // Populate ComboBox with level numbers
             foreach (JsonProperty level in levels.EnumerateObject())
             {
                 // Extract level data dynamically
                 JsonElement levelData = level.Value;
 
-                Dictionary<string, string> properties = new Dictionary<string, string>();
-
+                Dictionary<string, string> buildingInfoList = new Dictionary<string, string>();
+                
                 foreach (var property in levelData.EnumerateObject())
                 {
-                    properties[property.Name] = GetPropertyValue(property.Value);
+                    buildingInfoList[property.Name] = GetPropertyValue(property.Value);
                 }
 
-                // Create BuildingInfoBox and set its properties dynamically
-                BuildingInfoBox buildingInfoBox = new BuildingInfoBox(properties)
+                try
                 {
-                    Margin = new Thickness(10),
-                    Width = 100,
-                    Height = 100
-                };
-
-                // Add BuildingInfoBox to the ListOfBuildings stack panel
-                ListOfBuildings.Children.Add(buildingInfoBox);
+                    // Create BuildingInfoBox and set its properties dynamically
+                    BuildingInfoBox buildingInfoBox = new BuildingInfoBox(buildingInfoList)
+                    {
+                        Margin = new Thickness(10),
+                        Width = 100,
+                        Height = 100
+                    };
+                    // Add BuildingInfoBox to the ListOfBuildings stack panel
+                    ListOfBuildings.Children.Add(buildingInfoBox);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);}
             }
         }
+
+        public Dictionary<string, string> CurrentBuildingDictionary { get; set; } = new Dictionary<string, string>();
 
         public JsonElement ReadableElement(string path)
         {
@@ -109,14 +114,13 @@ namespace ClashOfClansHelper
             }
         }
 
-        private void DropListSelectLevel_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void DropListSelectedBuilding_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
             ListOfBuildings.Children.Clear();
 
-            string selectedItem = DropListSelectLevel.SelectedItem.ToString();
+            string selectedItem = DropListSelectBuilding.SelectedItem.ToString();
             string ClearedName = Path.GetFileNameWithoutExtension(selectedItem);
-            MessageBox.Show(ClearedName);
             PrintListBuilding(ClearedName);
         }
     }

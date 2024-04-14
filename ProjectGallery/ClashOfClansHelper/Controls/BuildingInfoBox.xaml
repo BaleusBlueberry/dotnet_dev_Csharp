@@ -9,7 +9,10 @@
     <Button Name="BuildingButton">
         <StackPanel>
             <Image Source="{Binding Path=[picture]}" Width="70" Height="70"/>
-            <TextBlock Text="{Binding Path=[level]}" TextAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="LVL: " VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding Path=[level]}" VerticalAlignment="Center"/>
+            </StackPanel>
         </StackPanel>
     </Button>
 </UserControl>

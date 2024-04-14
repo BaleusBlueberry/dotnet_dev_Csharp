@@ -1,17 +1,6 @@
 ﻿using ClassLibrary;
 using System.ComponentModel;
-using System.Data.Common;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Tic_Tac_Toe.Controls;
 using Tic_Tac_Toe.Enums;
 

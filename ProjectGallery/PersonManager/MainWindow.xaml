@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PersonManager"
+        xmlns:syncfusionskin= "clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -12,25 +13,42 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid AutoGenerateColumns="False" Grid.Column="0" Margin="10" Name="peopleGrid">
+        <DataGrid AutoGenerateColumns="False"
+                  Grid.Column="0"
+                  Margin="10"
+                  Name="PeopleGrid"
+                  SelectionChanged="HandleSelectionChange"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  SelectionUnit="FullRow"
+                  >
             
             <DataGrid.Columns>
+
+
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Age" Width="*" Binding="{Binding Age}"/>
+                <DataGridTemplateColumn Header="Action" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" Click="HandleDeleteClick" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 
         <StackPanel Grid.Column="1">
-            <Label Content="ID:" Margin="6 0 10 0"/>
+            <TextBlock Text="ID:" Margin="10 0 10 0" />
             <TextBox Name="TB_ID" Margin="10 0 10 0"/>
-            <Label Content="Name:" Margin="6 0 10 0"/>
+            <TextBlock Text="Name:" Margin="10 0 10 0"/>
             <TextBox Name="TB_Name" Margin="10 0 10 0"/>
-            <Label Content="Age:" Margin="6 0 10 0"/>
+            <TextBlock Text="Age:" Margin="10 0 10 0"/>
             <TextBox Name="TB_Age" Margin="10 0 10 0"/>
 
-            <Button Name="Btn_Add" Content="Add" Margin="10 20 10 0"/>
-            <Button Name="Btn_Update" Content="Update" Margin="10 20 10 0"/>
+            <Button Name="Btn_Add" Content="Add" Margin="10 20 10 0" Click="Btn_Add_OnClick"/>
+            <Button Name="Btn_Update" Content="Update" Margin="10 20 10 0" Click="Btn_Update_OnClick"/>
         </StackPanel>
     </Grid>
 </Window>

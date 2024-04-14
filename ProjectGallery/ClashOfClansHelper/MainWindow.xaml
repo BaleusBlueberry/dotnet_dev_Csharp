@@ -10,7 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -37,7 +37,7 @@
 
         <StackPanel Grid.Row="1">
             <TextBlock Text="Select Building:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <ComboBox Margin="10,10,0,13" SelectionChanged="DropListSelectLevel_OnSelectionChanged" Name="DropListSelectLevel" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
+            <ComboBox Margin="10,10,0,13" SelectionChanged="DropListSelectedBuilding_OnSelectionChanged" x:Name="DropListSelectBuilding" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
             </ComboBox>
         </StackPanel>
 

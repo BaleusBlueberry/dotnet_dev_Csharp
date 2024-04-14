@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace ClassLibrary;
 
 public static class ThemeHelper
 {
+
+
     public static void SetTheme(Window window)
     {
         var windowsAppThemes = new ClassLibrary.WindowsAppThemes();
@@ -22,5 +19,14 @@ public static class ThemeHelper
         {
             Syncfusion.SfSkinManager.SfSkinManager.SetVisualStyle(window, Syncfusion.SfSkinManager.VisualStyles.Windows11Dark);
         }
+    }
+
+    public static string SetTextColor()
+    {
+        var windowsAppThemes = new ClassLibrary.WindowsAppThemes();
+        var appTheme = windowsAppThemes.GetWindowsAppTheme();
+
+        if (appTheme == WindowsAppTheme.Dark) return "White";
+        else return "Black";
     }
 }
