@@ -1,0 +1,161 @@
+﻿<table class='wikitable'><tbody>
+<tr>
+<td>1</td>
+<td class="ModifierStat DPS" title="4">4</td>
+<td class="ModifierStat DPH" title="20">20</td>
+<td>400</td>
+<td class="GoldPass bCost" title="5,000">5,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="3h">3h</td>
+<td class="GoldPass EXP" title="103">103</td>
+<td>3
+</td></tr>
+<tr>
+<td>2</td>
+<td class="ModifierStat DPS" title="5">5</td>
+<td class="ModifierStat DPH" title="25">25</td>
+<td>450</td>
+<td class="GoldPass bCost" title="25,000">25,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="6h">6h</td>
+<td class="GoldPass EXP" title="146">146</td>
+<td>4
+</td></tr>
+<tr>
+<td>3</td>
+<td class="ModifierStat DPS" title="6">6</td>
+<td class="ModifierStat DPH" title="30">30</td>
+<td>500</td>
+<td class="GoldPass bCost" title="100,000">100,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="12h">12h</td>
+<td class="GoldPass EXP" title="207">207</td>
+<td>5
+</td></tr>
+<tr>
+<td>4</td>
+<td class="ModifierStat DPS" title="7">7</td>
+<td class="ModifierStat DPH" title="35">35</td>
+<td>550</td>
+<td class="GoldPass bCost" title="200,000">200,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="18h">18h</td>
+<td class="GoldPass EXP" title="254">254</td>
+<td>6
+</td></tr>
+<tr>
+<td>5</td>
+<td class="ModifierStat DPS" title="9">9</td>
+<td class="ModifierStat DPH" title="45">45</td>
+<td>600</td>
+<td class="GoldPass bCost" title="300,000">300,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="1d">1d</td>
+<td class="GoldPass EXP" title="293">293</td>
+<td>7
+</td></tr>
+<tr>
+<td>6</td>
+<td class="ModifierStat DPS" title="11">11</td>
+<td class="ModifierStat DPH" title="55">55</td>
+<td>650</td>
+<td class="GoldPass bCost" title="560,000">560,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="2d">2d</td>
+<td class="GoldPass EXP" title="415">415</td>
+<td>8
+</td></tr>
+<tr>
+<td>7</td>
+<td class="ModifierStat DPS" title="15">15</td>
+<td class="ModifierStat DPH" title="75">75</td>
+<td>700</td>
+<td class="GoldPass bCost" title="1,300,000">1,300,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="2d 12h">2d 12h</td>
+<td class="GoldPass EXP" title="464">464</td>
+<td>9
+</td></tr>
+<tr>
+<td>8</td>
+<td class="ModifierStat DPS" title="20">20</td>
+<td class="ModifierStat DPH" title="100">100</td>
+<td>800</td>
+<td class="GoldPass bCost" title="1,900,000">1,900,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="2d 12h">2d 12h</td>
+<td class="GoldPass EXP" title="464">464</td>
+<td>10
+</td></tr>
+<tr>
+<td>9</td>
+<td class="ModifierStat DPS" title="25">25</td>
+<td class="ModifierStat DPH" title="125">125</td>
+<td>950</td>
+<td class="GoldPass bCost" title="2,500,000">2,500,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="3d">3d</td>
+<td class="GoldPass EXP" title="509">509</td>
+<td>11
+</td></tr>
+<tr>
+<td>10</td>
+<td class="ModifierStat DPS" title="30">30</td>
+<td class="ModifierStat DPH" title="150">150</td>
+<td>1,100</td>
+<td class="GoldPass bCost" title="3,500,000">3,500,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="3d">3d</td>
+<td class="GoldPass EXP" title="509">509</td>
+<td>11
+</td></tr>
+<tr>
+<td>11</td>
+<td class="ModifierStat DPS" title="35">35</td>
+<td class="ModifierStat DPH" title="175">175</td>
+<td>1,300</td>
+<td class="GoldPass bCost" title="5,800,000">5,800,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="7d">7d</td>
+<td class="GoldPass EXP" title="777">777</td>
+<td>12
+</td></tr>
+<tr>
+<td>12</td>
+<td class="ModifierStat DPS" title="38">38</td>
+<td class="ModifierStat DPH" title="190">190</td>
+<td>1,500</td>
+<td class="GoldPass bCost" title="6,500,000">6,500,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="7d">7d</td>
+<td class="GoldPass EXP" title="777">777</td>
+<td>12
+</td></tr>
+<tr>
+<td>13</td>
+<td class="ModifierStat DPS" title="42">42</td>
+<td class="ModifierStat DPH" title="210">210</td>
+<td>1,700</td>
+<td class="GoldPass bCost" title="8,200,000">8,200,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="7d 12h">7d 12h</td>
+<td class="GoldPass EXP" title="804">804</td>
+<td>13
+</td></tr>
+<tr>
+<td>14</td>
+<td class="ModifierStat DPS" title="48">48</td>
+<td class="ModifierStat DPH" title="240">240</td>
+<td>1,950</td>
+<td class="GoldPass bCost" title="15,000,000">15,000,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="12d">12d</td>
+<td class="GoldPass EXP" title="1,018">1,018</td>
+<td>14
+</td></tr>
+<tr>
+<td>15</td>
+<td class="ModifierStat DPS" title="54">54</td>
+<td class="ModifierStat DPH" title="270">270</td>
+<td>2,150</td>
+<td class="GoldPass bCost" title="19,000,000">19,000,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="13d 12h">13d 12h</td>
+<td class="GoldPass EXP" title="1,080">1,080</td>
+<td>15
+</td></tr>
+<tr>
+<td>16</td>
+<td class="ModifierStat DPS" title="60">60</td>
+<td class="ModifierStat DPH" title="300">300</td>
+<td>2,300</td>
+<td class="GoldPass bCost" title="19,500,000">19,500,000</td>
+<td class="GoldPass bTime" style="white-space:nowrap;" title="14d 12h">14d 12h</td>
+<td class="GoldPass EXP" title="1,119">1,119</td>
+<td>16
+</td></tr></tbody></table>";

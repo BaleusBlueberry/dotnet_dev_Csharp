@@ -4,7 +4,14 @@ using System.IO;
 using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using Newtonsoft.Json.Linq;
 using Path = System.IO.Path;
+using System;
+using System.Web;
+using System.Windows.Data;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ClashOfClansHelper
 {
@@ -16,7 +23,7 @@ namespace ClashOfClansHelper
         public MainWindow()
         {
             InitializeComponent();
-
+            
             ThemeHelper.SetTheme(this);
             /*PrintListBuilding();*/
 
@@ -44,29 +51,22 @@ namespace ClashOfClansHelper
             }
         }
 
+        public IDictionary<int, Dictionary<string, string>> dictionaryOfBildings = new Dictionary<int, Dictionary<string, string>>();
+
         public void PrintListBuilding(string path)
         {
-            // Get the levels array
-            JsonElement BuildingsList = ReadableElement(path);
-            JsonElement levels = BuildingsList.GetProperty("levels");
 
-            // Populate ComboBox with level numbers
-            foreach (JsonProperty level in levels.EnumerateObject())
+            string dataInString = File.ReadAllText($@".\Resources\Data\{path}.json");
+
+            dictionaryOfBildings = ConvertJsonToDictionary(dataInString);
+
+            foreach (Dictionary<string, string> building in dictionaryOfBildings.Values)
             {
-                // Extract level data dynamically
-                JsonElement levelData = level.Value;
-
-                Dictionary<string, string> buildingInfoList = new Dictionary<string, string>();
-                
-                foreach (var property in levelData.EnumerateObject())
-                {
-                    buildingInfoList[property.Name] = GetPropertyValue(property.Value);
-                }
-
                 try
                 {
+                    SingleBuilding bulding = new SingleBuilding(building["Level"], building["picture"], building);
                     // Create BuildingInfoBox and set its properties dynamically
-                    BuildingInfoBox buildingInfoBox = new BuildingInfoBox(buildingInfoList)
+                    BuildingInfoBox buildingInfoBox = new BuildingInfoBox(bulding)
                     {
                         Margin = new Thickness(10),
                         Width = 100,
@@ -74,45 +74,35 @@ namespace ClashOfClansHelper
                     };
                     // Add BuildingInfoBox to the ListOfBuildings stack panel
                     ListOfBuildings.Children.Add(buildingInfoBox);
+
+                    buildingInfoBox.BuildingButtonClicked += BuildingInfoBox_BuildingButtonClicked;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);}
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
-        public Dictionary<string, string> CurrentBuildingDictionary { get; set; } = new Dictionary<string, string>();
 
-        public JsonElement ReadableElement(string path)
+        public static IDictionary<int, Dictionary<string, string>> ConvertJsonToDictionary(string jsonData)
         {
-            string text = File.ReadAllText($@".\Resources\Data\{path}.json");
+            var jArray = JArray.Parse(jsonData);
+            var dictionary = new Dictionary<int, Dictionary<string, string>>();
 
-            // Parse JSON
-            JsonDocument doc = JsonDocument.Parse(text);
-            JsonElement root = doc.RootElement;
-
-            // Get the levels array
-
-            return root;
-        }
-        private string GetPropertyValue(JsonElement element)
-        {
-            switch (element.ValueKind)
+            foreach (var jToken in jArray)
             {
-                case JsonValueKind.String:
-                    return element.GetString();
-                case JsonValueKind.Number:
-                    // Convert number to string
-                    return element.ToString();
-                case JsonValueKind.True:
-                    return "true";
-                case JsonValueKind.False:
-                    return "false";
-                case JsonValueKind.Null:
-                default:
-                    return null;
+                var jObject = (JObject)jToken;
+                var level = jObject["Level"].Value<int>();
+                var properties = jObject.Properties()
+                    .ToDictionary(p => p.Name, p => p.Value.ToString());
+
+                dictionary[level] = properties;
             }
+
+            return dictionary;
         }
+
 
         private void DropListSelectedBuilding_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -122,6 +112,61 @@ namespace ClashOfClansHelper
             string selectedItem = DropListSelectBuilding.SelectedItem.ToString();
             string ClearedName = Path.GetFileNameWithoutExtension(selectedItem);
             PrintListBuilding(ClearedName);
+        }
+
+        private Uri stringToUri(string value)
+        {
+            return new Uri(value);
+        }
+
+        public class SingleBuilding
+        {
+            public string level { get; set; }
+            public string picture { get; set; }
+            public Dictionary<string, string> bulding { get; set; }
+
+            public SingleBuilding(string level, string picture, Dictionary<string, string> bulding)
+            {
+                this.level = level;
+                this.picture = picture;
+                this.bulding = bulding;
+            }
+        }
+
+        public class DataItem
+        {
+            public string Column1 { get; set; }
+            public string Column2 { get; set; }
+
+        }
+
+
+        private void BuildingInfoBox_BuildingButtonClicked(object sender, EventArgs e)
+        {
+            // Get the building dictionary from the BuildingInfoBox instance
+            if (sender is BuildingInfoBox buildingInfoBox)
+            {
+                Dictionary<string, string> building = buildingInfoBox.GetBuilding();
+                AddBuildingToGridInfo(building);
+            }
+        }
+
+        public void AddBuildingToGridInfo(Dictionary<string, string> building)
+        {
+            buildingGridList.Items.Clear();
+
+            foreach (var i in building)
+            {
+                if (i.Key  == "picture") continue;
+
+                var buildingSingleInfo = new DataItem();
+                buildingSingleInfo.Column1 = i.Key.Replace("_"," ");
+                buildingSingleInfo.Column2 = i.Value;
+
+                buildingGridList.Items.Add(buildingSingleInfo);
+            }
+
+            buildingGridList.Items.Refresh();
         }
     }
 }

@@ -47,9 +47,22 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="0">
-            <TextBlock Text="List of Buildings:" HorizontalAlignment="Center" Padding="10" FontSize="22" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="Building's Info:" HorizontalAlignment="Center" Padding="10 0 10 0" FontSize="22" FontWeight="Bold"></TextBlock>
             <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ListOfInfo"></WrapPanel>
+
+            <DataGrid AutoGenerateColumns="False"
+                      Grid.Column="0"
+                      Margin="10 0 10 0"
+                      Name="buildingGridList"
+            >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Building's Info:" Binding="{Binding Column1}" Width="2*"/>
+                    <DataGridTextColumn Header="" Binding="{Binding Column2}" Width="*"/>
+                    <DataGridTextColumn Header="" Binding="{Binding Column3}" Width="*"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
+
 
     </Grid>
 </Window>

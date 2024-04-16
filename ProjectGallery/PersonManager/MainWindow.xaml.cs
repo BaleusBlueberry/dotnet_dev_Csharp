@@ -1,22 +1,29 @@
 ﻿using ClassLibrary;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Input;
 
 namespace PersonManager;
 
 public partial class MainWindow : Window
 {
     private const string filePath = "people.json";
+    private readonly ICollectionView peopleView;
 
 
     public MainWindow()
     {
         InitializeComponent();
         ThemeHelper.SetTheme(this);
-        PeopleGrid.ItemsSource = people;
+
+        peopleView = CollectionViewSource.GetDefaultView(people);
+
+        PeopleGrid.ItemsSource = peopleView;
         LoadFile();
     }
 
@@ -26,6 +33,19 @@ public partial class MainWindow : Window
         set;
     } = new ObservableCollection<Person>();
 
+
+    private void HandleFilterKeyUp(object sender, KeyEventArgs e)
+    {
+        string filterString = TB_Filter.Text.ToLower();
+
+        peopleView.Filter = o => {
+            if (o is Person personToFilter)
+            {
+                return personToFilter.Name.ToLower().Contains(filterString);
+            }
+            return false;
+        };
+    }
 
     public void HandleSelectionChange(object sender, SelectionChangedEventArgs e)
     {
@@ -154,5 +174,21 @@ public partial class MainWindow : Window
 
         PeopleGrid.SelectedItem = null;
 
+    }
+
+    private void HandleFilterFocus(object sender, RoutedEventArgs e)
+    {
+        if (TB_Filter.Text != "Filter...") return;
+        TB_Filter.Text = "";
+    }
+
+    private void HandleFilterLostFocus(object sender, RoutedEventArgs e)
+    {
+        if (!string.IsNullOrWhiteSpace(TB_Filter.Text))
+        {
+            return;
+        }
+
+        TB_Filter.Text = "Filter...";
     }
 }

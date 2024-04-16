@@ -1,0 +1,155 @@
+﻿[
+  {
+    "Level": 1,
+    "Hitpoints": "300",
+    "Cumulative_Cost_Gold": "50",
+    "Cumulative_Cost_Elixir": "0",
+    "Magic_Items": "N/A",
+    "Town_Hall_Level_Required": "2",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/74/Wall1.png"
+  },
+  {
+    "Level": 2,
+    "Hitpoints": "500",
+    "Cumulative_Cost_Gold": "1,050",
+    "Cumulative_Cost_Elixir": "1",
+    "Magic_Items": "N/A",
+    "Town_Hall_Level_Required": "2",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/97/Wall2.png"
+  },
+  {
+    "Level": 3,
+    "Hitpoints": "700",
+    "Cumulative_Cost_Gold": "6,050",
+    "Cumulative_Cost_Elixir": "1",
+    "Magic_Items": "N/A",
+    "Town_Hall_Level_Required": "3",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/f5/Wall3.png"
+  },
+  {
+    "Level": 4,
+    "Hitpoints": "900",
+    "Cumulative_Cost_Gold": "16,050",
+    "Cumulative_Cost_Elixir": "1",
+    "Magic_Items": "N/A",
+    "Town_Hall_Level_Required": "4",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/62/Wall4.png"
+  },
+  {
+    "Level": 5,
+    "Hitpoints": "1,400",
+    "Cumulative_Cost_Gold": "36,050",
+    "Cumulative_Cost_Elixir": "20,000",
+    "Magic_Items": "1",
+    "Town_Hall_Level_Required": "5",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/c4/Wall5.png"
+  },
+  {
+    "Level": 6,
+    "Hitpoints": "2,000",
+    "Cumulative_Cost_Gold": "66,050",
+    "Cumulative_Cost_Elixir": "30,000",
+    "Magic_Items": "1",
+    "Town_Hall_Level_Required": "6",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/c7/Wall6.png"
+  },
+  {
+    "Level": 7,
+    "Hitpoints": "2,500",
+    "Cumulative_Cost_Gold": "116,050",
+    "Cumulative_Cost_Elixir": "50,000",
+    "Magic_Items": "1",
+    "Town_Hall_Level_Required": "7",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/be/Wall7.png"
+  },
+  {
+    "Level": 8,
+    "Hitpoints": "3,000",
+    "Cumulative_Cost_Gold": "191,050",
+    "Cumulative_Cost_Elixir": "75,000",
+    "Magic_Items": "1",
+    "Town_Hall_Level_Required": "8",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/06/Wall8.png"
+  },
+  {
+    "Level": 9,
+    "Hitpoints": "3,500",
+    "Cumulative_Cost_Gold": "291,050",
+    "Cumulative_Cost_Elixir": "100,000",
+    "Magic_Items": "1",
+    "Town_Hall_Level_Required": "9",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/93/Wall9.png"
+  },
+  {
+    "Level": 10,
+    "Hitpoints": "4,000",
+    "Cumulative_Cost_Gold": "491,050",
+    "Cumulative_Cost_Elixir": "200,000",
+    "Magic_Items": "1",
+    "Town_Hall_Level_Required": "9",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/8/8b/Wall10.png"
+  },
+  {
+    "Level": 11,
+    "Hitpoints": "5,000",
+    "Cumulative_Cost_Gold": "991,050",
+    "Cumulative_Cost_Elixir": "500,000",
+    "Magic_Items": "1",
+    "Town_Hall_Level_Required": "10",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/8/86/Wall11.png"
+  },
+  {
+    "Level": 12,
+    "Hitpoints": "7,000",
+    "Cumulative_Cost_Gold": "1,991,050",
+    "Cumulative_Cost_Elixir": "1,000,000",
+    "Magic_Items": "1",
+    "Town_Hall_Level_Required": "11",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/41/Wall12.png"
+  },
+  {
+    "Level": 13,
+    "Hitpoints": "9,000",
+    "Cumulative_Cost_Gold": "3,991,050",
+    "Cumulative_Cost_Elixir": "2,000,000",
+    "Magic_Items": "2",
+    "Town_Hall_Level_Required": "12",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/2/23/Wall13.png"
+  },
+  {
+    "Level": 14,
+    "Hitpoints": "11,000",
+    "Cumulative_Cost_Gold": "6,991,050",
+    "Cumulative_Cost_Elixir": "3,000,000",
+    "Magic_Items": "4",
+    "Town_Hall_Level_Required": "13",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/53/Wall14.png"
+  },
+  {
+    "Level": 15,
+    "Hitpoints": "12,500",
+    "Cumulative_Cost_Gold": "11,991,050",
+    "Cumulative_Cost_Elixir": "5,000,000",
+    "Magic_Items": "7",
+    "Town_Hall_Level_Required": "14",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/61/Wall15.png"
+  },
+  {
+    "Level": 16,
+    "Hitpoints": "13,500",
+    "Cumulative_Cost_Gold": "19,991,050",
+    "Cumulative_Cost_Elixir": "8,000,000",
+    "Magic_Items": "8",
+    "Town_Hall_Level_Required": "15",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/8/81/Wall16.png"
+  },
+  {
+    "Level": 17,
+    "Hitpoints": "14,500",
+    "Cumulative_Cost_Gold": "28,991,050",
+    "Cumulative_Cost_Elixir": "9,000,000",
+    "Magic_Items": "9",
+    "Town_Hall_Level_Required": "16",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/6c/Wall17.png"
+  }
+]

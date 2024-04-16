@@ -1,0 +1,233 @@
+﻿[
+  {
+    "Level": 1,
+    "Damage_per_Second": 11,
+    "Damage_per_Shot": 5.5,
+    "Hitpoints": 380,
+    "Cost_Gold": "1,000",
+    "Build_Time": "1m",
+    "Experience_Gained": 7,
+    "Town_Hall_Level_Required": 2,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/6e/Archer_Tower1.png"
+  },
+  {
+    "Level": 2,
+    "Damage_per_Second": 15,
+    "Damage_per_Shot": 7.5,
+    "Hitpoints": 420,
+    "Cost_Gold": "2,000",
+    "Build_Time": "15m",
+    "Experience_Gained": 30,
+    "Town_Hall_Level_Required": 2,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e0/Archer_Tower2.png"
+  },
+  {
+    "Level": 3,
+    "Damage_per_Second": 19,
+    "Damage_per_Shot": 9.5,
+    "Hitpoints": 460,
+    "Cost_Gold": "5,000",
+    "Build_Time": "45m",
+    "Experience_Gained": 51,
+    "Town_Hall_Level_Required": 3,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/9e/Archer_Tower3.png"
+  },
+  {
+    "Level": 4,
+    "Damage_per_Second": 25,
+    "Damage_per_Shot": 12.5,
+    "Hitpoints": 500,
+    "Cost_Gold": "20,000",
+    "Build_Time": "3h",
+    "Experience_Gained": 103,
+    "Town_Hall_Level_Required": 4,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/b8/Archer_Tower4.png"
+  },
+  {
+    "Level": 5,
+    "Damage_per_Second": 30,
+    "Damage_per_Shot": 15,
+    "Hitpoints": 540,
+    "Cost_Gold": "80,000",
+    "Build_Time": "4h",
+    "Experience_Gained": 120,
+    "Town_Hall_Level_Required": 5,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e8/Archer_Tower5.png"
+  },
+  {
+    "Level": 6,
+    "Damage_per_Second": 35,
+    "Damage_per_Shot": 17.5,
+    "Hitpoints": 580,
+    "Cost_Gold": "150,000",
+    "Build_Time": "5h",
+    "Experience_Gained": 134,
+    "Town_Hall_Level_Required": 5,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/70/Archer_Tower6.png"
+  },
+  {
+    "Level": 7,
+    "Damage_per_Second": 42,
+    "Damage_per_Shot": 21,
+    "Hitpoints": 630,
+    "Cost_Gold": "300,000",
+    "Build_Time": "8h",
+    "Experience_Gained": 169,
+    "Town_Hall_Level_Required": 6,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/1f/Archer_Tower7.png"
+  },
+  {
+    "Level": 8,
+    "Damage_per_Second": 48,
+    "Damage_per_Shot": 24,
+    "Hitpoints": 690,
+    "Cost_Gold": "480,000",
+    "Build_Time": "10h",
+    "Experience_Gained": 189,
+    "Town_Hall_Level_Required": 7,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e2/Archer_Tower8.png"
+  },
+  {
+    "Level": 9,
+    "Damage_per_Second": 56,
+    "Damage_per_Shot": 28,
+    "Hitpoints": 750,
+    "Cost_Gold": "580,000",
+    "Build_Time": "12h",
+    "Experience_Gained": 207,
+    "Town_Hall_Level_Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/4a/Archer_Tower9.png"
+  },
+  {
+    "Level": 10,
+    "Damage_per_Second": 63,
+    "Damage_per_Shot": 31.5,
+    "Hitpoints": 810,
+    "Cost_Gold": "760,000",
+    "Build_Time": "12h",
+    "Experience_Gained": 207,
+    "Town_Hall_Level_Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/45/Archer_Tower10.png"
+  },
+  {
+    "Level": 11,
+    "Damage_per_Second": 70,
+    "Damage_per_Shot": 35,
+    "Hitpoints": 890,
+    "Cost_Gold": "1,000,000",
+    "Build_Time": "14h",
+    "Experience_Gained": 224,
+    "Town_Hall_Level_Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/03/Archer_Tower11.png"
+  },
+  {
+    "Level": 12,
+    "Damage_per_Second": 75,
+    "Damage_per_Shot": 37.5,
+    "Hitpoints": 970,
+    "Cost_Gold": "1,100,000",
+    "Build_Time": "18h",
+    "Experience_Gained": 254,
+    "Town_Hall_Level_Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/f0/Archer_Tower12.png"
+  },
+  {
+    "Level": 13,
+    "Damage_per_Second": 80,
+    "Damage_per_Shot": 40,
+    "Hitpoints": 1050,
+    "Cost_Gold": "2,000,000",
+    "Build_Time": "18h",
+    "Experience_Gained": 254,
+    "Town_Hall_Level_Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/fb/Archer_Tower13.png"
+  },
+  {
+    "Level": 14,
+    "Damage_per_Second": 90,
+    "Damage_per_Shot": 45,
+    "Hitpoints": 1130,
+    "Cost_Gold": "2,200,000",
+    "Build_Time": "1d 6h",
+    "Experience_Gained": 328,
+    "Town_Hall_Level_Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/2/2c/Archer_Tower14.png"
+  },
+  {
+    "Level": 15,
+    "Damage_per_Second": 100,
+    "Damage_per_Shot": 50,
+    "Hitpoints": 1230,
+    "Cost_Gold": "2,500,000",
+    "Build_Time": "1d 6h",
+    "Experience_Gained": 328,
+    "Town_Hall_Level_Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/44/Archer_Tower15.png"
+  },
+  {
+    "Level": 16,
+    "Damage_per_Second": 105,
+    "Damage_per_Shot": 52.5,
+    "Hitpoints": 1310,
+    "Cost_Gold": "4,700,000",
+    "Build_Time": "3d",
+    "Experience_Gained": 509,
+    "Town_Hall_Level_Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/73/Archer_Tower16.png"
+  },
+  {
+    "Level": 17,
+    "Damage_per_Second": 110,
+    "Damage_per_Shot": 55,
+    "Hitpoints": 1390,
+    "Cost_Gold": "6,100,000",
+    "Build_Time": "3d",
+    "Experience_Gained": 509,
+    "Town_Hall_Level_Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/fd/Archer_Tower17.png"
+  },
+  {
+    "Level": 18,
+    "Damage_per_Second": 120,
+    "Damage_per_Shot": 60,
+    "Hitpoints": 1510,
+    "Cost_Gold": "6,800,000",
+    "Build_Time": "7d",
+    "Experience_Gained": 777,
+    "Town_Hall_Level_Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/6f/Archer_Tower18.png"
+  },
+  {
+    "Level": 19,
+    "Damage_per_Second": 130,
+    "Damage_per_Shot": 65,
+    "Hitpoints": 1600,
+    "Cost_Gold": "8,000,000",
+    "Build_Time": "7d",
+    "Experience_Gained": 777,
+    "Town_Hall_Level_Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/49/Archer_Tower19.png"
+  },
+  {
+    "Level": 20,
+    "Damage_per_Second": 138,
+    "Damage_per_Shot": 69,
+    "Hitpoints": 1700,
+    "Cost_Gold": "11,600,000",
+    "Build_Time": "9d 12h",
+    "Experience_Gained": 905,
+    "Town_Hall_Level_Required": 14,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/34/Archer_Tower20.png"
+  },
+  {
+    "Level": 21,
+    "Damage_per_Second": 145,
+    "Damage_per_Shot": 72.5,
+    "Hitpoints": 1800,
+    "Cost_Gold": "16,000,000",
+    "Build_Time": "13d 6h",
+    "Experience_Gained": 1069,
+    "Town_Hall_Level_Required": 15,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/fa/Archer_Tower21.png"
+  }
+]

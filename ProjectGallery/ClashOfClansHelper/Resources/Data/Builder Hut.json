@@ -1,0 +1,67 @@
+﻿[
+  {
+    "Level": 1,
+    "Damage_per_Second": "N/A",
+    "Damage_per_Shot": "N/A",
+    "Repair_per_Second": "N/A",
+    "Repair_per_Hit": "None",
+    "Hitpoints": "250",
+    "Build_Cost_Gold": "0",
+    "Build_Time": "1",
+    "Experience_Gained": "0",
+    "Town_Hall_Level_Required": "1",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/10/Builders_Hut.png"
+  },
+  {
+    "Level": 2,
+    "Damage_per_Second": "80",
+    "Damage_per_Shot": "32",
+    "Repair_per_Second": "50",
+    "Repair_per_Hit": "37.5",
+    "Hitpoints": "1,000",
+    "Build_Cost_Gold": "8,000,000",
+    "Build_Time": "9d 12h",
+    "Experience_Gained": "905",
+    "Town_Hall_Level_Required": "14",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/a0/Builders_Hut2.png"
+  },
+  {
+    "Level": 3,
+    "Damage_per_Second": "100",
+    "Damage_per_Shot": "40",
+    "Repair_per_Second": "60",
+    "Repair_per_Hit": "45",
+    "Hitpoints": "1,300",
+    "Build_Cost_Gold": "10,000,000",
+    "Build_Time": "11d 12h",
+    "Experience_Gained": "996",
+    "Town_Hall_Level_Required": "14",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/f9/Builders_Hut3.png"
+  },
+  {
+    "Level": 4,
+    "Damage_per_Second": "120",
+    "Damage_per_Shot": "48",
+    "Repair_per_Second": "70",
+    "Repair_per_Hit": "52.5",
+    "Hitpoints": "1,600",
+    "Build_Cost_Gold": "12,000,000",
+    "Build_Time": "13d 6h",
+    "Experience_Gained": "1,069",
+    "Town_Hall_Level_Required": "14",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/b4/Builders_Hut4.png"
+  },
+  {
+    "Level": 5,
+    "Damage_per_Second": "135",
+    "Damage_per_Shot": "54",
+    "Repair_per_Second": "80",
+    "Repair_per_Hit": "60",
+    "Hitpoints": "1,800",
+    "Build_Cost_Gold": "17,000,000",
+    "Build_Time": "14d 6h",
+    "Experience_Gained": "1,109",
+    "Town_Hall_Level_Required": "15",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e7/Builders_Hut5.png"
+  }
+]

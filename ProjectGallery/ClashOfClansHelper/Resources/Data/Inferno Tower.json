@@ -1,0 +1,122 @@
+﻿[
+  {
+    "Level": 1,
+    "Initial_Damage_per_Second": "30",
+    "After_1.5s_Damage_per_Second": "80",
+    "After_5.25s_Damage_per_Second": "102.4",
+    "Hitpoints": "800",
+    "Cost_Gold": "1,500,000",
+    "Build_Time": "2d",
+    "Experience_Gained": "415",
+    "Town_Hall_Level_Required": "10",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/6d/Inferno_Tower1_Single.png"
+  },
+  {
+    "Level": 2,
+    "Initial_Damage_per_Second": "35",
+    "After_1.5s_Damage_per_Second": "100",
+    "After_5.25s_Damage_per_Second": "128",
+    "Hitpoints": "1,000",
+    "Cost_Gold": "2,000,000",
+    "Build_Time": "2d 12h",
+    "Experience_Gained": "464",
+    "Town_Hall_Level_Required": "10",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e3/Inferno_Tower2_Single.png"
+  },
+  {
+    "Level": 3,
+    "Initial_Damage_per_Second": "40",
+    "After_1.5s_Damage_per_Second": "120",
+    "After_5.25s_Damage_per_Second": "153.6",
+    "Hitpoints": "1,200",
+    "Cost_Gold": "3,000,000",
+    "Build_Time": "3d",
+    "Experience_Gained": "509",
+    "Town_Hall_Level_Required": "10",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/2/28/Inferno_Tower3_Single.png"
+  },
+  {
+    "Level": 4,
+    "Initial_Damage_per_Second": "50",
+    "After_1.5s_Damage_per_Second": "140",
+    "After_5.25s_Damage_per_Second": "179.2",
+    "Hitpoints": "1,400",
+    "Cost_Gold": "3,400,000",
+    "Build_Time": "4d 6h",
+    "Experience_Gained": "605",
+    "Town_Hall_Level_Required": "11",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/ae/Inferno_Tower4_Single.png"
+  },
+  {
+    "Level": 5,
+    "Initial_Damage_per_Second": "60",
+    "After_1.5s_Damage_per_Second": "160",
+    "After_5.25s_Damage_per_Second": "204.8",
+    "Hitpoints": "1,600",
+    "Cost_Gold": "4,200,000",
+    "Build_Time": "5d",
+    "Experience_Gained": "657",
+    "Town_Hall_Level_Required": "11",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/91/Inferno_Tower5_Single.png"
+  },
+  {
+    "Level": 6,
+    "Initial_Damage_per_Second": "70",
+    "After_1.5s_Damage_per_Second": "180",
+    "After_5.25s_Damage_per_Second": "230.4",
+    "Hitpoints": "1,800",
+    "Cost_Gold": "6,500,000",
+    "Build_Time": "8d 12h",
+    "Experience_Gained": "856",
+    "Town_Hall_Level_Required": "12",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/90/Inferno_Tower6_Single.png"
+  },
+  {
+    "Level": 7,
+    "Initial_Damage_per_Second": "85",
+    "After_1.5s_Damage_per_Second": "200",
+    "After_5.25s_Damage_per_Second": "256",
+    "Hitpoints": "2,000",
+    "Cost_Gold": "10,500,000",
+    "Build_Time": "9d",
+    "Experience_Gained": "881",
+    "Town_Hall_Level_Required": "13",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/0c/Inferno_Tower7_Single.png"
+  },
+  {
+    "Level": 8,
+    "Initial_Damage_per_Second": "100",
+    "After_1.5s_Damage_per_Second": "220",
+    "After_5.25s_Damage_per_Second": "281.6",
+    "Hitpoints": "2,200",
+    "Cost_Gold": "12,600,000",
+    "Build_Time": "13d",
+    "Experience_Gained": "1,059",
+    "Town_Hall_Level_Required": "14",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/69/Inferno_Tower8_Single.png"
+  },
+  {
+    "Level": 9,
+    "Initial_Damage_per_Second": "110",
+    "After_1.5s_Damage_per_Second": "240",
+    "After_5.25s_Damage_per_Second": "307.2",
+    "Hitpoints": "2,400",
+    "Cost_Gold": "21,000,000",
+    "Build_Time": "13d 18h",
+    "Experience_Gained": "1,089",
+    "Town_Hall_Level_Required": "15",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/8/8e/Inferno_Tower9_Single.png"
+  },
+  {
+    "Level": 10,
+    "Initial_Damage_per_Second": "120",
+    "After_1.5s_Damage_per_Second": "260",
+    "After_5.25s_Damage_per_Second": "332.8",
+    "Hitpoints": "2,600",
+    "Cost_Gold": "22,000,000",
+    "Build_Time": "14d 12h",
+    "Experience_Gained": "1,119",
+    "Town_Hall_Level_Required": "16",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/6c/Inferno_Tower10_Single.png"
+  }
+]

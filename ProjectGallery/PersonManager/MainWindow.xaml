@@ -24,8 +24,6 @@
                   >
             
             <DataGrid.Columns>
-
-
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Age" Width="*" Binding="{Binding Age}"/>
@@ -40,6 +38,10 @@
         </DataGrid>
 
         <StackPanel Grid.Column="1">
+            <TextBlock Text="Filter: " Margin="6 0 10 0" ></TextBlock>
+            <TextBox Margin="10 0 10 10" KeyUp="HandleFilterKeyUp" Name="TB_Filter" Text="Filter..." 
+                     GotFocus="HandleFilterFocus" 
+                     LostFocus="HandleFilterLostFocus"/>
             <TextBlock Text="ID:" Margin="10 0 10 0" />
             <TextBox Name="TB_ID" Margin="10 0 10 0"/>
             <TextBlock Text="Name:" Margin="10 0 10 0"/>

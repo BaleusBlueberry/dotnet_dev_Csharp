@@ -1,0 +1,167 @@
+﻿[
+  {
+    "Level": 1,
+    "Damage_per_Second": "34",
+    "Damage_per_Shot": "20.4",
+    "Hitpoints": "600",
+    "Cost_Gold": "250,000",
+    "Build_Time": "2h",
+    "Experience_Gained": "84",
+    "Town_Hall_Level_Required": "7",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/8/81/Hidden_Tesla1.png"
+  },
+  {
+    "Level": 2,
+    "Damage_per_Second": "40",
+    "Damage_per_Shot": "24",
+    "Hitpoints": "630",
+    "Cost_Gold": "350,000",
+    "Build_Time": "3h",
+    "Experience_Gained": "103",
+    "Town_Hall_Level_Required": "7",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e4/Hidden_Tesla2.png"
+  },
+  {
+    "Level": 3,
+    "Damage_per_Second": "48",
+    "Damage_per_Shot": "28.8",
+    "Hitpoints": "660",
+    "Cost_Gold": "520,000",
+    "Build_Time": "5h",
+    "Experience_Gained": "134",
+    "Town_Hall_Level_Required": "7",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/fb/Hidden_Tesla3.png"
+  },
+  {
+    "Level": 4,
+    "Damage_per_Second": "55",
+    "Damage_per_Shot": "33",
+    "Hitpoints": "690",
+    "Cost_Gold": "800,000",
+    "Build_Time": "12h",
+    "Experience_Gained": "207",
+    "Town_Hall_Level_Required": "8",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/54/Hidden_Tesla4.png"
+  },
+  {
+    "Level": 5,
+    "Damage_per_Second": "64",
+    "Damage_per_Shot": "38.4",
+    "Hitpoints": "730",
+    "Cost_Gold": "1,000,000",
+    "Build_Time": "18h",
+    "Experience_Gained": "254",
+    "Town_Hall_Level_Required": "8",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e9/Hidden_Tesla5.png"
+  },
+  {
+    "Level": 6,
+    "Damage_per_Second": "75",
+    "Damage_per_Shot": "45",
+    "Hitpoints": "770",
+    "Cost_Gold": "1,200,000",
+    "Build_Time": "1d",
+    "Experience_Gained": "293",
+    "Town_Hall_Level_Required": "8",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/d7/Hidden_Tesla6.png"
+  },
+  {
+    "Level": 7,
+    "Damage_per_Second": "87",
+    "Damage_per_Shot": "52.2",
+    "Hitpoints": "810",
+    "Cost_Gold": "1,500,000",
+    "Build_Time": "2d",
+    "Experience_Gained": "415",
+    "Town_Hall_Level_Required": "9",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/79/Hidden_Tesla7.png"
+  },
+  {
+    "Level": 8,
+    "Damage_per_Second": "99",
+    "Damage_per_Shot": "59.4",
+    "Hitpoints": "850",
+    "Cost_Gold": "1,600,000",
+    "Build_Time": "2d 12h",
+    "Experience_Gained": "464",
+    "Town_Hall_Level_Required": "10",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/4f/Hidden_Tesla8.png"
+  },
+  {
+    "Level": 9,
+    "Damage_per_Second": "110",
+    "Damage_per_Shot": "66",
+    "Hitpoints": "900",
+    "Cost_Gold": "2,500,000",
+    "Build_Time": "3d",
+    "Experience_Gained": "509",
+    "Town_Hall_Level_Required": "11",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e3/Hidden_Tesla9.png"
+  },
+  {
+    "Level": 10,
+    "Damage_per_Second": "120",
+    "Damage_per_Shot": "72",
+    "Hitpoints": "980",
+    "Cost_Gold": "5,000,000",
+    "Build_Time": "7d 18h",
+    "Experience_Gained": "818",
+    "Town_Hall_Level_Required": "12",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/37/Hidden_Tesla10.png"
+  },
+  {
+    "Level": 11,
+    "Damage_per_Second": "130",
+    "Damage_per_Shot": "78",
+    "Hitpoints": "1,100",
+    "Cost_Gold": "7,700,000",
+    "Build_Time": "8d",
+    "Experience_Gained": "831",
+    "Town_Hall_Level_Required": "13",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/b9/Hidden_Tesla11.png"
+  },
+  {
+    "Level": 12,
+    "Damage_per_Second": "140",
+    "Damage_per_Shot": "84",
+    "Hitpoints": "1,200",
+    "Cost_Gold": "9,000,000",
+    "Build_Time": "8d",
+    "Experience_Gained": "831",
+    "Town_Hall_Level_Required": "13",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/05/Hidden_Tesla12.png"
+  },
+  {
+    "Level": 13,
+    "Damage_per_Second": "150",
+    "Damage_per_Shot": "90",
+    "Hitpoints": "1,350",
+    "Cost_Gold": "12,000,000",
+    "Build_Time": "13d",
+    "Experience_Gained": "1,059",
+    "Town_Hall_Level_Required": "14",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/78/Hidden_Tesla13.png"
+  },
+  {
+    "Level": 14,
+    "Damage_per_Second": "160",
+    "Damage_per_Shot": "96",
+    "Hitpoints": "1,450",
+    "Cost_Gold": "19,100,000",
+    "Build_Time": "13d 12h",
+    "Experience_Gained": "1,080",
+    "Town_Hall_Level_Required": "15",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/f1/Hidden_Tesla14.png"
+  },
+  {
+    "Level": 15,
+    "Damage_per_Second": "170",
+    "Damage_per_Shot": "102",
+    "Hitpoints": "1,550",
+    "Cost_Gold": "20,000,000",
+    "Build_Time": "14d",
+    "Experience_Gained": "1,099",
+    "Town_Hall_Level_Required": "16",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/9e/Hidden_Tesla15.png"
+  }
+]

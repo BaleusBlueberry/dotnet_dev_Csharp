@@ -34,6 +34,7 @@ public partial class Board : UserControl, INotifyPropertyChanged
         InitializeGameGrid();
 
         DataContext = this;
+
     }
 
     public GameType CurrentGameType

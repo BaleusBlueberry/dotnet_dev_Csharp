@@ -1,0 +1,156 @@
+﻿[
+  {
+    "Level": 1,
+    "Damage_per_Second": "80",
+    "Damage_per_Shot": "80",
+    "Hitpoints": "800",
+    "Cost_Gold": "22,000",
+    "Build_Time": "3h",
+    "Experience_Gained": "103",
+    "Town_Hall_Level_Required": "4",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/6f/Air_Defense1.png"
+  },
+  {
+    "Level": 2,
+    "Damage_per_Second": "110",
+    "Damage_per_Shot": "110",
+    "Hitpoints": "850",
+    "Cost_Gold": "90,000",
+    "Build_Time": "8h",
+    "Experience_Gained": "169",
+    "Town_Hall_Level_Required": "4",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/ef/Air_Defense2.png"
+  },
+  {
+    "Level": 3,
+    "Damage_per_Second": "140",
+    "Damage_per_Shot": "140",
+    "Hitpoints": "900",
+    "Cost_Gold": "270,000",
+    "Build_Time": "12h",
+    "Experience_Gained": "207",
+    "Town_Hall_Level_Required": "5",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/0a/Air_Defense3.png"
+  },
+  {
+    "Level": 4,
+    "Damage_per_Second": "160",
+    "Damage_per_Shot": "160",
+    "Hitpoints": "950",
+    "Cost_Gold": "500,000",
+    "Build_Time": "18h",
+    "Experience_Gained": "254",
+    "Town_Hall_Level_Required": "6",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/48/Air_Defense4.png"
+  },
+  {
+    "Level": 5,
+    "Damage_per_Second": "190",
+    "Damage_per_Shot": "190",
+    "Hitpoints": "1,000",
+    "Cost_Gold": "800,000",
+    "Build_Time": "1d",
+    "Experience_Gained": "293",
+    "Town_Hall_Level_Required": "7",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/7e/Air_Defense5.png"
+  },
+  {
+    "Level": 6,
+    "Damage_per_Second": "230",
+    "Damage_per_Shot": "230",
+    "Hitpoints": "1,050",
+    "Cost_Gold": "1,000,000",
+    "Build_Time": "1d 12h",
+    "Experience_Gained": "360",
+    "Town_Hall_Level_Required": "8",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/39/Air_Defense6.png"
+  },
+  {
+    "Level": 7,
+    "Damage_per_Second": "280",
+    "Damage_per_Shot": "280",
+    "Hitpoints": "1,100",
+    "Cost_Gold": "1,750,000",
+    "Build_Time": "2d",
+    "Experience_Gained": "415",
+    "Town_Hall_Level_Required": "9",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/ca/Air_Defense7.png"
+  },
+  {
+    "Level": 8,
+    "Damage_per_Second": "320",
+    "Damage_per_Shot": "320",
+    "Hitpoints": "1,210",
+    "Cost_Gold": "2,300,000",
+    "Build_Time": "2d 12h",
+    "Experience_Gained": "464",
+    "Town_Hall_Level_Required": "10",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/03/Air_Defense8.png"
+  },
+  {
+    "Level": 9,
+    "Damage_per_Second": "360",
+    "Damage_per_Shot": "360",
+    "Hitpoints": "1,300",
+    "Cost_Gold": "3,400,000",
+    "Build_Time": "3d",
+    "Experience_Gained": "509",
+    "Town_Hall_Level_Required": "11",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/45/Air_Defense9.png"
+  },
+  {
+    "Level": 10,
+    "Damage_per_Second": "400",
+    "Damage_per_Shot": "400",
+    "Hitpoints": "1,400",
+    "Cost_Gold": "5,800,000",
+    "Build_Time": "8d 18h",
+    "Experience_Gained": "869",
+    "Town_Hall_Level_Required": "12",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/34/Air_Defense10.png"
+  },
+  {
+    "Level": 11,
+    "Damage_per_Second": "440",
+    "Damage_per_Shot": "440",
+    "Hitpoints": "1,500",
+    "Cost_Gold": "8,400,000",
+    "Build_Time": "9d",
+    "Experience_Gained": "881",
+    "Town_Hall_Level_Required": "13",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/ba/Air_Defense11.png"
+  },
+  {
+    "Level": 12,
+    "Damage_per_Second": "500",
+    "Damage_per_Shot": "500",
+    "Hitpoints": "1,650",
+    "Cost_Gold": "11,900,000",
+    "Build_Time": "12d",
+    "Experience_Gained": "1,018",
+    "Town_Hall_Level_Required": "14",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/c3/Air_Defense12.png"
+  },
+  {
+    "Level": 13,
+    "Damage_per_Second": "540",
+    "Damage_per_Shot": "540",
+    "Hitpoints": "1,750",
+    "Cost_Gold": "19,500,000",
+    "Build_Time": "13d 12h",
+    "Experience_Gained": "1,080",
+    "Town_Hall_Level_Required": "15",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/d9/Air_Defense13.png"
+  },
+  {
+    "Level": 14,
+    "Damage_per_Second": "600",
+    "Damage_per_Shot": "600",
+    "Hitpoints": "1,850",
+    "Cost_Gold": "20,500,000",
+    "Build_Time": "15d",
+    "Experience_Gained": "1,138",
+    "Town_Hall_Level_Required": "16",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/cf/Air_Defense14.png"
+  }
+]
