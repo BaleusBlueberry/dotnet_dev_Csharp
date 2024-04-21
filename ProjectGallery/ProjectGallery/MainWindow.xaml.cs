@@ -14,6 +14,7 @@ public partial class MainWindow : Window
         new MemoryGame.Project(),
         new Tic_Tac_Toe.Project(),
         new ClashOfClansHelper.Project(),
+        new JokeApp.Project(),
     };
 
     public MainWindow()

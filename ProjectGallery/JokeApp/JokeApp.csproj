@@ -8,4 +8,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\cloun.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClashOfClansHelper\ClashOfClansHelper.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\cloun.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ClashOfClansHelper\ClashOfClansHelper.csproj" />
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
+    <ProjectReference Include="..\JokeApp\JokeApp.csproj" />
     <ProjectReference Include="..\MemoryGame\MemoryGame.csproj" />
     <ProjectReference Include="..\PersonManager\PersonManager.csproj" />
     <ProjectReference Include="..\Tic_Tac_Toe\Tic_Tac_Toe.csproj" />

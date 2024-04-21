@@ -17,8 +17,6 @@ namespace Tic_Tac_Toe
                 return new BitmapImage(uri);
             }
         }
-
-
         public void Run()
         {
             MainWindow window = new MainWindow();

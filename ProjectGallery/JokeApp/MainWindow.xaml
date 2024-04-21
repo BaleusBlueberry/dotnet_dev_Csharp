@@ -6,8 +6,38 @@
         xmlns:local="clr-namespace:JokeApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel VerticalAlignment="Center">
-        <Button Content="Tell me a Joke!" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonBase_OnClick"></Button>
-        <TextBlock Name="TB_Joke" TextWrapping="Wrap" Margin="10" HorizontalAlignment="Center"></TextBlock>
-    </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <!--The Joke button and section-->
+        <StackPanel VerticalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3">
+            <Button Content="Tell me a Joke!" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonBase_OnClick"></Button>
+            <TextBlock Name="TB_Joke" TextWrapping="Wrap" Margin="10" HorizontalAlignment="Center"></TextBlock>
+        </StackPanel>
+
+        <!--Settings of the joke-->
+        <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock Text="Category / Categories:" HorizontalAlignment="Center" Margin="5" FontSize="15"/>
+            <CheckBox Content="Any" HorizontalAlignment="Center" Name="CategoryChoiceAny" IsChecked="True"/>
+            <WrapPanel Margin="10" HorizontalAlignment="Center" Name="CategoryChoices">
+                <CheckBox Content="Programming" Margin="5"></CheckBox>
+                <CheckBox Content="Misc" Margin="5"></CheckBox>
+                <CheckBox Content="Dark" Margin="5"></CheckBox>
+                <CheckBox Content="Pun" Margin="5"></CheckBox>
+                <CheckBox Content="Spooky" Margin="5"></CheckBox>
+                <CheckBox Content="Chistmas" Margin="5"></CheckBox>
+            </WrapPanel>
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center"  Text="𝓙𝓸𝓴𝓮 𝓑𝓾𝓽𝓽𝓸𝓷 𝓐𝓹𝓹" VerticalAlignment="Center" FontSize="40"/>
+    </Grid>
 </Window>

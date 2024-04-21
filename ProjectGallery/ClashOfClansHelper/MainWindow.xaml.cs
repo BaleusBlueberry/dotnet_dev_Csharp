@@ -23,7 +23,7 @@ namespace ClashOfClansHelper
         public MainWindow()
         {
             InitializeComponent();
-            
+
             ThemeHelper.SetTheme(this);
             /*PrintListBuilding();*/
 
@@ -157,10 +157,10 @@ namespace ClashOfClansHelper
 
             foreach (var i in building)
             {
-                if (i.Key  == "picture") continue;
+                if (i.Key == "picture") continue;
 
                 var buildingSingleInfo = new DataItem();
-                buildingSingleInfo.Column1 = i.Key.Replace("_"," ");
+                buildingSingleInfo.Column1 = i.Key.Replace("_", " ");
                 buildingSingleInfo.Column2 = i.Value;
 
                 buildingGridList.Items.Add(buildingSingleInfo);
