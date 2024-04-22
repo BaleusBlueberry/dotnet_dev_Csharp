@@ -71,33 +71,18 @@ namespace JokeApp
 
         private async Task<string> GetJokeAPI()
         {
-            List<string> choices = GetChoices();
 
-            string choicesFilterd = "";
+            string finalString = GetFinalSubmitString();
 
-            if (choices.Count == 1)
-            {
-                choicesFilterd = choices[0];
-            }
-            else
-            {
-                foreach (string choice in choices)
-                {
-                    choicesFilterd += choice + ",";
-                }
-                choicesFilterd = choicesFilterd[..^1];
-            }
+            MessageBox.Show($"https://v2.jokeapi.dev/joke/{finalString}");
 
-            MessageBox.Show($"https://v2.jokeapi.dev/joke/{choicesFilterd}");
-
-            string response = await client.GetStringAsync($"https://v2.jokeapi.dev/joke/{choicesFilterd}");
+            string response = await client.GetStringAsync($"https://v2.jokeapi.dev/joke/{finalString}");
             return response;
         }
 
-        private List<string> GetChoices()
+        private string GetChoices()
         {
             List<string> selectedChoices = new List<string>();
-
 
             // If "Any" checkbox is checked, return all categories
             try
@@ -125,7 +110,88 @@ namespace JokeApp
                 selectedChoices.Add("Any");
             }
 
-            return selectedChoices;
+            return FormatListToString(selectedChoices);
+        }
+
+        private string GetBlacklists()
+        {
+            List<string> blacklistsChoices = new List<string>();
+
+            string finalString = "";
+            // If "Any" checkbox is checked, return all categories
+            try
+            {
+                if (IsAnyCheckboxChecked())
+                {
+                    foreach (CheckBox checkBox in BlacklistChoices.Children)
+                    {
+                        if (checkBox.IsChecked == true)
+                        {
+                            blacklistsChoices.Add(checkBox.Content.ToString());
+                        }
+                    }
+                    string formatedBlackList = FormatListToString(blacklistsChoices);
+
+                    finalString = string.Concat("?blacklistFlags=", formatedBlackList);
+                    MessageBox.Show(finalString);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("failed to get categories: " + ex.Message);
+            }
+
+            return finalString;
+        }
+
+        private string GetFinalSubmitString()
+        {
+            string choices = GetChoices();
+
+            string Blacklists = GetBlacklists();
+
+
+
+            string choicesFilterd = string.Concat(choices, Blacklists);
+
+            return choicesFilterd;
+        }
+
+        private string FormatListToString(List<string> list)
+        {
+            string outputString = "";
+
+            if (list.Count == 1)
+            {
+                outputString = list[0];
+            }
+            else
+            {
+                foreach (string choice in list)
+                {
+                    outputString += choice + ",";
+                }
+                outputString = outputString[..^1];
+            }
+            return outputString;
+        }
+        private bool IsAnyCheckboxChecked()
+        {
+            foreach (CheckBox checkBox in BlacklistChoices.Children)
+            {
+                if (checkBox.IsChecked == true)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private string FormatSearchTerms()
+        {
+
+            return "";
         }
     }
 }

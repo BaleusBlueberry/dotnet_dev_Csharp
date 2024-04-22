@@ -38,6 +38,23 @@
             </WrapPanel>
         </StackPanel>
 
+        <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock Text="Select flags to blacklist:" HorizontalAlignment="Center" Margin="5" FontSize="15"/>
+            <WrapPanel Margin="10" HorizontalAlignment="Center" Name="BlacklistChoices">
+                <CheckBox Content="nsfw" Margin="5" FontSize="13"></CheckBox>
+                <CheckBox Content="religious" Margin="5" FontSize="13"></CheckBox>
+                <CheckBox Content="political" Margin="5" FontSize="13"></CheckBox>
+                <CheckBox Content="racist" Margin="5" FontSize="13"></CheckBox>
+                <CheckBox Content="sexist" Margin="5" FontSize="13"></CheckBox>
+                <CheckBox Content="explicit" Margin="5" FontSize="13"></CheckBox>
+            </WrapPanel>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock TextWrapping="Wrap" Text="Search for a joke that contains this search string:" HorizontalAlignment="Center" Margin="5" FontSize="15"/>
+            <TextBox Width="100" HorizontalAlignment="Center" Margin="5" FontSize="15" Name="JokeSearch"/>
+        </StackPanel>
+
         <TextBlock Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center"  Text="𝓙𝓸𝓴𝓮 𝓑𝓾𝓽𝓽𝓸𝓷 𝓐𝓹𝓹" VerticalAlignment="Center" FontSize="40"/>
     </Grid>
 </Window>
