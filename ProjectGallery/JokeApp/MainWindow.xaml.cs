@@ -85,8 +85,7 @@ namespace JokeApp
                 {
                     choicesFilterd += choice + ",";
                 }
-
-                choicesFilterd.Remove(choicesFilterd.Length - 1, 1);
+                choicesFilterd = choicesFilterd[..^1];
             }
 
             MessageBox.Show($"https://v2.jokeapi.dev/joke/{choicesFilterd}");

@@ -15,7 +15,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
 
         <!--The Joke button and section-->
@@ -29,12 +29,12 @@
             <TextBlock Text="Category / Categories:" HorizontalAlignment="Center" Margin="5" FontSize="15"/>
             <CheckBox Content="Any" HorizontalAlignment="Center" Name="CategoryChoiceAny" IsChecked="True"/>
             <WrapPanel Margin="10" HorizontalAlignment="Center" Name="CategoryChoices">
-                <CheckBox Content="Programming" Margin="5"></CheckBox>
-                <CheckBox Content="Misc" Margin="5"></CheckBox>
-                <CheckBox Content="Dark" Margin="5"></CheckBox>
-                <CheckBox Content="Pun" Margin="5"></CheckBox>
-                <CheckBox Content="Spooky" Margin="5"></CheckBox>
-                <CheckBox Content="Chistmas" Margin="5"></CheckBox>
+                <CheckBox Content="Programming" Margin="5" FontSize="13"></CheckBox>
+                <CheckBox Content="Miscellaneous" Margin="5" FontSize="13"></CheckBox>
+                <CheckBox Content="Dark" Margin="5" FontSize="13"></CheckBox>
+                <CheckBox Content="Pun" Margin="5" FontSize="13"></CheckBox>
+                <CheckBox Content="Spooky" Margin="5" FontSize="13"></CheckBox>
+                <CheckBox Content="Christmas" Margin="5" FontSize="13"></CheckBox>
             </WrapPanel>
         </StackPanel>
 
