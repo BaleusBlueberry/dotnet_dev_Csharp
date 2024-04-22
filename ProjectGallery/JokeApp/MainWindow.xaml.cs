@@ -1,4 +1,5 @@
 ﻿using ClassLibrary;
+using System.ComponentModel;
 using System.Net.Http;
 using System.Text.Json;
 using System.Windows;
@@ -149,11 +150,19 @@ namespace JokeApp
         {
             string choices = GetChoices();
 
-            string Blacklists = GetBlacklists();
+            string blacklists = GetBlacklists();
 
+            string searchterms = FormatSearchTerms();
 
+            string choicesFilterd = choices;
 
-            string choicesFilterd = string.Concat(choices, Blacklists);
+            if (blacklists == "" & searchterms != "")
+            {
+                choicesFilterd = String.Concat(choices, "?", searchterms);
+            } else if (blacklists != "" & searchterms != "")
+            {
+                choicesFilterd = String.Concat(choices, blacklists, "&", searchterms);
+            } else choicesFilterd = string.Concat(choices, blacklists);
 
             return choicesFilterd;
         }
@@ -190,8 +199,11 @@ namespace JokeApp
 
         private string FormatSearchTerms()
         {
+            string returnString = "";
 
-            return "";
+            if (JokeSearch.Text == "") return "";
+
+            return "contains=" + JokeSearch.Text;
         }
     }
 }
