@@ -24,6 +24,9 @@
             <TextBlock Name="TB_Joke" TextWrapping="Wrap" Margin="10" HorizontalAlignment="Center"></TextBlock>
         </StackPanel>
 
+        <!--language setting-->
+
+
         <!--Settings of the joke-->
         <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock Text="Category / Categories:" HorizontalAlignment="Center" Margin="5" FontSize="15"/>
@@ -56,5 +59,7 @@
         </StackPanel>
 
         <TextBlock Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center"  Text="𝓙𝓸𝓴𝓮 𝓑𝓾𝓽𝓽𝓸𝓷 𝓐𝓹𝓹" VerticalAlignment="Center" FontSize="40"/>
+
+        <Button HorizontalAlignment="Right" Grid.Column="2" Grid.Row="0" Width="70" Margin="10" Height="30" Click="Button_Click" >More info</Button>
     </Grid>
 </Window>

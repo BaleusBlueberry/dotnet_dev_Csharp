@@ -1,6 +1,7 @@
 ﻿using ClassLibrary;
 using System.ComponentModel;
 using System.Net.Http;
+using System.Printing;
 using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
@@ -52,6 +53,11 @@ namespace JokeApp
 
                 JokeDTO? jokeObj = JsonSerializer.Deserialize<JokeDTO>(joke, new JsonSerializerOptions());
 
+                
+                if (jokeObj.APIError)
+                {
+                    TB_Joke.Text = jokeObj.ErrorMessage + "\n-----\n" + jokeObj.ErrorMessageMore;
+                }
                 if (jokeObj.Type == "twopart")
                 {
                     TB_Joke.Text = jokeObj.JokeSetup + "\n-----\n" + jokeObj.JokeDelivery;
@@ -83,7 +89,7 @@ namespace JokeApp
 
         private string GetChoices()
         {
-            List<string> selectedChoices = new List<string>();
+            List<string> selectedChoices = new();
 
             // If "Any" checkbox is checked, return all categories
             try
@@ -116,7 +122,7 @@ namespace JokeApp
 
         private string GetBlacklists()
         {
-            List<string> blacklistsChoices = new List<string>();
+            List<string> blacklistsChoices = new();
 
             string finalString = "";
             // If "Any" checkbox is checked, return all categories
@@ -205,5 +211,11 @@ namespace JokeApp
 
             return "contains=" + JokeSearch.Text;
         }
+
+        private void Button_Click(object? sender, object e) {
+            MessageBox.Show("Welcome to my button app, where i used an api to to to get random jokes, and set up diffrent imputs for the using to use to the the spasific kind of joke");
+        }
+
+        
     }
 }

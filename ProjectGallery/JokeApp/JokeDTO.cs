@@ -16,4 +16,11 @@ public class JokeDTO
     [JsonPropertyName("joke")]
     public string Joke { get; set; }
 
+    [JsonPropertyName("message")]
+    public string ErrorMessage { get; set; }
+    [JsonPropertyName("additionalInfo")]
+    public string ErrorMessageMore { get; set; }
+
+
+
 }
