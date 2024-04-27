@@ -9,8 +9,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -23,10 +23,6 @@
         </Grid.Background>
 
         <!--clash of clans town hall image-->
-        <StackPanel Grid.Row="0" Grid.Column="0">
-            <TextBlock Text="Town Hall:" HorizontalAlignment="Center" Padding="10" FontSize="22" FontWeight="Bold"></TextBlock>
-            <WrapPanel Margin="10" HorizontalAlignment="Center" Name="TownHall"></WrapPanel>
-        </StackPanel>
 
         <!--clash of clans helper text-->
         <Image Source="{Binding Icon}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center"></Image>
@@ -34,10 +30,14 @@
         <StackPanel HorizontalAlignment="Center"  Grid.Row="1" Orientation="Horizontal">
             <StackPanel>
                 <TextBlock Text="Select Town Hall:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <ComboBox Margin="10,10,0,13" SelectionChanged="DropListSelectedBuilding_OnSelectionChanged" x:Name="DropListSelectTownhall" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
+                <ComboBox Margin="10,10,0,13" SelectionChanged="DropListSelectedTownHall_OnSelectionChanged" x:Name="DropListSelectTownhall" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
                 </ComboBox>
+                <WrapPanel Margin="10" HorizontalAlignment="Center" Name="TownHall"></WrapPanel>
             </StackPanel>
             <StackPanel>
+                <TextBlock Text="Select Building Type:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ComboBox  Margin="10,10,0,13" x:Name="DropListSelectBuildingType" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
+                </ComboBox>
                 <TextBlock Text="Select Building:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <ComboBox  Margin="10,10,0,13" SelectionChanged="DropListSelectedBuilding_OnSelectionChanged" x:Name="DropListSelectBuilding" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
                 </ComboBox>
