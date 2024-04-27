@@ -30,9 +30,11 @@ namespace ClashOfClansHelper
 
             ListBuilding();
 
-            BitmapImage ClashOfClansImageLoader = ClashOfClansImage("clashofclansfont");
-        }
+            ImageLoader cocImage = new ImageLoader("clashofclansfont");
 
+            DataContext = cocImage;
+
+        }
 
         public void ListBuilding()
         {
@@ -176,7 +178,7 @@ namespace ClashOfClansHelper
         {
 
             string? assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
-            Uri uri = new Uri($"pack://application:,,,/{fileName};component/Resources/coc.jpg");
+            Uri uri = new Uri($"pack://application:,,,/{assemblyName};component/Resources/{fileName}.jpg");
             return new BitmapImage(uri);
 
         }

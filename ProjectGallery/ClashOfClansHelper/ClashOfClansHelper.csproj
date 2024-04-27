@@ -31,43 +31,43 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\Data\Air Defense.json">
+    <None Update="Resources\Data\Defensive buildings\Air Defense.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Air Sweeper.json">
+    <None Update="Resources\Data\Defensive buildings\Air Sweeper.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Archer Tower.json">
+    <None Update="Resources\Data\Defensive buildings\Archer Tower.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Bomb Tower.json">
+    <None Update="Resources\Data\Defensive buildings\Bomb Tower.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Builder Hut.json">
+    <None Update="Resources\Data\Defensive buildings\Builder Hut.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Cannon.json">
+    <None Update="Resources\Data\Defensive buildings\Cannon.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Eagle Artillery.json">
+    <None Update="Resources\Data\Defensive buildings\Eagle Artillery.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Hidden Tesla.json">
+    <None Update="Resources\Data\Defensive buildings\Hidden Tesla.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Inferno Tower.json">
+    <None Update="Resources\Data\Defensive buildings\Inferno Tower.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Mortar.json">
+    <None Update="Resources\Data\Defensive buildings\Mortar.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Scattershot.json">
+    <None Update="Resources\Data\Defensive buildings\Scattershot.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\Walls.json">
+    <None Update="Resources\Data\Defensive buildings\Walls.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Data\X Bow.json">
+    <None Update="Resources\Data\Defensive buildings\X Bow.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
