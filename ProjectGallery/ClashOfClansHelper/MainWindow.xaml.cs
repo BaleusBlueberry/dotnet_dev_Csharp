@@ -12,6 +12,7 @@ using System.Web;
 using System.Windows.Data;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Reflection;
 
 namespace ClashOfClansHelper
 {
@@ -28,6 +29,8 @@ namespace ClashOfClansHelper
             /*PrintListBuilding();*/
 
             ListBuilding();
+
+            BitmapImage ClashOfClansImageLoader = ClashOfClansImage("clashofclansfont");
         }
 
 
@@ -167,6 +170,15 @@ namespace ClashOfClansHelper
             }
 
             buildingGridList.Items.Refresh();
+        }
+
+        public BitmapImage ClashOfClansImage(string fileName)
+        {
+
+            string? assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
+            Uri uri = new Uri($"pack://application:,,,/{fileName};component/Resources/coc.jpg");
+            return new BitmapImage(uri);
+
         }
     }
 }

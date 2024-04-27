@@ -18,21 +18,14 @@
             <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
+        <Image Source=""> </Image>
+        
         <Rectangle Grid.Row="0" Grid.ColumnSpan="2">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="https://wallpapers.com/images/high/clash-of-clans-battle-mejez09j0x7vpknn.webp" Stretch="UniformToFill"/>
             </Rectangle.Fill>
         </Rectangle>
 
-        <Rectangle Grid.Row="0" Grid.ColumnSpan="2" Width="200" Height="100" Opacity="0.5">
-            <Rectangle.Fill>
-                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                    <GradientStop Color="YellowGreen"  Offset="0.0" />
-                    <GradientStop Color="White" Offset="0.5" />
-                    <GradientStop Color="LawnGreen" Offset="1.0" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
         <TextBlock Text="Hello World!" Grid.ColumnSpan="2" HorizontalAlignment="center" VerticalAlignment="Center" />
 
         <StackPanel Grid.Row="1">
