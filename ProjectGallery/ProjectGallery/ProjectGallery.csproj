@@ -15,6 +15,7 @@
     <ProjectReference Include="..\MemoryGame\MemoryGame.csproj" />
     <ProjectReference Include="..\PersonManager\PersonManager.csproj" />
     <ProjectReference Include="..\Tic_Tac_Toe\Tic_Tac_Toe.csproj" />
+    <ProjectReference Include="..\UsersAPI\UsersAPI.csproj" />
   </ItemGroup>
 
   <ItemGroup>

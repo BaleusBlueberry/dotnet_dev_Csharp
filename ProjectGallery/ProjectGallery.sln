@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonManager", "PersonMana
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClashOfClansHelper", "ClashOfClansHelper\ClashOfClansHelper.csproj", "{32F0B468-BAFF-422E-B979-95326395F6F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokeApp", "JokeApp\JokeApp.csproj", "{78C07BBA-E991-4760-B6D6-794F28813118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokeApp", "JokeApp\JokeApp.csproj", "{78C07BBA-E991-4760-B6D6-794F28813118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAPI", "UsersAPI\UsersAPI.csproj", "{9E34EBDA-D980-4300-822E-0B99B7878494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{78C07BBA-E991-4760-B6D6-794F28813118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78C07BBA-E991-4760-B6D6-794F28813118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78C07BBA-E991-4760-B6D6-794F28813118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E34EBDA-D980-4300-822E-0B99B7878494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E34EBDA-D980-4300-822E-0B99B7878494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E34EBDA-D980-4300-822E-0B99B7878494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E34EBDA-D980-4300-822E-0B99B7878494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

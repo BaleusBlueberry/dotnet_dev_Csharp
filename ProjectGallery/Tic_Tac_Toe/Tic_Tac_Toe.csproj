@@ -9,11 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\tic.png" />
+    <None Remove="resources\tic.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\tic.png" />
+    <Resource Include="resources\tic.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,10 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\O.png">
+    <None Update="resources\O.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\X.png">
+    <None Update="resources\X.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
