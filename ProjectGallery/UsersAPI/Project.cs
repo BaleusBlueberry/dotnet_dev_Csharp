@@ -12,7 +12,7 @@ namespace UsersAPI
             get
             {
                 string? assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
-                Uri uri = new Uri($"pack://application:,,,/{assemblyName};component/resources/userapi.png");
+                Uri uri = new Uri($"pack://application:,,,/{assemblyName};component/Resources/uapi.png");
                 return new BitmapImage(uri);
             }
         }

@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="resources\userapi.png" />
+    <None Remove="resources\UAPI.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,9 +17,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="resources\userapi.png">
+    <Resource Include="resources\uapi.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TownHall.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

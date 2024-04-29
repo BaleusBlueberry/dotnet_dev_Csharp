@@ -1,0 +1,123 @@
+﻿[
+  {
+    "Level": 1,
+    "Damage_per_Second": "24",
+    "Damage_per_Shot": "26.4",
+    "Hitpoints": "650",
+    "Cost_Gold": "700,000",
+    "Build_Time": "18h",
+    "Experience_Gained": "254",
+    "Town_Hall_Level_Required": "8",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/68/Bomb_Tower1.png"
+  },
+  {
+    "Level": 2,
+    "Damage_per_Second": "28",
+    "Damage_per_Shot": "30.8",
+    "Hitpoints": "700",
+    "Cost_Gold": "1,000,000",
+    "Build_Time": "1d",
+    "Experience_Gained": "293",
+    "Town_Hall_Level_Required": "8",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/c9/Bomb_Tower2.png"
+  },
+  {
+    "Level": 3,
+    "Damage_per_Second": "32",
+    "Damage_per_Shot": "35.2",
+    "Hitpoints": "750",
+    "Cost_Gold": "1,600,000",
+    "Build_Time": "1d 12h",
+    "Experience_Gained": "360",
+    "Town_Hall_Level_Required": "9",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/46/Bomb_Tower3.png"
+  },
+  {
+    "Level": 4,
+    "Damage_per_Second": "40",
+    "Damage_per_Shot": "44",
+    "Hitpoints": "850",
+    "Cost_Gold": "2,000,000",
+    "Build_Time": "2d",
+    "Experience_Gained": "415",
+    "Town_Hall_Level_Required": "10",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/75/Bomb_Tower4.png"
+  },
+  {
+    "Level": 5,
+    "Damage_per_Second": "48",
+    "Damage_per_Shot": "52.8",
+    "Hitpoints": "1,050",
+    "Cost_Gold": "2,800,000",
+    "Build_Time": "3d",
+    "Experience_Gained": "509",
+    "Town_Hall_Level_Required": "11",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/d2/Bomb_Tower5.png"
+  },
+  {
+    "Level": 6,
+    "Damage_per_Second": "56",
+    "Damage_per_Shot": "61.6",
+    "Hitpoints": "1,300",
+    "Cost_Gold": "4,000,000",
+    "Build_Time": "3d",
+    "Experience_Gained": "509",
+    "Town_Hall_Level_Required": "11",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/8/83/Bomb_Tower6.png"
+  },
+  {
+    "Level": 7,
+    "Damage_per_Second": "64",
+    "Damage_per_Shot": "70.4",
+    "Hitpoints": "1,600",
+    "Cost_Gold": "6,300,000",
+    "Build_Time": "8d",
+    "Experience_Gained": "831",
+    "Town_Hall_Level_Required": "12",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/59/Bomb_Tower7.png"
+  },
+  {
+    "Level": 8,
+    "Damage_per_Second": "72",
+    "Damage_per_Shot": "79.2",
+    "Hitpoints": "1,900",
+    "Cost_Gold": "8,800,000",
+    "Build_Time": "9d",
+    "Experience_Gained": "881",
+    "Town_Hall_Level_Required": "13",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/bc/Bomb_Tower8.png"
+  },
+  {
+    "Level": 9,
+    "Damage_per_Second": "84",
+    "Damage_per_Shot": "92.4",
+    "Hitpoints": "2,300",
+    "Cost_Gold": "12,300,000",
+    "Build_Time": "13d",
+    "Experience_Gained": "1,059",
+    "Town_Hall_Level_Required": "14",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/b3/Bomb_Tower9.png"
+  },
+  {
+    "Level": 10,
+    "Damage_per_Second": "94",
+    "Damage_per_Shot": "103.4",
+    "Hitpoints": "2,500",
+    "Cost_Gold": "20,000,000",
+    "Build_Time": "13d 12h",
+    "Experience_Gained": "1,080",
+    "Town_Hall_Level_Required": "15",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/07/Bomb_Tower10.png"
+  },
+  {
+    "Level": 11,
+    "Damage_per_Second": "104",
+    "Damage_per_Shot": "114.4",
+    "Hitpoints": "2,700",
+    "Cost_Gold": "20,800,000",
+    "Build_Time": "14d 12h",
+    "Experience_Gained": "1,119",
+    "Town_Hall_Level_Required": "16",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/70/Bomb_Tower11.png"
+  }
+]

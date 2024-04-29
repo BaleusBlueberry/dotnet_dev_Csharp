@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClashOfClansHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="680" Width="1350">
+        Title="MainWindow" Height="700" Width="1350">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -22,8 +22,6 @@
             <ImageBrush Opacity="0.3" ImageSource="https://wallpapers.com/images/high/clash-of-clans-battle-mejez09j0x7vpknn.webp" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <!--clash of clans town hall image-->
-
         <!--clash of clans helper text-->
         <Image Source="{Binding Icon}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center"></Image>
 
@@ -32,11 +30,11 @@
                 <TextBlock Text="Select Town Hall:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <ComboBox Margin="10,10,0,13" SelectionChanged="DropListSelectedTownHall_OnSelectionChanged" x:Name="DropListSelectTownhall" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
                 </ComboBox>
-                <WrapPanel Margin="10" HorizontalAlignment="Center" Name="TownHall"></WrapPanel>
+                <Image Source="https://static.wikia.nocookie.net/clashofclans/images/5/53/Town_Hall16.png" x:Name="TownHallImage" Width="100" Height="100" Margin="10 -5 0 10"></Image>
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Select Building Type:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <ComboBox  Margin="10,10,0,13" x:Name="DropListSelectBuildingType" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
+                <ComboBox  Margin="10,10,0,13" SelectionChanged="DropListBuildingType_OnSelectionChanged" x:Name="DropListSelectBuildingType" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
                 </ComboBox>
                 <TextBlock Text="Select Building:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <ComboBox  Margin="10,10,0,13" SelectionChanged="DropListSelectedBuilding_OnSelectionChanged" x:Name="DropListSelectBuilding" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
@@ -49,26 +47,22 @@
             <TextBlock Text="List of Buildings:" HorizontalAlignment="Center" Padding="10" FontSize="22" FontWeight="Bold"></TextBlock>
             <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ListOfBuildings"></WrapPanel>
         </StackPanel>
-        
+
 
         <!--building info panel-->
         <StackPanel Grid.Row="2" Grid.Column="0">
             <TextBlock Text="Building's Info:" HorizontalAlignment="Center" Padding="10 0 10 0" FontSize="22" FontWeight="Bold"></TextBlock>
-            <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ListOfInfo"></WrapPanel>
-
-            <DataGrid AutoGenerateColumns="False"
-                      Grid.Column="0"
-                      Margin="10 0 10 0"
-                      Name="buildingGridList"
-            >
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Building's Info:" Binding="{Binding Column1}" Width="2*"/>
-                    <DataGridTextColumn Header="" Binding="{Binding Column2}" Width="*"/>
-                    <DataGridTextColumn Header="" Binding="{Binding Column3}" Width="*"></DataGridTextColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+            <ListBox Margin="10 10 10 10" Height="250" Name="UsersListBox" Background="LightGoldenrodYellow" Grid.Row="2">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Height="20" >
+                            <TextBlock Text="{Binding Key}" FontWeight="Bold" FontSize="15"></TextBlock>
+                            <TextBlock Text="{Binding Value}" FontSize="15"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Image x:Name="BuildingInfoImage" Width="130" Height="130" Margin="250 -200 0 0"/>
         </StackPanel>
-
-
     </Grid>
 </Window>
