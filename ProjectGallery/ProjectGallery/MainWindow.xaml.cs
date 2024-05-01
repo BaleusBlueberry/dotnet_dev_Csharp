@@ -11,11 +11,11 @@ public partial class MainWindow : Window
 {
     private IProjectMeta[] projects = new IProjectMeta[] {
         new PersonManager.Project(),
-        new MemoryGame.Project(),
         new Tic_Tac_Toe.Project(),
         new ClashOfClansHelper.Project(),
         new JokeApp.Project(),
         new UsersAPI.Project(),
+        new UsersCRUDApi.Project(),
     };
 
     public MainWindow()
