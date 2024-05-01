@@ -8,7 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-        
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <DataGrid
@@ -17,7 +18,9 @@
             Margin="10"
             IsReadOnly="True"
             ></DataGrid>
-        <StackPanel Grid.Column="1" Margin="10" Name=""></StackPanel>
+        <StackPanel Grid.Column="1" Margin="10" Name="ButtonStack"></StackPanel>
+
+        
 
     </Grid>
 </Window>
