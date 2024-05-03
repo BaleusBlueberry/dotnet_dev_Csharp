@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Products.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
