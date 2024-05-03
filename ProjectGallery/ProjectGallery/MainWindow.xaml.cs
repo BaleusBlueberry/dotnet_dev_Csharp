@@ -51,8 +51,8 @@ public partial class MainWindow : Window
             ProjectButton button = new ProjectButton(project)
             {
                 Margin = new Thickness(10),
-                Width = 140,
-                Height = 140
+                Width = 80,
+                Height = 80
             };
 
             ProjectsTestsPanel.Children.Add(button);

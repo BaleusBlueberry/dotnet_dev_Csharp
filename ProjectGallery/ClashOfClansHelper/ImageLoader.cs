@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media.Imaging;
 
 namespace ClashOfClansHelper
@@ -20,12 +21,16 @@ namespace ClashOfClansHelper
         {
 
             get
-            {
+            { 
                 string? assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
-                Uri uri = new Uri($"pack://application:,,,/{assemblyName};component/Resources/{imageNameInside}.jpg");
+                Uri uri = new Uri($"pack://application:,,,/{assemblyName};component/Resources/{imageNameInside}");
+
+
                 return new BitmapImage(uri);
             }
         }
 
     }
+    
 }
+

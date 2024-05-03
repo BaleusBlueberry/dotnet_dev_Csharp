@@ -33,7 +33,7 @@ public partial class MainWindow : Window
 
         AsembleTownHallDropList();
 
-        ImageLoader cocImage = new ImageLoader("clashofclansfont");
+        ImageLoader cocImage = new ImageLoader("clashofclanstextv1.png");
 
         DataContext = cocImage;
 

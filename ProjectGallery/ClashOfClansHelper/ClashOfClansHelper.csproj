@@ -9,7 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\clashofclansfont.jpg" />
+    <None Remove="Resources\clashofclans.jpg" />
+    <None Remove="Resources\clashofclanstextv1.png" />
     <None Remove="Resources\coc.jpg" />
   </ItemGroup>
 
@@ -22,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\clashofclansfont.jpg">
+    <Resource Include="Resources\clashofclanstextv1.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\coc.jpg">
