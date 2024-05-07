@@ -41,6 +41,14 @@ public partial class MainWindow : Window
 
     public List<TownHallLevel> townHallLevels = new List<TownHallLevel>();
 
+    public bool goldPass = false;
+
+    // made this into a method to make it easy to read
+    private void toggleGoldPass()
+    {
+        goldPass = !goldPass;
+    }
+
     public void ConvertTownHallJsonToList()
     {
         string TownHallPath = @".\Resources\TownHall.json";
@@ -383,15 +391,37 @@ public partial class MainWindow : Window
 
             var buildingSingleInfo = new DataItem();
 
+            string buildingKey = i.Key.Replace("_", " ");
+            string buildingValue = i.Value;
+
+            
+
+            if (goldPass)
+            {
+                buildingKey = formatGoldPassStringKey(buildingKey);
+                buildingValue = formatGoldPassStringValue(buildingValue);
+            }
+
             SingleBuildingSingleLine buldingInfo = new SingleBuildingSingleLine()
             {
-                Key = i.Key.Replace("_", " ").Insert(i.Key.Length, ":    "),
-                Value = i.Value,
+                Key = buildingKey.Insert(buildingKey.Length, ":    "),
+                Value = buildingValue,
             };
+            
 
             UsersListBox.Items.Add(buldingInfo);
         }
         UsersListBox.Items.Refresh();
+    }
+
+    private string formatGoldPassStringKey(string key) {
+
+        return "emty GoldPass";
+    }
+    private string formatGoldPassStringValue(string value)
+    {
+
+        return "emty GoldPass";
     }
 
     public BitmapImage ClashOfClansImage(string fileName)
@@ -407,6 +437,12 @@ public partial class MainWindow : Window
     {
         UsersListBox.Items.Clear();
         BuildingInfoImage.Source = null;
+    }
+
+    private void GoldPassToggle_Click(object sender, RoutedEventArgs e)
+    {
+        toggleGoldPass();
+
     }
 }
 

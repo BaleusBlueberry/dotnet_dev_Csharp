@@ -43,7 +43,7 @@
         </StackPanel>
 
         <!--list of buildings panel-->
-        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
+        <StackPanel Grid.Column="1" Grid.RowSpan="3" Margin="0,185,0,2">
             <TextBlock Text="List of Buildings:" HorizontalAlignment="Center" Padding="10" FontSize="22" FontWeight="Bold"></TextBlock>
             <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ListOfBuildings"></WrapPanel>
         </StackPanel>
@@ -51,7 +51,11 @@
 
         <!--building info panel-->
         <StackPanel Grid.Row="2" Grid.Column="0">
-            <TextBlock Text="Building's Info:" HorizontalAlignment="Center" Padding="10 0 10 0" FontSize="22" FontWeight="Bold"></TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="10 10 10 0">
+                <Button Content="Gold Pass Toggle" Name="GoldPassToggle" Click="GoldPassToggle_Click" FontSize="22" FontWeight="Bold" Margin="10 10 10 10" Padding="10 5 5 5"></Button>
+                <TextBlock Text="Building's Info:" HorizontalAlignment="Center" Margin="10 10 10 10" Padding="5" FontSize="22" FontWeight="Bold"></TextBlock>
+            </StackPanel>
+
             <ListBox Margin="10 10 10 10" Height="250" Name="UsersListBox" Background="LightGoldenrodYellow" Grid.Row="2">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
