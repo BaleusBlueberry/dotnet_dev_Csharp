@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClashOfClansHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1350">
+        Title="MainWindow" Height="800" Width="1350">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
-            <RowDefinition Height="3*"></RowDefinition>
-            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="7*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -56,7 +56,7 @@
                 <TextBlock Text="Building's Info:" HorizontalAlignment="Center" Margin="10 10 10 10" Padding="5" FontSize="22" FontWeight="Bold"></TextBlock>
             </StackPanel>
 
-            <ListBox Margin="10 10 10 10" Height="250" Name="UsersListBox" Background="LightGoldenrodYellow" Grid.Row="2">
+            <ListBox Margin="10 10 10 0" Height="250" Name="UsersListBox" Background="LightGoldenrodYellow" Grid.Row="2">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Height="20" >
@@ -66,7 +66,11 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Image x:Name="BuildingInfoImage" Width="130" Height="130" Margin="250 -200 0 0"/>
+            <StackPanel Orientation="Horizontal" Margin="10 10 10 0" HorizontalAlignment="Center">
+                <Image x:Name="PreviusBuildingInfoImage" Width="100" Height="100"/>
+                <Image x:Name="BuildingUpgradeArrow" Width="50" Height="50" Source="/ClashOfClansHelper;component/Resources/greenarrow.png" Visibility="Hidden"/>
+                <Image x:Name="BuildingInfoImage" Width="100" Height="100"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

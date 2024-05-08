@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 using System.Windows.Shapes;
 using System.Text.Json.Serialization;
 using System.Reflection.Emit;
+using System.Net.NetworkInformation;
 
 namespace ClashOfClansHelper;
 
@@ -35,9 +36,12 @@ public partial class MainWindow : Window
 
         ImageLoader cocImage = new ImageLoader("clashofclanstextv1.png");
 
+        ImageLoader cocGreenArrow = new ImageLoader("greenarrow.png");
+
         DataContext = cocImage;
 
     }
+    public TownHallLevel selectedTownHall = new TownHallLevel();
 
     public List<TownHallLevel> townHallLevels = new List<TownHallLevel>();
 
@@ -48,6 +52,8 @@ public partial class MainWindow : Window
     {
         goldPass = !goldPass;
     }
+
+    public IDictionary<int, Dictionary<string, string>> dictionaryOfBildings = new Dictionary<int, Dictionary<string, string>>();
 
     public void ConvertTownHallJsonToList()
     {
@@ -73,7 +79,7 @@ public partial class MainWindow : Window
         }
 
         // asembeling the drop list of the town hall levels
-        for (int i = 1; i <= 15; i++)
+        for (int i = 1; i <= 16; i++)
         {
             DropListSelectTownhall.Items.Add($"level {i}");
         }
@@ -139,8 +145,6 @@ public partial class MainWindow : Window
 
     }
 
-    public IDictionary<int, Dictionary<string, string>> dictionaryOfBildings = new Dictionary<int, Dictionary<string, string>>();
-
     public void PrintListBuilding(string path, string buildingType)
     {
 
@@ -177,7 +181,7 @@ public partial class MainWindow : Window
                     MessageBox.Show("Error: Unable to parse building level as an integer.");
                     continue;
                 }
-                
+
                 SingleBuilding bulding = new SingleBuilding(building["Level"], building["picture"], building);
                 // Create BuildingInfoBox and set its properties dynamically
                 BuildingInfoBox buildingInfoBox = new BuildingInfoBox(bulding)
@@ -283,8 +287,6 @@ public partial class MainWindow : Window
         return;
     }
 
-    public TownHallLevel selectedTownHall = new TownHallLevel();
-
     private async Task RednderselectedTownHallAsync()
     {
         selectedTownHall = new TownHallLevel();
@@ -377,9 +379,29 @@ public partial class MainWindow : Window
         }
     }
 
-    public void AddBuildingToGridInfo(Dictionary<string, string> building)
+    private void AddBuildingToGridInfo(Dictionary<string, string> building)
     {
+        bool isFirstLevel = true;
+
+        Dictionary<string, string> PreviusBuilding;
+
         ResetSingleBuilding();
+
+        UnloadPreviusBuldingImage();
+
+        foreach (var i in building)
+        {
+            if (i.Key == "Level")
+            {
+                int currentLevel = int.Parse(i.Value);
+                if (currentLevel > 1)
+                {
+                    LoadPreviusBuildingImage(currentLevel);
+                    isFirstLevel = false;
+                    PreviusBuilding = dictionaryOfBildings[currentLevel - 1];
+                }
+            }
+        }
 
         foreach (var i in building)
         {
@@ -389,42 +411,76 @@ public partial class MainWindow : Window
                 continue;
             }
 
-            var buildingSingleInfo = new DataItem();
-
-            string buildingKey = i.Key.Replace("_", " ");
-            string buildingValue = i.Value;
-
-            
-
-            if (goldPass)
+            if (isFirstLevel)
             {
-                buildingKey = formatGoldPassStringKey(buildingKey);
-                buildingValue = formatGoldPassStringValue(buildingValue);
+                var buildingSingleInfo = new DataItem();
+
+                string buildingKey = i.Key.Replace("_", " ");
+                string buildingValue = i.Value;
+
+                if (goldPass)
+                {
+                    buildingKey = formatGoldPassStringKey(buildingKey);
+                    buildingValue = formatGoldPassStringValue(buildingValue);
+                }
+
+                SingleBuildingSingleLine buldingInfo = new SingleBuildingSingleLine()
+                {
+                    Key = buildingKey.Insert(buildingKey.Length, ":    "),
+                    Value = buildingValue,
+                };
+                
+
+
+                UsersListBox.Items.Add(buldingInfo);
+                
             }
-
-            SingleBuildingSingleLine buldingInfo = new SingleBuildingSingleLine()
-            {
-                Key = buildingKey.Insert(buildingKey.Length, ":    "),
-                Value = buildingValue,
-            };
-            
-
-            UsersListBox.Items.Add(buldingInfo);
         }
         UsersListBox.Items.Refresh();
     }
 
-    private string formatGoldPassStringKey(string key) {
+    private void LoadPreviusBuildingImage(int currentBuildingLevel)
+    {
+        BuildingUpgradeArrow.Visibility = Visibility.Visible;
+
+        Dictionary<string, string> PreviusBuilding = dictionaryOfBildings[currentBuildingLevel - 1];
+
+        foreach (var i in PreviusBuilding)
+        {
+            if (i.Key == "picture")
+            {
+                PreviusBuildingInfoImage.Source = new BitmapImage(new Uri(i.Value));
+            }
+        }
+    }
+    private void UnloadPreviusBuldingImage()
+    {
+        PreviusBuildingInfoImage.Source = null;
+        BuildingUpgradeArrow.Visibility = Visibility.Hidden;
+    }
+
+    private string formatGoldPassStringKey(string key)
+    {
 
         return "emty GoldPass";
     }
     private string formatGoldPassStringValue(string value)
     {
 
-        return "emty GoldPass";
+        // Apply strikethrough effect using Unicode combining characters
+        string crossedOutValue = "";
+        foreach (char c in value)
+        {
+            crossedOutValue += c + "\u0336"; // Combining Long Stroke Overlay
+        }
+
+        // Append " Gold Pass" after the crossed-out value
+        string formattedText = crossedOutValue + " Gold Pass";
+
+        return formattedText;
     }
 
-    public BitmapImage ClashOfClansImage(string fileName)
+    private BitmapImage ClashOfClansImage(string fileName)
     {
 
         string? assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
@@ -433,7 +489,7 @@ public partial class MainWindow : Window
 
     }
 
-    public void ResetSingleBuilding()
+    private void ResetSingleBuilding()
     {
         UsersListBox.Items.Clear();
         BuildingInfoImage.Source = null;
@@ -452,6 +508,8 @@ public class SingleBuildingSingleLine
     public string Key { get; set; }
 
     public string Value { get; set; }
+
+    public System.Windows.Media.Brush Foreground { get; set; }
 }
 public class SingleBuildingImage
 {

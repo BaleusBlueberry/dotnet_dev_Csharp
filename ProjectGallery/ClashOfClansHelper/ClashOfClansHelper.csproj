@@ -12,6 +12,7 @@
     <None Remove="Resources\clashofclans.jpg" />
     <None Remove="Resources\clashofclanstextv1.png" />
     <None Remove="Resources\coc.jpg" />
+    <None Remove="Resources\greenarrow.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,14 +20,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Resources\clashofclanstextv1.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\coc.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\greenarrow.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
@@ -79,6 +79,10 @@
   <ItemGroup>
     <Folder Include="Resources\Data\Buildings\" />
     <Folder Include="Resources\Data\Traps\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,7 +11,9 @@ public class TownHallLevel
 {
     public int Cannon { get; set; }
     public int ArcherTower { get; set; }
-    public int Wall { get; set; }
+    public int BuilderHut { get; set; }
+    public int Walls { get; set; }
+    public int Scattershot { get; set; }
     public int Mortar { get; set; }
     public int AirDefense { get; set; }
     public int WizardTower { get; set; }

@@ -33,6 +33,8 @@ public partial class MainWindow : Window
         AddButtons("Get All New Objects", GetAllNewObjMethod, GetAllNewObjMethod);
         AddButtons("Orderr By", OrderByMethod, OrderBySyntax);
         AddButtons("Orderr By twice", OrderByMethodTwice, OrderByMethodTwice);
+        AddButtons("Filters", FilterSyntax, FilterByMethod);
+        AddButtons("First", FirstMethod, FirstMethod);
     }
 
     private void GetAllMethod(object sender, RoutedEventArgs e)
@@ -41,6 +43,21 @@ public partial class MainWindow : Window
             rawListOfProducts.Select(product => product);
 
         ResultsDataGrid.ItemsSource = result;
+    }
+    private void FirstMethod(object sender, RoutedEventArgs e)
+    {
+        var result =
+            rawListOfProducts.OrderBy(product => product.CategoryId).FirstOrDefault();
+
+        if (result == null)
+        {
+            ResultsDataGrid.ItemsSource = null;
+        } else
+        {
+            ResultsDataGrid.ItemsSource = new List<Product> { result };
+        }
+
+        
     }
 
     private void GetAllNamesMethod(object sender, RoutedEventArgs e)
@@ -97,6 +114,26 @@ public partial class MainWindow : Window
     {
         IEnumerable<Product> result =
             rawListOfProducts.OrderBy(product => product.CategoryId).ThenBy(product => product.Price);
+        /*rawListOfProducts.OrderByDescending(product => product.Id);*/
+
+
+        ResultsDataGrid.ItemsSource = result;
+    }
+
+    private void FilterByMethod(object sender, RoutedEventArgs e)
+    {
+        IEnumerable<Product> result =
+            rawListOfProducts.FindAll(product => product.CategoryId == 3);
+        /*rawListOfProducts.OrderByDescending(product => product.Id);*/
+
+
+        ResultsDataGrid.ItemsSource = result;
+    }
+
+    private void FilterSyntax(object sender, RoutedEventArgs e)
+    {
+        var result = from product in rawListOfProducts where product.CategoryId == 3 select product;
+        
         /*rawListOfProducts.OrderByDescending(product => product.Id);*/
 
 

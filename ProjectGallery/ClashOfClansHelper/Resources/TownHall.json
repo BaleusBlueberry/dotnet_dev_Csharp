@@ -2,7 +2,7 @@
   {
     "Cannon": 2,
     "ArcherTower": 0,
-    "Wall": 0,
+    "Walls": 0,
     "Mortar": 0,
     "AirDefense": 0,
     "WizardTower": 0,
@@ -33,7 +33,7 @@
   {
     "Cannon": 3,
     "ArcherTower": 2,
-    "Wall": 2,
+    "Walls": 2,
     "Mortar": 0,
     "AirDefense": 0,
     "WizardTower": 0,
@@ -64,7 +64,7 @@
   {
     "Cannon": 4,
     "ArcherTower": 3,
-    "Wall": 3,
+    "Walls": 3,
     "Mortar": 1,
     "AirDefense": 0,
     "WizardTower": 0,
@@ -95,7 +95,7 @@
   {
     "Cannon": 5,
     "ArcherTower": 4,
-    "Wall": 4,
+    "Walls": 4,
     "Mortar": 2,
     "AirDefense": 2,
     "WizardTower": 0,
@@ -126,7 +126,7 @@
   {
     "Cannon": 6,
     "ArcherTower": 6,
-    "Wall": 5,
+    "Walls": 5,
     "Mortar": 3,
     "AirDefense": 3,
     "WizardTower": 2,
@@ -157,7 +157,7 @@
   {
     "Cannon": 7,
     "ArcherTower": 7,
-    "Wall": 6,
+    "Walls": 6,
     "Mortar": 4,
     "AirDefense": 4,
     "WizardTower": 3,
@@ -188,7 +188,7 @@
   {
     "Cannon": 8,
     "ArcherTower": 8,
-    "Wall": 7,
+    "Walls": 7,
     "Mortar": 5,
     "AirDefense": 5,
     "WizardTower": 4,
@@ -219,7 +219,7 @@
   {
     "Cannon": 10,
     "ArcherTower": 10,
-    "Wall": 8,
+    "Walls": 8,
     "Mortar": 6,
     "AirDefense": 6,
     "WizardTower": 6,
@@ -250,7 +250,7 @@
   {
     "Cannon": 11,
     "ArcherTower": 11,
-    "Wall": 10,
+    "Walls": 10,
     "Mortar": 7,
     "AirDefense": 7,
     "WizardTower": 7,
@@ -281,7 +281,7 @@
   {
     "Cannon": 13,
     "ArcherTower": 13,
-    "Wall": 11,
+    "Walls": 11,
     "Mortar": 8,
     "AirDefense": 8,
     "WizardTower": 9,
@@ -312,7 +312,7 @@
   {
     "Cannon": 15,
     "ArcherTower": 15,
-    "Wall": 12,
+    "Walls": 12,
     "Mortar": 10,
     "AirDefense": 9,
     "WizardTower": 10,
@@ -343,7 +343,7 @@
   {
     "Cannon": 17,
     "ArcherTower": 17,
-    "Wall": 13,
+    "Walls": 13,
     "Mortar": 12,
     "AirDefense": 10,
     "WizardTower": 11,
@@ -369,12 +369,13 @@
     "Blacksmith": 5,
     "Workshop": 3,
     "PetHouse": 0,
-    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/76/Town_Hall12.png"
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/c7/Town_Hall12-1.png"
   },
   {
     "Cannon": 19,
+    "Scattershot": 2,
     "ArcherTower": 19,
-    "Wall": 14,
+    "Walls": 14,
     "Mortar": 13,
     "AirDefense": 11,
     "WizardTower": 13,
@@ -400,12 +401,14 @@
     "Blacksmith": 6,
     "Workshop": 5,
     "PetHouse": 0,
-    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/f6/Town_Hall13.png"
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/98/Town_Hall13-1.png"
   },
   {
     "Cannon": 20,
+    "BuilderHut": 4,
+    "Scattershot": 3,
     "ArcherTower": 20,
-    "Wall": 15,
+    "Walls": 15,
     "Mortar": 14,
     "AirDefense": 12,
     "WizardTower": 14,
@@ -431,12 +434,14 @@
     "Blacksmith": 7,
     "Workshop": 6,
     "PetHouse": 4,
-    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e7/Town_Hall14.png"
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e0/Town_Hall14-1.png"
   },
   {
     "Cannon": 21,
+    "BuilderHut": 5,
+    "Scattershot": 4,
     "ArcherTower": 21,
-    "Wall": 16,
+    "Walls": 16,
     "Mortar": 15,
     "AirDefense": 13,
     "WizardTower": 15,
@@ -462,12 +467,14 @@
     "Blacksmith": 8,
     "Workshop": 7,
     "PetHouse": 8,
-    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/66/Town_Hall15.png"
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/5b/Town_Hall15-1.png"
   },
   {
     "Cannon": 21,
+    "BuilderHut": 6,
+    "Scattershot": 5,
     "ArcherTower": 21,
-    "Wall": 17,
+    "Walls": 17,
     "Mortar": 16,
     "AirDefense": 14,
     "WizardTower": 16,
@@ -476,7 +483,7 @@
     "BombTower": 11,
     "XBow": 11,
     "InfernoTower": 10,
-    "EagleArtillery": 6,
+    "EagleArtillery": 7,
     "Bomb": 12,
     "SpringTrap": 5,
     "AirBomb": 11,
