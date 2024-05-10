@@ -18,6 +18,8 @@ using System.Windows.Shapes;
 using System.Text.Json.Serialization;
 using System.Reflection.Emit;
 using System.Net.NetworkInformation;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace ClashOfClansHelper;
 
@@ -45,6 +47,8 @@ public partial class MainWindow : Window
 
     public List<TownHallLevel> townHallLevels = new List<TownHallLevel>();
 
+    public IDictionary<int, Dictionary<string, string>> dictionaryOfBildings = new Dictionary<int, Dictionary<string, string>>();
+
     public bool goldPass = false;
 
     // made this into a method to make it easy to read
@@ -53,9 +57,8 @@ public partial class MainWindow : Window
         goldPass = !goldPass;
     }
 
-    public IDictionary<int, Dictionary<string, string>> dictionaryOfBildings = new Dictionary<int, Dictionary<string, string>>();
-
     public void ConvertTownHallJsonToList()
+        //takes the data of the townhalls from a folder and convert it into a list
     {
         string TownHallPath = @".\Resources\TownHall.json";
         string dataInString = File.ReadAllText(TownHallPath);
@@ -65,6 +68,7 @@ public partial class MainWindow : Window
     }
 
     public void AsembleTownHallDropList()
+        // asembles the townhall droplist and the droplist of the buldings types
     {
         string[] ListOfBuildingTypes = new string[] {
         "Defensive Buildings", "Buildings", "Traps"
@@ -86,19 +90,23 @@ public partial class MainWindow : Window
     }
 
     public void AsembleBuldingDropList(string _buldingType)
+    // asembles the droplist of DropListSelectBuilding with the buldings names
     {
         DropListSelectBuilding.Items.Clear();
 
         string dataFolderPath = @".\Resources\Data\";
         // Get all files in the "Data" folder
 
+        // gets the folder of the current buidling type
         string dataFolderPathOfDefensiveBuildings = dataFolderPath + _buldingType;
 
         // asembeling the drop list of the Defensive Buldings
         string[] dataFiles = Directory.GetFiles(dataFolderPathOfDefensiveBuildings);
 
+        //if user didn't select a town hall at DropListSelectTownhall
         if (DropListSelectTownhall.SelectedItem == null)
         {
+            // displays all buildings
             foreach (string filePath in dataFiles)
             {
                 try
@@ -114,6 +122,7 @@ public partial class MainWindow : Window
         }
         else
         {
+            // display only buildings that exist in the currently selected DropListSelectTownhall
             foreach (string filePath in dataFiles)
             {
                 try
@@ -128,13 +137,13 @@ public partial class MainWindow : Window
                     // Check if the property exists
                     if (property != null)
                     {
+                        // convers the property of the selected town hall to int dynamically acording to the current buliding name
                         int propertyValue = (int)property.GetValue(selectedTownHall);
                         if (propertyValue != 0)
                         {
                             DropListSelectBuilding.Items.Add($"{ClearedName}");
                         }
                     }
-                    /*if (selectedTownHall.GetType().GetProperties().Select(p =>) == 0)*/
                 }
                 catch (Exception ex)
                 {
@@ -146,17 +155,18 @@ public partial class MainWindow : Window
     }
 
     public void PrintListBuilding(string path, string buildingType)
+    // displays all the buildings in the current path inside buildingType
     {
-
+        // finds the location of the item
         string dataInString = File.ReadAllText($@".\Resources\Data\{buildingType}\{path}.json");
 
         dictionaryOfBildings = ConvertJsonToDictionary(dataInString);
 
+        // loops over each bulding inside dictionaryOfBildings 
         foreach (Dictionary<string, string> building in dictionaryOfBildings.Values)
         {
             try
             {
-
                 if (int.TryParse(building["Level"], out int buildingLvl))
                 {
                     string ClearedName = path.Replace(" ", "");
@@ -169,6 +179,9 @@ public partial class MainWindow : Window
                     if (property != null)
                     {
                         int propertyValue = (int)property.GetValue(selectedTownHall);
+
+                        // tests if the current bulding level is lower then the level of that bulding inside the current selected level of TownHallLevel
+                        // to skip over any building that has a higher level then the allowed level of the currently selected TownHallLevel
                         if (buildingLvl > propertyValue)
                         {
                             continue;
@@ -181,18 +194,21 @@ public partial class MainWindow : Window
                     MessageBox.Show("Error: Unable to parse building level as an integer.");
                     continue;
                 }
-
+                // creates a new SingleBuilding with its level and picture data
                 SingleBuilding bulding = new SingleBuilding(building["Level"], building["picture"], building);
-                // Create BuildingInfoBox and set its properties dynamically
+
+                // Create BuildingInfoBox and set its properties dynamically from the bulding
                 BuildingInfoBox buildingInfoBox = new BuildingInfoBox(bulding)
                 {
                     Margin = new Thickness(10),
                     Width = 100,
                     Height = 100
                 };
+
                 // Add BuildingInfoBox to the ListOfBuildings stack panel
                 ListOfBuildings.Children.Add(buildingInfoBox);
 
+                // Adds the event listener in order to make BuildingInfoBox_BuildingButtonClicked work for each element
                 buildingInfoBox.BuildingButtonClicked += BuildingInfoBox_BuildingButtonClicked;
             }
             catch (Exception ex)
@@ -204,6 +220,8 @@ public partial class MainWindow : Window
 
 
     public static IDictionary<int, Dictionary<string, string>> ConvertJsonToDictionary(string jsonData)
+    //takes in a json and convers it into a Dictionary<string, string> dynamically
+    // in order to find each entery of the dictionary with a level
     {
         var jArray = JArray.Parse(jsonData);
         var dictionary = new Dictionary<int, Dictionary<string, string>>();
@@ -222,6 +240,8 @@ public partial class MainWindow : Window
     }
 
     private async void DropListBuildingType_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+    // when clicking an item of the droplist of buildingtype
+    // test and assembles the list of buildings in the dropbox DropListSelectBuilding according to the current townhall and what types of buildings
     {
         ListOfBuildings.Children.Clear();
 
@@ -240,10 +260,9 @@ public partial class MainWindow : Window
             // Check if the selected item is not null
             if (selectedItem != null)
             {
-                // Assuming the selected item is a string, you can assign it to the selection variable
+                // Assuming the selected item is a string sets it ass a string
                 selection = selectedItem.ToString();
 
-                // Now you can use the selection variable as needed
             }
             else
             {
@@ -251,6 +270,7 @@ public partial class MainWindow : Window
                 return;
             }
 
+            // puts the name of the building in the AsembleBuldingDropList
             AsembleBuldingDropList(selection);
             PrintBuildings();
         }
@@ -270,10 +290,11 @@ public partial class MainWindow : Window
     }
 
     private async void DropListSelectedTownHall_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+    // when user selects a town hall from the selectedTownHall
     {
         ListOfBuildings.Children.Clear();
 
-        await RednderselectedTownHallAsync(); // Await the asynchronous method here
+        await RednderselectedTownHallAsync(); // Await the asynchronous method here to load the current townhall data
 
         TownHallImage.Source = new BitmapImage(new Uri(selectedTownHall.picture));
 
@@ -288,20 +309,26 @@ public partial class MainWindow : Window
     }
 
     private async Task RednderselectedTownHallAsync()
+        // loads the current town hall data 
     {
         selectedTownHall = new TownHallLevel();
 
+        // if the user didn't select a town hall, set it to max (16 level)
         if (DropListSelectTownhall.SelectedItem == null)
         {
             selectedTownHall = townHallLevels[15];
         }
         else
         {
+            // translate all data of the currently selected DropListSelectTownhall to string and clean it
             string currentStringOfTownHall = DropListSelectTownhall.SelectedItem.ToString();
             currentStringOfTownHall = currentStringOfTownHall.Replace("level", "").Trim();
             int levelNumber;
+
+            // convert it to int
             if (int.TryParse(currentStringOfTownHall, out levelNumber))
             {
+                // set the current selectedTownHall to what the user selected
                 selectedTownHall = townHallLevels[levelNumber - 1];
             }
             else
@@ -312,12 +339,11 @@ public partial class MainWindow : Window
     }
 
     private void PrintBuildings()
+    //tests before asembling the the DropListSelectBuilding
     {
 
         string selectedBuildingTypeName;
         string selectedBuildingName;
-
-        // test if the dropdown of townhall is empty
 
         // test if the dropdown of Buildingtype is empty 
         if (DropListSelectBuildingType.SelectedItem == null || DropListSelectBuilding.SelectedItem == null)
@@ -347,28 +373,6 @@ public partial class MainWindow : Window
         return new Uri(value);
     }
 
-    public class SingleBuilding
-    {
-        public string level { get; set; }
-        public string picture { get; set; }
-        public Dictionary<string, string> bulding { get; set; }
-
-        public SingleBuilding(string level, string picture, Dictionary<string, string> bulding)
-        {
-            this.level = level;
-            this.picture = picture;
-            this.bulding = bulding;
-        }
-    }
-
-    public class DataItem
-    {
-        public string Column1 { get; set; }
-        public string Column2 { get; set; }
-
-    }
-
-
     private void BuildingInfoBox_BuildingButtonClicked(object sender, EventArgs e)
     {
         // Get the building dictionary from the BuildingInfoBox instance
@@ -380,6 +384,8 @@ public partial class MainWindow : Window
     }
 
     private void AddBuildingToGridInfo(Dictionary<string, string> building)
+    // this function takes in a single dictionarry or a building
+    // and displays all the information in the UsersListBox
     {
         bool isFirstLevel = true;
 
@@ -389,62 +395,74 @@ public partial class MainWindow : Window
 
         UnloadPreviusBuldingImage();
 
+        // gose over each dictionarry entery of a building in order to find the level and save it
         foreach (var i in building)
         {
+            // if the entery is a level
             if (i.Key == "Level")
             {
                 int currentLevel = int.Parse(i.Value);
+
+                //if the level is grear then 1
                 if (currentLevel > 1)
                 {
+                    //loads an image of the building thats one level below the current bulding level
                     LoadPreviusBuildingImage(currentLevel);
                     isFirstLevel = false;
+                    // loads in the PreviusBuilding data
                     PreviusBuilding = dictionaryOfBildings[currentLevel - 1];
                 }
             }
         }
 
+        // gose over each dictionarry entery of a building in order to display the data
         foreach (var i in building)
         {
+            // logic to find the picture entry and display it in the BuildingInfoImage
             if (i.Key == "picture")
             {
                 BuildingInfoImage.Source = new BitmapImage(new Uri(i.Value));
                 continue;
             }
+            string buildingKey = i.Key.Replace("_", " ");
+            string buildingValue = i.Value;
 
-            if (isFirstLevel)
+            // builds the current line that would be displayed it UsersListBox
+            SingleBuildingSingleLine buildingInfo = new SingleBuildingSingleLine()
             {
-                var buildingSingleInfo = new DataItem();
+                Key = buildingKey.Insert(buildingKey.Length, ":    "),
+                Value = buildingValue,
+            };
 
-                string buildingKey = i.Key.Replace("_", " ");
-                string buildingValue = i.Value;
+            // test if the user clicked on goladpass and if the current building entery contains a gold pass discountble item
+            if (goldPass && FindGoldPassDiscountedValues(buildingKey))
+            {
+                //IsStrikethrough SecondValue ShowArrow
+                buildingInfo.ShowArrow = true;
+                buildingInfo.IsStrikethrough = true;
 
-                if (goldPass)
-                {
-                    buildingKey = formatGoldPassStringKey(buildingKey);
-                    buildingValue = formatGoldPassStringValue(buildingValue);
-                }
+                buildingInfo.SecondValue = DisplayCorrectValueAfterGoldPass(buildingKey, buildingValue);
 
-                SingleBuildingSingleLine buldingInfo = new SingleBuildingSingleLine()
-                {
-                    Key = buildingKey.Insert(buildingKey.Length, ":    "),
-                    Value = buildingValue,
-                };
-                
-
-
-                UsersListBox.Items.Add(buldingInfo);
-                
             }
+
+            if (!isFirstLevel)
+            {
+
+            };
+            UsersListBox.Items.Add(buildingInfo);
         }
         UsersListBox.Items.Refresh();
     }
 
     private void LoadPreviusBuildingImage(int currentBuildingLevel)
+    // loads the previus bulding at PreviusBuildingInfoImage
     {
         BuildingUpgradeArrow.Visibility = Visibility.Visible;
 
+        // loads the previus building 
         Dictionary<string, string> PreviusBuilding = dictionaryOfBildings[currentBuildingLevel - 1];
 
+        // find the key picture inside the dictionarry in order to save it into the source of PreviusBuildingInfoImage
         foreach (var i in PreviusBuilding)
         {
             if (i.Key == "picture")
@@ -454,33 +472,86 @@ public partial class MainWindow : Window
         }
     }
     private void UnloadPreviusBuldingImage()
+    //unload the PreviusBuildingInfoImage and hide BuildingUpgradeArrow in the list of building info
     {
         PreviusBuildingInfoImage.Source = null;
         BuildingUpgradeArrow.Visibility = Visibility.Hidden;
     }
 
-    private string formatGoldPassStringKey(string key)
+    private bool FindGoldPassDiscountedValues(string key)
+        //logic to find any matching values of a goldpass inside the key 
     {
-
-        return "emty GoldPass";
-    }
-    private string formatGoldPassStringValue(string value)
-    {
-
-        // Apply strikethrough effect using Unicode combining characters
-        string crossedOutValue = "";
-        foreach (char c in value)
+        List<string> goldPassDiscountsListNames = new List<string>()
         {
-            crossedOutValue += c + "\u0336"; // Combining Long Stroke Overlay
+            "gold", "elixir", "darkelixer", "build",
+        };
+
+        //cleanup
+        string cleanKey = key.ToLower().Replace(" ", "");
+
+        bool keyContainsName = false;
+
+        //find if any goldpass value is inside the key string
+        foreach (string i in goldPassDiscountsListNames)
+        {
+            if (cleanKey.Contains(i)) keyContainsName = true;
+        }
+        return keyContainsName;
+    }
+
+    private string DisplayCorrectValueAfterGoldPass(string key, string value)
+        // logic to calculate the value acording to the type of the key
+    {
+        List<string> goldPassDiscountsListResurces = new List<string>()
+        {
+            "gold", "elixir", "darkelixer",
+        };
+        string goldPassDiscoutBuilding = "build";
+
+        string cleanKey = key.ToLower().Replace(" ", "");
+
+        // finds if the key contains any of the gold pass resurce words
+        if (goldPassDiscountsListResurces.Any(resource => cleanKey.IndexOf(resource) != -1))
+        {
+            // takes out anythings thats not a number
+            string cleanValue = Regex.Replace(value, "[^0-9]", "");
+
+            // returns the discounted resurce value of the inputed value
+            if (double.TryParse(cleanValue, out double valueAsInt))
+            {
+                double result = valueAsInt * 0.8;
+                string output = result.ToString();
+                return output;
+            }
+        // finds if the key has a build in it to assemble the discounted time
+        } else if (key.Contains(goldPassDiscoutBuilding))
+        {
+
+            string hours = "";
+            string days = "";
+
+            string[] valueData = value.Split(' ');
+
+            // test each value of the list
+            foreach (string part in valueData) {
+
+                string trimmedPart = part.Trim().ToLower();
+
+                //finds the days
+                if (trimmedPart.EndsWith("h")) {
+
+                    continue;
+                }
+
+            }
+
         }
 
-        // Append " Gold Pass" after the crossed-out value
-        string formattedText = crossedOutValue + " Gold Pass";
-
-        return formattedText;
+        return value;
     }
 
     private BitmapImage ClashOfClansImage(string fileName)
+        //loads an image of the filename 
     {
 
         string? assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
@@ -490,6 +561,7 @@ public partial class MainWindow : Window
     }
 
     private void ResetSingleBuilding()
+    //resets the UsersListBox and erases BuildingInfoImage
     {
         UsersListBox.Items.Clear();
         BuildingInfoImage.Source = null;
@@ -501,18 +573,3 @@ public partial class MainWindow : Window
 
     }
 }
-
-public class SingleBuildingSingleLine
-{
-
-    public string Key { get; set; }
-
-    public string Value { get; set; }
-
-    public System.Windows.Media.Brush Foreground { get; set; }
-}
-public class SingleBuildingImage
-{
-    public string Image { get; set; }
-}
-
