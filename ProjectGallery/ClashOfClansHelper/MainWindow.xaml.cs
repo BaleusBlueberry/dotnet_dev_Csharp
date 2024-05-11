@@ -358,6 +358,7 @@ public partial class MainWindow : Window
             selectedBuildingTypeName = DropListSelectBuildingType.SelectedItem.ToString();
             selectedBuildingName = DropListSelectBuilding.SelectedItem.ToString();
 
+            // print the DropListSelectBuilding
             PrintListBuilding(selectedBuildingName, selectedBuildingTypeName);
 
         }
@@ -524,30 +525,68 @@ public partial class MainWindow : Window
                 return output;
             }
         // finds if the key has a build in it to assemble the discounted time
-        } else if (key.Contains(goldPassDiscoutBuilding))
+        } else if (cleanKey.Contains(goldPassDiscoutBuilding))
         {
 
-            string hours = "";
-            string days = "";
+            int hours = 0;
 
             string[] valueData = value.Split(' ');
 
-            // test each value of the list
+            // test each value of the list and convert hours and days into hours
             foreach (string part in valueData) {
 
                 string trimmedPart = part.Trim().ToLower();
+                int currentPartInt = StringToNumber(trimmedPart);
 
                 //finds the days
                 if (trimmedPart.EndsWith("h")) {
 
-                    continue;
+                    hours += currentPartInt;
+                }
+
+                if (trimmedPart.EndsWith("d")) {
+
+                    hours += currentPartInt * 24;
                 }
 
             }
 
+            double discountedHours = Math.Floor(hours * 0.8);
+
+            if (discountedHours < 24)
+            {
+                return $"{discountedHours}h";
+
+            } else if (discountedHours >= 24) {
+
+                double days = Math.Floor(discountedHours / 24);
+
+                double finalHours = discountedHours - days *24;
+
+                string finalString = $"{days}d " + (finalHours == 0 ? "" : $"{finalHours}h");
+
+                return finalString;
+
+
+            }
         }
 
         return value;
+    }
+
+    private int StringToNumber(string stringValue)
+    {
+
+        string cleanValue = Regex.Replace(stringValue, "[^0-9]", "");
+        if (int.TryParse(cleanValue, out int valueAsInt))
+        {
+            return valueAsInt;
+        }
+        else
+        {
+            MessageBox.Show("there was an error converting a string to a number: returns 0");
+            return 0;
+        }
     }
 
     private BitmapImage ClashOfClansImage(string fileName)
