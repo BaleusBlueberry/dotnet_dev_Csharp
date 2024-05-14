@@ -20,6 +20,9 @@ using System.Reflection.Emit;
 using System.Net.NetworkInformation;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Diagnostics.Eventing.Reader;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace ClashOfClansHelper;
 
@@ -58,7 +61,7 @@ public partial class MainWindow : Window
     }
 
     public void ConvertTownHallJsonToList()
-        //takes the data of the townhalls from a folder and convert it into a list
+    //takes the data of the townhalls from a folder and convert it into a list
     {
         string TownHallPath = @".\Resources\TownHall.json";
         string dataInString = File.ReadAllText(TownHallPath);
@@ -68,10 +71,10 @@ public partial class MainWindow : Window
     }
 
     public void AsembleTownHallDropList()
-        // asembles the townhall droplist and the droplist of the buldings types
+    // asembles the townhall droplist and the droplist of the buldings types
     {
         string[] ListOfBuildingTypes = new string[] {
-        "Defensive Buildings", "Buildings", "Traps"
+        "Defensive Buildings", "Army Buildings", "Traps", "Resource Buildings",
         };
 
         ConvertTownHallJsonToList();
@@ -309,7 +312,7 @@ public partial class MainWindow : Window
     }
 
     private async Task RednderselectedTownHallAsync()
-        // loads the current town hall data 
+    // loads the current town hall data 
     {
         selectedTownHall = new TownHallLevel();
 
@@ -390,11 +393,21 @@ public partial class MainWindow : Window
     {
         bool isFirstLevel = true;
 
-        Dictionary<string, string> PreviusBuilding;
+        Dictionary<string, string> PreviusBuilding = null;
 
         ResetSingleBuilding();
 
         UnloadPreviusBuldingImage();
+
+        List<string> goldPassDiscountsListNames = new List<string>()
+        {
+            "gold", "elixir", "darkelixer", "build",
+        };
+
+        List<string> skippbleValues = new List<string>()
+        {
+            "gained", "required", "unlock"
+        };
 
         // gose over each dictionarry entery of a building in order to find the level and save it
         foreach (var i in building)
@@ -432,24 +445,48 @@ public partial class MainWindow : Window
             SingleBuildingSingleLine buildingInfo = new SingleBuildingSingleLine()
             {
                 Key = buildingKey.Insert(buildingKey.Length, ":    "),
-                Value = buildingValue,
             };
 
-            // test if the user clicked on goladpass and if the current building entery contains a gold pass discountble item
-            if (goldPass && FindGoldPassDiscountedValues(buildingKey))
+            //test if the current building entery contains a gold pass discountble item
+            if (SearchForMatchingString(goldPassDiscountsListNames, buildingKey))
             {
-                //IsStrikethrough SecondValue ShowArrow
-                buildingInfo.ShowArrow = true;
-                buildingInfo.IsStrikethrough = true;
+                buildingInfo.Value = buildingValue;
 
-                buildingInfo.SecondValue = DisplayCorrectValueAfterGoldPass(buildingKey, buildingValue);
+                // test if the user clicked on goladpass
+                if (goldPass)
+                {
+                    //IsStrikethrough SecondValue ShowArrow
+                    buildingInfo.ShowArrow = true;
+                    buildingInfo.IsStrikethrough = true;
+                    buildingInfo.SecondValue = DisplayCorrectValueAfterGoldPass(buildingKey, buildingValue);
+                }
 
+                UsersListBox.Items.Add(buildingInfo);
+                continue;
             }
 
-            if (!isFirstLevel)
+            // check for spasific names to skip over
+            if (SearchForMatchingString(skippbleValues, buildingKey))
+            {
+                buildingInfo.Value = buildingValue;
+                UsersListBox.Items.Add(buildingInfo);
+                continue;
+            }
+
+            if (isFirstLevel)
+            {
+                buildingInfo.Value = buildingValue;
+            }
+
+            // loads the previus buildings info
+            if (PreviusBuilding != null)
             {
 
-            };
+                buildingInfo.Value = PreviusBuilding.FirstOrDefault(x => x.Key == i.Key).Value;
+                buildingInfo.SecondValue = buildingValue;
+                buildingInfo.ShowArrow = true;
+            }
+
             UsersListBox.Items.Add(buildingInfo);
         }
         UsersListBox.Items.Refresh();
@@ -478,22 +515,16 @@ public partial class MainWindow : Window
         PreviusBuildingInfoImage.Source = null;
         BuildingUpgradeArrow.Visibility = Visibility.Hidden;
     }
-
-    private bool FindGoldPassDiscountedValues(string key)
-        //logic to find any matching values of a goldpass inside the key 
+    private bool SearchForMatchingString(List<string> values, string key)
+    // searches for a maching string in key inside the list
     {
-        List<string> goldPassDiscountsListNames = new List<string>()
-        {
-            "gold", "elixir", "darkelixer", "build",
-        };
 
-        //cleanup
         string cleanKey = key.ToLower().Replace(" ", "");
 
         bool keyContainsName = false;
 
         //find if any goldpass value is inside the key string
-        foreach (string i in goldPassDiscountsListNames)
+        foreach (string i in values)
         {
             if (cleanKey.Contains(i)) keyContainsName = true;
         }
@@ -501,7 +532,7 @@ public partial class MainWindow : Window
     }
 
     private string DisplayCorrectValueAfterGoldPass(string key, string value)
-        // logic to calculate the value acording to the type of the key
+    // logic to calculate the value acording to the type of the key
     {
         List<string> goldPassDiscountsListResurces = new List<string>()
         {
@@ -524,8 +555,9 @@ public partial class MainWindow : Window
                 string output = result.ToString();
                 return output;
             }
-        // finds if the key has a build in it to assemble the discounted time
-        } else if (cleanKey.Contains(goldPassDiscoutBuilding))
+            // finds if the key has a build in it to assemble the discounted time
+        }
+        else if (cleanKey.Contains(goldPassDiscoutBuilding))
         {
 
             int hours = 0;
@@ -533,18 +565,21 @@ public partial class MainWindow : Window
             string[] valueData = value.Split(' ');
 
             // test each value of the list and convert hours and days into hours
-            foreach (string part in valueData) {
+            foreach (string part in valueData)
+            {
 
                 string trimmedPart = part.Trim().ToLower();
                 int currentPartInt = StringToNumber(trimmedPart);
 
                 //finds the days
-                if (trimmedPart.EndsWith("h")) {
+                if (trimmedPart.EndsWith("h"))
+                {
 
                     hours += currentPartInt;
                 }
 
-                if (trimmedPart.EndsWith("d")) {
+                if (trimmedPart.EndsWith("d"))
+                {
 
                     hours += currentPartInt * 24;
                 }
@@ -557,11 +592,13 @@ public partial class MainWindow : Window
             {
                 return $"{discountedHours}h";
 
-            } else if (discountedHours >= 24) {
+            }
+            else if (discountedHours >= 24)
+            {
 
                 double days = Math.Floor(discountedHours / 24);
 
-                double finalHours = discountedHours - days *24;
+                double finalHours = discountedHours - days * 24;
 
                 string finalString = $"{days}d " + (finalHours == 0 ? "" : $"{finalHours}h");
 
@@ -590,7 +627,7 @@ public partial class MainWindow : Window
     }
 
     private BitmapImage ClashOfClansImage(string fileName)
-        //loads an image of the filename 
+    //loads an image of the filename 
     {
 
         string? assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
@@ -608,7 +645,15 @@ public partial class MainWindow : Window
 
     private void GoldPassToggle_Click(object sender, RoutedEventArgs e)
     {
+        // Toggle the goldPass variable or perform any other logic here
         toggleGoldPass();
 
+        // Update the background color of the GoldPassToggle button based on goldPass variable
+        GoldPassToggle.Background = goldPass ? Brushes.Yellow : Brushes.White;
+
+        var hoverStyle = new Style(typeof(Button));
+        hoverStyle.Setters.Add(new Setter(Button.BackgroundProperty, goldPass ? Brushes.Gold : Brushes.SkyBlue));
+        hoverStyle.Setters.Add(new Setter(Button.BorderBrushProperty, goldPass ? Brushes.DarkGoldenrod : Brushes.DodgerBlue));
+        GoldPassToggle.Style = hoverStyle;
     }
 }

@@ -1,0 +1,79 @@
+[
+  {
+    "Level": 1,
+    "Hitpoints": 425,
+    "Spell(s) Unlocked": "Lightning Spell",
+    "Spell Storage Capacity": 2,
+    "Build Cost Elixir": "150,000",
+    "Build Time": "8h",
+    "Experience Gained": 169,
+    "Town Hall Level Required": 5,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/ca/Spell_Factory1.png"
+  },
+  {
+    "Level": 2,
+    "Hitpoints": 470,
+    "Spell(s) Unlocked": "Healing Spell",
+    "Spell Storage Capacity": 4,
+    "Build Cost Elixir": "300,000",
+    "Build Time": "1d",
+    "Experience Gained": 293,
+    "Town Hall Level Required": 6,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/07/Spell_Factory2.png"
+  },
+  {
+    "Level": 3,
+    "Hitpoints": 520,
+    "Spell(s) Unlocked": "Rage Spell",
+    "Spell Storage Capacity": 6,
+    "Build Cost Elixir": "600,000",
+    "Build Time": "2d",
+    "Experience Gained": 415,
+    "Town Hall Level Required": 7,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/af/Spell_Factory3.png"
+  },
+  {
+    "Level": 4,
+    "Hitpoints": 600,
+    "Spell(s) Unlocked": "Jump Spell, Freeze Spell",
+    "Spell Storage Capacity": 8,
+    "Build Cost Elixir": "1,200,000",
+    "Build Time": "3d 12h",
+    "Experience Gained": 549,
+    "Town Hall Level Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/42/Spell_Factory4.png"
+  },
+  {
+    "Level": 5,
+    "Hitpoints": 720,
+    "Spell(s) Unlocked": "Clone Spell",
+    "Spell Storage Capacity": 10,
+    "Build Cost Elixir": "2,000,000",
+    "Build Time": "4d 6h",
+    "Experience Gained": 605,
+    "Town Hall Level Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/4c/Spell_Factory5.png"
+  },
+  {
+    "Level": 6,
+    "Hitpoints": 840,
+    "Spell(s) Unlocked": "Invisibility Spell",
+    "Spell Storage Capacity": 10,
+    "Build Cost Elixir": "3,500,000",
+    "Build Time": "5d",
+    "Experience Gained": 657,
+    "Town Hall Level Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/c1/Spell_Factory6.png"
+  },
+  {
+    "Level": 7,
+    "Hitpoints": 960,
+    "Spell(s) Unlocked": "Recall Spell",
+    "Spell Storage Capacity": 10,
+    "Build Cost Elixir": "9,000,000",
+    "Build Time": "8d",
+    "Experience Gained": 831,
+    "Town Hall Level Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/aa/Spell_Factory7.png"
+  }
+]

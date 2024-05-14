@@ -1,0 +1,102 @@
+[
+  {
+    "Level": 1,
+    "Unlocked Unit": "Minion",
+    "Hitpoints": 500,
+    "Build Cost Elixir": "200,000",
+    "Build Time": "8h",
+    "Experience Gained": 169,
+    "Town Hall Level Required": 7,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/f6/Dark_Barracks1.png"
+  },
+  {
+    "Level": 2,
+    "Unlocked Unit": "Hog Rider",
+    "Hitpoints": 550,
+    "Build Cost Elixir": "600,000",
+    "Build Time": "1d",
+    "Experience Gained": 293,
+    "Town Hall Level Required": 7,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/dd/Dark_Barracks2.png"
+  },
+  {
+    "Level": 3,
+    "Unlocked Unit": "Valkyrie",
+    "Hitpoints": 600,
+    "Build Cost Elixir": "1,000,000",
+    "Build Time": "1d 12h",
+    "Experience Gained": 360,
+    "Town Hall Level Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/f0/Dark_Barracks3.png"
+  },
+  {
+    "Level": 4,
+    "Unlocked Unit": "Golem",
+    "Hitpoints": 650,
+    "Build Cost Elixir": "1,600,000",
+    "Build Time": "2d",
+    "Experience Gained": 415,
+    "Town Hall Level Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/1e/Dark_Barracks4.png"
+  },
+  {
+    "Level": 5,
+    "Unlocked Unit": "Witch",
+    "Hitpoints":700,
+    "Build Cost Elixir": "2,200,000",
+    "Build Time": "3d 12h",
+    "Experience Gained": 549,
+    "Town Hall Level Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/60/Dark_Barracks5.png"
+  },
+  {
+    "Level": 6,
+    "Unlocked Unit": "Lava Hound",
+    "Hitpoints": 750,
+    "Build Cost Elixir": "2,900,000",
+    "Build Time": "4d 12h",
+    "Experience Gained": 623,
+    "Town Hall Level Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/54/Dark_Barracks6.png"
+  },
+  {
+    "Level": 7,
+    "Unlocked Unit": "Bowler",
+    "Hitpoints": 800,
+    "Build Cost Elixir": "4,000,000",
+    "Build Time": "6d 12h",
+    "Experience Gained": 749,
+    "Town Hall Level Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/b4/Dark_Barracks7.png"
+  },
+  {
+    "Level": 8,
+    "Unlocked Unit": "Ice Golem",
+    "Hitpoints": 850,
+    "Build Cost Elixir": "7,500,000",
+    "Build Time": "8d",
+    "Experience Gained": 831,
+    "Town Hall Level Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/30/Dark_Barracks8.png"
+  },
+  {
+    "Level": 9,
+    "Unlocked Unit": "Headhunter",
+    "Hitpoints": 900,
+    "Build Cost Elixir": "9,000,000",
+    "Build Time": "10d",
+    "Experience Gained": 929,
+    "Town Hall Level Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/c5/Dark_Barracks9.png"
+  },
+  {
+    "Level": 10,
+    "Unlocked Unit": "Apprentice Warden",
+    "Hitpoints": 950,
+    "Build Cost Elixir": "13,000,000",
+    "Build Time": "13d",
+    "Experience Gained": 1059,
+    "Town Hall Level Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/c9/Dark_Barracks10.png"
+  }
+]

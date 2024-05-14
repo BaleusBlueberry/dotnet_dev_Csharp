@@ -1,0 +1,122 @@
+[
+  {
+    "Level": 1,
+    "Troop Capacity": 20,
+    "Hitpoints": 250,
+    "Build Cost Elixir": "200",
+    "Build Time": "5m",
+    "Experience Gained": 17,
+    "Town Hall Level Required": 1,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/79/Army_Camp1.png"
+  },
+  {
+    "Level": 2,
+    "Troop Capacity": 30,
+    "Hitpoints": 270,
+    "Build Cost Elixir": "2,000",
+    "Build Time": "15m",
+    "Experience Gained": 30,
+    "Town Hall Level Required": 2,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/92/Army_Camp2.png"
+  },
+  {
+    "Level": 3,
+    "Troop Capacity": 35,
+    "Hitpoints": 290,
+    "Build Cost Elixir": "10,000",
+    "Build Time": "2h",
+    "Experience Gained": 84,
+    "Town Hall Level Required": 3,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/ce/Army_Camp3.png"
+  },
+  {
+    "Level": 4,
+    "Troop Capacity": 40,
+    "Hitpoints": 310,
+    "Build Cost Elixir": "100,000",
+    "Build Time": "5h",
+    "Experience Gained": 134,
+    "Town Hall Level Required": 4,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e0/Army_Camp4.png"
+  },
+  {
+    "Level": 5,
+    "Troop Capacity": 45,
+    "Hitpoints": 330,
+    "Build Cost Elixir": "250,000",
+    "Build Time": "8h",
+    "Experience Gained": 169,
+    "Town Hall Level Required": 5,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/dc/Army_Camp5.png"
+  },
+  {
+    "Level": 6,
+    "Troop Capacity": 50,
+    "Hitpoints": 350,
+    "Build Cost Elixir": "750,000",
+    "Build Time": "12h",
+    "Experience Gained": 207,
+    "Town Hall Level Required": 6,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/68/Army_Camp6.png"
+  },
+  {
+    "Level": 7,
+    "Troop Capacity": 55,
+    "Hitpoints": 400,
+    "Build Cost Elixir": "1,500,000",
+    "Build Time": "2d",
+    "Experience Gained": 415,
+    "Town Hall Level Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/fb/Army_Camp7.png"
+  },
+  {
+    "Level": 8,
+    "Troop Capacity": 60,
+    "Hitpoints": 500,
+    "Build Cost Elixir": "2,500,000",
+    "Build Time": "3d",
+    "Experience Gained": 509,
+    "Town Hall Level Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/be/Army_Camp8.png"
+  },
+  {
+    "Level": 9,
+    "Troop Capacity": 65,
+    "Hitpoints": 600,
+    "Build Cost Elixir": "4,200,000",
+    "Build Time": "6d 6h",
+    "Experience Gained": 734,
+    "Town Hall Level Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/7d/Army_Camp9.png"
+  },
+  {
+    "Level": 10,
+    "Troop Capacity": 70,
+    "Hitpoints": 700,
+    "Build Cost Elixir": "5,700,000",
+    "Build Time": "8d 18h",
+    "Experience Gained": 869,
+    "Town Hall Level Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/1d/Army_Camp10.png"
+  },
+  {
+    "Level": 11,
+    "Troop Capacity": 75,
+    "Hitpoints": 800,
+    "Build Cost Elixir": "9,600,000",
+    "Build Time": "9d 12h",
+    "Experience Gained": 905,
+    "Town Hall Level Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/2/21/Army_Camp11.png"
+  },
+  {
+    "Level": 12,
+    "Troop Capacity": 80,
+    "Hitpoints": 850,
+    "Build Cost Elixir": "19,000,000",
+    "Build Time": "12d 12h",
+    "Experience Gained": 1039,
+    "Town Hall Level Required": 15,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/19/Army_Camp12.png"
+  }
+]

@@ -52,7 +52,15 @@
         <!--building info panel-->
         <StackPanel Grid.Row="2" Grid.Column="0">
             <StackPanel Orientation="Horizontal" Margin="10 10 10 0">
-                <Button Content="Gold Pass Toggle" Name="GoldPassToggle" Click="GoldPassToggle_Click" FontSize="22" FontWeight="Bold" Margin="10 10 10 10" Padding="10 5 5 5"></Button>
+                <Button Content="Gold Pass Toggle"
+                        Name="GoldPassToggle"
+                        Click="GoldPassToggle_Click"
+                        FontSize="22" FontWeight="Bold"
+                        Margin="10 10 10 10"
+                        Padding="10 5 5 5"
+                        BorderThickness="2"
+                        >
+                </Button>
                 <TextBlock Text="Building's Info:" HorizontalAlignment="Center" Margin="10 10 10 10" Padding="5" FontSize="22" FontWeight="Bold"></TextBlock>
             </StackPanel>
 
