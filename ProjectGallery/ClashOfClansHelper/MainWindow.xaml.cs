@@ -163,7 +163,7 @@ public partial class MainWindow : Window
         // finds the location of the item
         string dataInString = File.ReadAllText($@".\Resources\Data\{buildingType}\{path}.json");
 
-        dictionaryOfBildings = ConvertJsonToDictionary(dataInString);
+        dictionaryOfBildings = Converters.ConvertJsonToDictionary(dataInString);
 
         // loops over each bulding inside dictionaryOfBildings 
         foreach (Dictionary<string, string> building in dictionaryOfBildings.Values)
@@ -220,28 +220,6 @@ public partial class MainWindow : Window
             }
         }
     }
-
-
-    public static IDictionary<int, Dictionary<string, string>> ConvertJsonToDictionary(string jsonData)
-    //takes in a json and convers it into a Dictionary<string, string> dynamically
-    // in order to find each entery of the dictionary with a level
-    {
-        var jArray = JArray.Parse(jsonData);
-        var dictionary = new Dictionary<int, Dictionary<string, string>>();
-
-        foreach (var jToken in jArray)
-        {
-            var jObject = (JObject)jToken;
-            var level = jObject["Level"].Value<int>();
-            var properties = jObject.Properties()
-                .ToDictionary(p => p.Name, p => p.Value.ToString());
-
-            dictionary[level] = properties;
-        }
-
-        return dictionary;
-    }
-
     private async void DropListBuildingType_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
     // when clicking an item of the droplist of buildingtype
     // test and assembles the list of buildings in the dropbox DropListSelectBuilding according to the current townhall and what types of buildings
@@ -448,7 +426,7 @@ public partial class MainWindow : Window
             };
 
             //test if the current building entery contains a gold pass discountble item
-            if (SearchForMatchingString(goldPassDiscountsListNames, buildingKey))
+            if (Utils.SearchForMatchingString(goldPassDiscountsListNames, buildingKey))
             {
                 buildingInfo.Value = buildingValue;
 
@@ -458,7 +436,7 @@ public partial class MainWindow : Window
                     //IsStrikethrough SecondValue ShowArrow
                     buildingInfo.ShowArrow = true;
                     buildingInfo.IsStrikethrough = true;
-                    buildingInfo.SecondValue = DisplayCorrectValueAfterGoldPass(buildingKey, buildingValue);
+                    buildingInfo.SecondValue = Utils.DisplayCorrectValueAfterGoldPass(buildingKey, buildingValue);
                 }
 
                 UsersListBox.Items.Add(buildingInfo);
@@ -466,7 +444,7 @@ public partial class MainWindow : Window
             }
 
             // check for spasific names to skip over
-            if (SearchForMatchingString(skippbleValues, buildingKey))
+            if (Utils.SearchForMatchingString(skippbleValues, buildingKey))
             {
                 buildingInfo.Value = buildingValue;
                 UsersListBox.Items.Add(buildingInfo);
@@ -514,126 +492,6 @@ public partial class MainWindow : Window
     {
         PreviusBuildingInfoImage.Source = null;
         BuildingUpgradeArrow.Visibility = Visibility.Hidden;
-    }
-    private bool SearchForMatchingString(List<string> values, string key)
-    // searches for a maching string in key inside the list
-    {
-
-        string cleanKey = key.ToLower().Replace(" ", "");
-
-        bool keyContainsName = false;
-
-        //find if any goldpass value is inside the key string
-        foreach (string i in values)
-        {
-            if (cleanKey.Contains(i)) keyContainsName = true;
-        }
-        return keyContainsName;
-    }
-
-    private string DisplayCorrectValueAfterGoldPass(string key, string value)
-    // logic to calculate the value acording to the type of the key
-    {
-        List<string> goldPassDiscountsListResurces = new List<string>()
-        {
-            "gold", "elixir", "darkelixer",
-        };
-        string goldPassDiscoutBuilding = "build";
-
-        string cleanKey = key.ToLower().Replace(" ", "");
-
-        // finds if the key contains any of the gold pass resurce words
-        if (goldPassDiscountsListResurces.Any(resource => cleanKey.IndexOf(resource) != -1))
-        {
-            // takes out anythings thats not a number
-            string cleanValue = Regex.Replace(value, "[^0-9]", "");
-
-            // returns the discounted resurce value of the inputed value
-            if (double.TryParse(cleanValue, out double valueAsInt))
-            {
-                double result = valueAsInt * 0.8;
-                string output = result.ToString();
-                return output;
-            }
-            // finds if the key has a build in it to assemble the discounted time
-        }
-        else if (cleanKey.Contains(goldPassDiscoutBuilding))
-        {
-
-            int hours = 0;
-
-            string[] valueData = value.Split(' ');
-
-            // test each value of the list and convert hours and days into hours
-            foreach (string part in valueData)
-            {
-
-                string trimmedPart = part.Trim().ToLower();
-                int currentPartInt = StringToNumber(trimmedPart);
-
-                //finds the days
-                if (trimmedPart.EndsWith("h"))
-                {
-
-                    hours += currentPartInt;
-                }
-
-                if (trimmedPart.EndsWith("d"))
-                {
-
-                    hours += currentPartInt * 24;
-                }
-
-            }
-
-            double discountedHours = Math.Floor(hours * 0.8);
-
-            if (discountedHours < 24)
-            {
-                return $"{discountedHours}h";
-
-            }
-            else if (discountedHours >= 24)
-            {
-
-                double days = Math.Floor(discountedHours / 24);
-
-                double finalHours = discountedHours - days * 24;
-
-                string finalString = $"{days}d " + (finalHours == 0 ? "" : $"{finalHours}h");
-
-                return finalString;
-
-
-            }
-        }
-
-        return value;
-    }
-
-    private int StringToNumber(string stringValue)
-    {
-
-        string cleanValue = Regex.Replace(stringValue, "[^0-9]", "");
-        if (int.TryParse(cleanValue, out int valueAsInt))
-        {
-            return valueAsInt;
-        }
-        else
-        {
-            MessageBox.Show("there was an error converting a string to a number: returns 0");
-            return 0;
-        }
-    }
-
-    private BitmapImage ClashOfClansImage(string fileName)
-    //loads an image of the filename 
-    {
-
-        string? assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
-        Uri uri = new Uri($"pack://application:,,,/{assemblyName};component/Resources/{fileName}.jpg");
-        return new BitmapImage(uri);
-
     }
 
     private void ResetSingleBuilding()

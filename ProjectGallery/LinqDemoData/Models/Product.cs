@@ -1,4 +1,4 @@
-﻿namespace LinqDemoData;
+﻿namespace LinqDemoData.Models;
 
 public class Product
 {
