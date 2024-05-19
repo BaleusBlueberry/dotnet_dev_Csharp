@@ -1,0 +1,79 @@
+[
+  {
+    "Level": 1,
+    "Unlocked Siege Machine": "Wall Wrecker",
+    "Siege Machine Capacity": 1,
+    "Hitpoints": 1000,
+    "Build Cost Elixir": "3,000,000",
+    "Build Time": "4d",
+    "Experience Gained": 587,
+    "Town Hall Level Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/8/84/Workshop1.png"
+  },
+  {
+    "Level": 2,
+    "Unlocked Siege Machine": "Battle Blimp",
+    "Siege Machine Capacity": 2,
+    "Hitpoints": 1100,
+    "Build Cost Elixir": "5,000,000",
+    "Build Time": "5d",
+    "Experience Gained": 657,
+    "Town Hall Level Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e1/Workshop2.png"
+  },
+  {
+    "Level": 3,
+    "Unlocked Siege Machine": "Stone Slammer",
+    "Siege Machine Capacity": 3,
+    "Hitpoints": 1200,
+    "Build Cost Elixir": "7,000,000",
+    "Build Time": "7d",
+    "Experience Gained": 777,
+    "Town Hall Level Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/2/28/Workshop3.png"
+  },
+  {
+    "Level": 4,
+    "Unlocked Siege Machine": "Siege Barracks",
+    "Siege Machine Capacity": 3,
+    "Hitpoints": 1300,
+    "Build Cost Elixir": "9,000,000",
+    "Build Time": "10d",
+    "Experience Gained": 929,
+    "Town Hall Level Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/ec/Workshop4.png"
+  },
+  {
+    "Level": 5,
+    "Unlocked Siege Machine": "Log Launcher",
+    "Siege Machine Capacity": 3,
+    "Hitpoints": 1400,
+    "Build Cost Elixir": "10,000,000",
+    "Build Time": "11d",
+    "Experience Gained": 974,
+    "Town Hall Level Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/1b/Workshop5.png"
+  },
+  {
+    "Level": 6,
+    "Unlocked Siege Machine": "Flame Flinger",
+    "Siege Machine Capacity": 3,
+    "Hitpoints": 1500,
+    "Build Cost Elixir": "14,000,000",
+    "Build Time": "13d",
+    "Experience Gained": 1059,
+    "Town Hall Level Required": 14,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/18/Workshop6.png"
+  },
+  {
+    "Level": 7,
+    "Unlocked Siege Machine": "Battle Drill",
+    "Siege Machine Capacity": 3,
+    "Hitpoints": 1600,
+    "Build Cost Elixir": "19,000,000",
+    "Build Time": "13d 12h",
+    "Experience Gained": 1080,
+    "Town Hall Level Required": 15,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/4c/Workshop7.png"
+  }
+]

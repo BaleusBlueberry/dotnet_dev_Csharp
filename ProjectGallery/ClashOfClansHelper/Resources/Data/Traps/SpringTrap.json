@@ -1,0 +1,47 @@
+[
+  {
+    "Level": 1,
+    "Spring Capacity": 10,
+    "Gold Cost": "2,000",
+    "Build_Time": "N/A",
+    "Experience_Gained": "N/A",
+    "Town_Hall_Level_Required": 4,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/74/Spring_Trap1.png"
+  },
+  {
+    "Level": 2,
+    "Spring Capacity": 12,
+    "Gold Cost": "250,000",
+    "Build_Time": "3h",
+    "Experience_Gained": 103,
+    "Town_Hall_Level_Required": 7,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/74/Spring_Trap1.png"
+  },
+  {
+    "Level": 3,
+    "Spring Capacity": 14,
+    "Gold Cost": "375,000",
+    "Build_Time": "9h",
+    "Experience_Gained": 180,
+    "Town_Hall_Level_Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e2/Spring_Trap3.png"
+  },
+  {
+    "Level": 4,
+    "Spring Capacity": 16,
+    "Gold Cost": "700,000",
+    "Build_Time": "18h",
+    "Experience_Gained": 254,
+    "Town_Hall_Level_Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e2/Spring_Trap3.png"
+  },
+  {
+    "Level": 5,
+    "Spring Capacity": 18,
+    "Gold Cost": "800,000",
+    "Build_Time": "1d 18h",
+    "Experience_Gained": 388,
+    "Town_Hall_Level_Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/d5/Spring_Trap5.png"
+  }
+]

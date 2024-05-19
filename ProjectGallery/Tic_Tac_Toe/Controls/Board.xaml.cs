@@ -1,18 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Printing;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 using Tic_Tac_Toe.Enums;
 
@@ -21,9 +9,11 @@ namespace Tic_Tac_Toe.Controls;
 /// <summary>
 /// Interaction logic for Board.xaml
 /// </summary>
-public partial class Board : UserControl
+public partial class Board : UserControl, INotifyPropertyChanged
 {
-    public EventHandler GameEnded;
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    public EventHandler<GameEndEventArgs> GameEnded;
 
     private string PlayerOneContent = "X";
     private string PlayerTwoContent = "O";
@@ -34,9 +24,7 @@ public partial class Board : UserControl
 
     private bool _isPlayerOneTurn = true;
     private bool _gameIsActive = false;
-    private GameType _gameType;
-
-
+    private GameType _gameType = GameType.PvP;
 
 
     public Board()
@@ -44,7 +32,47 @@ public partial class Board : UserControl
         //
         InitializeComponent();
         InitializeGameGrid();
+
+        DataContext = this;
+
     }
+
+    public GameType CurrentGameType
+    {
+        get
+        {
+            return _gameType;
+        }
+        set
+        {
+            _gameType = value;
+            OnPropertyChanged(nameof(CurrentGameType));
+        }
+    }
+
+    private void OnPropertyChanged(string name)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    }
+
+    public bool IsPlayerOneTurn
+    {
+        get => _isPlayerOneTurn;
+        set
+        {
+            _isPlayerOneTurn = value;
+
+            OnPropertyChanged(nameof(_isPlayerOneTurn));
+            OnPropertyChanged(nameof(CurrentPlayerTurn));
+        }
+    }
+    private void OnGameEnd(GameResult result)
+    {
+        GameEnded?.Invoke(this, new GameEndEventArgs(result));
+    }
+
+
+    public string CurrentPlayerTurn => IsPlayerOneTurn ? "Player 1" : "Player 2";
 
     private void InitializeGameGrid()
     {
@@ -74,7 +102,7 @@ public partial class Board : UserControl
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
-        if (!_gameIsActive || _gameType == GameType.PvC && !_isPlayerOneTurn || _gameType == GameType.CvC) return;
+        if (!_gameIsActive || CurrentGameType == GameType.PvC && !IsPlayerOneTurn || CurrentGameType == GameType.CvC) return;
 
         Button btn = sender as Button;
 
@@ -82,18 +110,18 @@ public partial class Board : UserControl
 
         if (btn.Content == null)
         {
-            btn.Content = _isPlayerOneTurn ? PlayerOneContent : PlayerTwoContent;
+            btn.Content = IsPlayerOneTurn ? PlayerOneContent : PlayerTwoContent;
         }
 
         if (ProcessEndGame())
         {
             return;
         }
-        _isPlayerOneTurn = !_isPlayerOneTurn;
+        IsPlayerOneTurn = !IsPlayerOneTurn;
 
         // After human's turn
 
-        if (_gameType == GameType.PvC && !_isPlayerOneTurn)
+        if (CurrentGameType == GameType.PvC && !IsPlayerOneTurn)
         {
             ComputerMove();
         }
@@ -118,12 +146,12 @@ public partial class Board : UserControl
                 btn = _buttons[row, col];
             } while (btn.Content != null);
 
-            btn.Content = _isPlayerOneTurn ? PlayerOneContent : PlayerTwoContent;
+            btn.Content = IsPlayerOneTurn ? PlayerOneContent : PlayerTwoContent;
             if (ProcessEndGame()) return;
 
-            _isPlayerOneTurn = !_isPlayerOneTurn;
+            IsPlayerOneTurn = !IsPlayerOneTurn;
 
-            if (_gameType == GameType.CvC && !IsBoardFull())
+            if (CurrentGameType == GameType.CvC && !IsBoardFull())
             {
                 ComputerMove();
             }
@@ -137,9 +165,9 @@ public partial class Board : UserControl
         bool win = CheckForWinner();
         if (win)
         {
-            GameResult result = _isPlayerOneTurn ? GameResult.PlayerOneWins : GameResult.PlayerTwoWins;
+            GameResult result = IsPlayerOneTurn ? GameResult.PlayerOneWins : GameResult.PlayerTwoWins;
 
-            MessageBox.Show(result.ToString());
+            OnGameEnd(result);
 
             _gameIsActive = false;
             return true;
@@ -148,7 +176,7 @@ public partial class Board : UserControl
         {
             GameResult result = GameResult.Draw;
 
-            MessageBox.Show(result.ToString());
+            OnGameEnd(result);
 
             _gameIsActive = false;
             return true;
@@ -161,8 +189,13 @@ public partial class Board : UserControl
 
     public void StartNewGame(GameType gameType)
     {
-        _gameType = gameType;
-        _isPlayerOneTurn = true;
+        if (_gameIsActive)
+        {
+            return;
+        }
+
+        CurrentGameType = gameType;
+        IsPlayerOneTurn = true;
         _gameIsActive = true;
 
         foreach (Button btn in _buttons)

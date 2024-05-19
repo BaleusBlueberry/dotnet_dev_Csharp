@@ -1,0 +1,68 @@
+[
+  {
+    "Level": 1,
+    "Hitpoints": 600,
+    "Spell(s) Unlocked": "Poison Spell",
+    "Spell Storage Capacity": 1,
+    "Build Cost Elixir": "130,000",
+    "Build Time": "6h",
+    "Experience Gained": 146,
+    "Town Hall Level Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/3e/Dark_Spell_Factory1.png"
+  },
+  {
+    "Level": 2,
+    "Hitpoints": 660,
+    "Spell(s) Unlocked": "Earthquake Spell",
+    "Spell Storage Capacity": 1,
+    "Build Cost Elixir": "260,000",
+    "Build Time": "18h",
+    "Experience Gained": 254,
+    "Town Hall Level Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/9a/Dark_Spell_Factory2.png"
+  },
+  {
+    "Level": 3,
+    "Hitpoints": 720,
+    "Spell(s) Unlocked": "Haste Spell",
+    "Spell Storage Capacity": 1,
+    "Build Cost Elixir": "600,000",
+    "Build Time": "2d",
+    "Experience Gained": 415,
+    "Town Hall Level Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/91/Dark_Spell_Factory3.png"
+  },
+  {
+    "Level": 4,
+    "Hitpoints": 780,
+    "Spell(s) Unlocked": "Skeleton Spell",
+    "Spell Storage Capacity": 1,
+    "Build Cost Elixir": "1,200,000",
+    "Build Time": "4d",
+    "Experience Gained": 587,
+    "Town Hall Level Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/c/cf/Dark_Spell_Factory4.png"
+  },
+  {
+    "Level": 5,
+    "Hitpoints": 840,
+    "Spell(s) Unlocked": "Bat Spell",
+    "Spell Storage Capacity": 1,
+    "Build Cost Elixir": "2,500,000",
+    "Build Time": "6d",
+    "Experience Gained": 720,
+    "Town Hall Level Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/2/27/Dark_Spell_Factory5.png"
+  },
+  {
+    "Level": 6,
+    "Hitpoints": 950,
+    "Spell(s) Unlocked": "Overgrowth Spell",
+    "Spell Storage Capacity": 1,
+    "Build Cost Elixir": "5,000,000",
+    "Build Time": "8d",
+    "Experience Gained": 831,
+    "Town Hall Level Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/06/Dark_Spell_Factory6.png"
+  }
+]

@@ -1,0 +1,62 @@
+﻿[
+  {
+    "Level": 1,
+    "Damage_per_Second": "125",
+    "Damage_per_Shot": "300-403.5",
+    "Splash_Damage": "100-300",
+    "Hitpoints": "3,600",
+    "Build_Cost_Gold": "11,000,000",
+    "Build_Time": "10d",
+    "Experience_Gained": "929",
+    "Town_Hall_Level_Required": "13",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/67/Scattershot1.png"
+  },
+  {
+    "Level": 2,
+    "Damage_per_Second": "150",
+    "Damage_per_Shot": "360-484.2",
+    "Splash_Damage": "120-360",
+    "Hitpoints": "4,200",
+    "Build_Cost_Gold": "12,000,000",
+    "Build_Time": "11d",
+    "Experience_Gained": "974",
+    "Town_Hall_Level_Required": "13",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/62/Scattershot2.png"
+  },
+  {
+    "Level": 3,
+    "Damage_per_Second": "175",
+    "Damage_per_Shot": "420-564.9",
+    "Splash_Damage": "140-420",
+    "Hitpoints": "4,800",
+    "Build_Cost_Gold": "12,600,000",
+    "Build_Time": "13d",
+    "Experience_Gained": "1,059",
+    "Town_Hall_Level_Required": "14",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/4c/Scattershot3.png"
+  },
+  {
+    "Level": 4,
+    "Damage_per_Second": "185",
+    "Damage_per_Shot": "450-597.18",
+    "Splash_Damage": "150-450",
+    "Hitpoints": "5,100",
+    "Build_Cost_Gold": "21,300,000",
+    "Build_Time": "14d",
+    "Experience_Gained": "1,099",
+    "Town_Hall_Level_Required": "15",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/38/Scattershot4.png"
+  },
+  {
+    "Level": 5,
+    "Damage_per_Second": "190",
+    "Damage_per_Shot": "480-613.32",
+    "Splash_Damage": "160-480",
+    "Hitpoints": "5,410",
+    "Build_Cost_Gold": "22,500,000",
+    "Build_Time": "15d",
+    "Experience_Gained": "1,138",
+    "Town_Hall_Level_Required": "16",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/d9/Scattershot5.png"
+  }
+]

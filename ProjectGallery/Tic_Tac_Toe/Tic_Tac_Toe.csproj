@@ -9,17 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="resources\Tic.png" />
+    <None Remove="resources\tic.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\tic.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" Version="25.1.39" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="resources\tic.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
   </ItemGroup>
 
   <ItemGroup>

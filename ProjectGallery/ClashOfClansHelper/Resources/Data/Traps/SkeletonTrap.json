@@ -1,0 +1,38 @@
+[
+  {
+    "Level": 1,
+    "Damage": 2,
+    "Cost Gold": "6,000",
+    "Build Time": "N/A",
+    "Experience Gained": "N/A",
+    "Town Hall Level Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/3c/SkeletonTrap1_Air.png"
+  },
+  {
+    "Level": 2,
+    "Damage": 3,
+    "Cost Gold": "300,000",
+    "Build Time": "5h",
+    "Experience Gained": 134,
+    "Town Hall Level Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/3c/SkeletonTrap1_Air.png"
+  },
+  {
+    "Level": 3,
+    "Damage": 4,
+    "Cost Gold": "800,000",
+    "Build Time": "10h",
+    "Experience Gained": 189,
+    "Town Hall Level Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/52/SkeletonTrap3_Air.png"
+  },
+  {
+    "Level": 4,
+    "Damage": 5,
+    "Cost Gold": "1,100,000",
+    "Build Time": "20h",
+    "Experience Gained": 268,
+    "Town Hall Level Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/52/SkeletonTrap3_Air.png"
+  }
+]

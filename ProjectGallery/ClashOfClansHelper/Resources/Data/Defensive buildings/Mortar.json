@@ -1,0 +1,178 @@
+﻿[
+  {
+    "Level": 1,
+    "Damage_per_Second": 4,
+    "Damage_per_Shot": 20,
+    "Hitpoints": 400,
+    "Cost_Gold": "5,000",
+    "Build_Time": "3h",
+    "Experience_Gained": 103,
+    "Town_Hall_Level_Required": 3,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/7a/Mortar1.png"
+  },
+  {
+    "Level": 2,
+    "Damage_per_Second": 5,
+    "Damage_per_Shot": 25,
+    "Hitpoints": 450,
+    "Cost_Gold": "25,000",
+    "Build_Time": "6h",
+    "Experience_Gained": 146,
+    "Town_Hall_Level_Required": 4,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/ef/Mortar2.png"
+  },
+  {
+    "Level": 3,
+    "Damage_per_Second": 6,
+    "Damage_per_Shot": 30,
+    "Hitpoints": 500,
+    "Cost_Gold": "100,000",
+    "Build_Time": "12h",
+    "Experience_Gained": 207,
+    "Town_Hall_Level_Required": 5,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/4f/Mortar3.png"
+  },
+  {
+    "Level": 4,
+    "Damage_per_Second": 7,
+    "Damage_per_Shot": 35,
+    "Hitpoints": 550,
+    "Cost_Gold": "200,000",
+    "Build_Time": "18h",
+    "Experience_Gained": 254,
+    "Town_Hall_Level_Required": 6,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/4e/Mortar4.png"
+  },
+  {
+    "Level": 5,
+    "Damage_per_Second": 9,
+    "Damage_per_Shot": 45,
+    "Hitpoints": 600,
+    "Cost_Gold": "300,000",
+    "Build_Time": "1d",
+    "Experience_Gained": 293,
+    "Town_Hall_Level_Required": 7,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e7/Mortar5.png"
+  },
+  {
+    "Level": 6,
+    "Damage_per_Second": 11,
+    "Damage_per_Shot": 55,
+    "Hitpoints": 650,
+    "Cost_Gold": "560,000",
+    "Build_Time": "2d",
+    "Experience_Gained": 415,
+    "Town_Hall_Level_Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/42/Mortar6.png"
+  },
+  {
+    "Level": 7,
+    "Damage_per_Second": 15,
+    "Damage_per_Shot": 75,
+    "Hitpoints": 700,
+    "Cost_Gold": "1,300,000",
+    "Build_Time": "2d 12h",
+    "Experience_Gained": 464,
+    "Town_Hall_Level_Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/4b/Mortar7.png"
+  },
+  {
+    "Level": 8,
+    "Damage_per_Second": 20,
+    "Damage_per_Shot": 100,
+    "Hitpoints": 800,
+    "Cost_Gold": "1,900,000",
+    "Build_Time": "2d 12h",
+    "Experience_Gained": 464,
+    "Town_Hall_Level_Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/af/Mortar8B.png"
+  },
+  {
+    "Level": 9,
+    "Damage_per_Second": 25,
+    "Damage_per_Shot": 125,
+    "Hitpoints": 950,
+    "Cost_Gold": "2,500,000",
+    "Build_Time": "3d",
+    "Experience_Gained": 509,
+    "Town_Hall_Level_Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/bd/Mortar9B.png"
+  },
+  {
+    "Level": 10,
+    "Damage_per_Second": 30,
+    "Damage_per_Shot": 150,
+    "Hitpoints": 1100,
+    "Cost_Gold": "3,500,000",
+    "Build_Time": "3d",
+    "Experience_Gained": 509,
+    "Town_Hall_Level_Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/fe/Mortar10B.png"
+  },
+  {
+    "Level": 11,
+    "Damage_per_Second": 35,
+    "Damage_per_Shot": 175,
+    "Hitpoints": 1300,
+    "Cost_Gold": "5,800,000",
+    "Build_Time": "7d",
+    "Experience_Gained": 777,
+    "Town_Hall_Level_Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/f4/Mortar11B.png"
+  },
+  {
+    "Level": 12,
+    "Damage_per_Second": 38,
+    "Damage_per_Shot": 190,
+    "Hitpoints": 1500,
+    "Cost_Gold": "6,500,000",
+    "Build_Time": "7d",
+    "Experience_Gained": 777,
+    "Town_Hall_Level_Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/fd/Mortar12B.png"
+  },
+  {
+    "Level": 13,
+    "Damage_per_Second": 42,
+    "Damage_per_Shot": 210,
+    "Hitpoints": 1700,
+    "Cost_Gold": "8,200,000",
+    "Build_Time": "7d 12h",
+    "Experience_Gained": 804,
+    "Town_Hall_Level_Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/0e/Mortar13B.png"
+  },
+  {
+    "Level": 14,
+    "Damage_per_Second": 48,
+    "Damage_per_Shot": 240,
+    "Hitpoints": 1950,
+    "Cost_Gold": "15,000,000",
+    "Build_Time": "12d",
+    "Experience_Gained": 1018,
+    "Town_Hall_Level_Required": 14,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/71/Mortar14B.png"
+  },
+  {
+    "Level": 15,
+    "Damage_per_Second": 54,
+    "Damage_per_Shot": 270,
+    "Hitpoints": 2150,
+    "Cost_Gold": "19,000,000",
+    "Build_Time": "13d 12h",
+    "Experience_Gained": 1080,
+    "Town_Hall_Level_Required": 15,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/12/Mortar15B.png"
+  },
+  {
+    "Level": 16,
+    "Damage_per_Second": 60,
+    "Damage_per_Shot": 300,
+    "Hitpoints": 2300,
+    "Cost_Gold": "19,500,000",
+    "Build_Time": "14d 12h",
+    "Experience_Gained": 1119,
+    "Town_Hall_Level_Required": 16,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/1e/Mortar16B.png"
+  }
+]

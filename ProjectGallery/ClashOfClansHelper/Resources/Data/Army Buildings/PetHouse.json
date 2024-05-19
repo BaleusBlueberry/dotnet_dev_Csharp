@@ -1,0 +1,102 @@
+[
+  {
+    "Level": 1,
+    "Unlocked Pet": "L.A.S.S.I",
+    "Hitpoints": 700,
+    "Build Cost Elixir": "10,000,000",
+    "Build Time": "12d",
+    "Experience Gained": 1018,
+    "Town Hall Level Required": 14,
+    "Town Hall": "https://static.wikia.nocookie.net/clashofclans/images/2/21/Pet_House1.png"
+  },
+  {
+    "Level": 2,
+    "Unlocked Pet": "Electro Owl",
+    "Hitpoints": 800,
+    "Build Cost Elixir": "12,000,000",
+    "Build Time": "12d 12h",
+    "Experience Gained": 1039,
+    "Town Hall Level Required": 14,
+    "Town Hall": "https://static.wikia.nocookie.net/clashofclans/images/9/9d/Pet_House2.png"
+  },
+  {
+    "Level": 3,
+    "Unlocked Pet": "Mighty Yak",
+    "Hitpoints": 900,
+    "Build Cost Elixir": "14,000,000",
+    "Build Time": "12d 18h",
+    "Experience Gained": 1049,
+    "Town Hall Level Required": 14,
+    "Town Hall": "https://static.wikia.nocookie.net/clashofclans/images/c/c5/Pet_House3.png"
+  },
+  {
+    "Level": 4,
+    "Unlocked Pet": "Unicorn",
+    "Hitpoints": 1000,
+    "Build Cost Elixir": "16000000",
+    "Build Time": "13d",
+    "Experience Gained": 1059,
+    "Town Hall Level Required": 14,
+    "Town Hall": "https://static.wikia.nocookie.net/clashofclans/images/3/34/Pet_House4.png"
+  },
+  {
+    "Level": 5,
+    "Unlocked Pet": "Frosty",
+    "Hitpoints": 1050,
+    "Build Cost Elixir": "19750000",
+    "Build Time": "13d 6h",
+    "Experience Gained": 1069,
+    "Town Hall Level Required": 15,
+    "Town Hall": "https://static.wikia.nocookie.net/clashofclans/images/c/c2/Pet_House5.png"
+  },
+  {
+    "Level": 6,
+    "Unlocked Pet": "Diggy",
+    "Hitpoints": 1100,
+    "Build Cost Elixir": "20,000,000",
+    "Build Time": "13d 12h",
+    "Experience Gained": 1080,
+    "Town Hall Level Required": 15,
+    "Town Hall": "https://static.wikia.nocookie.net/clashofclans/images/1/1b/Pet_House6.png"
+  },
+  {
+    "Level": 7,
+    "Unlocked Pet": "Poison Lizard",
+    "Hitpoints": 1150,
+    "Build Cost Elixir": "20,250,000",
+    "Build Time": "13d 18h",
+    "Experience Gained": 1089,
+    "Town Hall Level Required": 15,
+    "Town Hall": "https://static.wikia.nocookie.net/clashofclans/images/d/d4/Pet_House7.png"
+  },
+  {
+    "Level": 8,
+    "Unlocked Pet": "Phoenix",
+    "Hitpoints": 1200,
+    "Build Cost Elixir": "20,500,000",
+    "Build Time": "14d",
+    "Experience Gained": 1099,
+    "Town Hall Level Required": 15,
+    "Town Hall": "https://static.wikia.nocookie.net/clashofclans/images/2/2d/Pet_House8.png"
+  },
+  {
+    "Level": 9,
+    "Unlocked Pet": "Spirit Fox",
+    "Hitpoints": 1250,
+    "Build Cost Elixir": "21,000,000",
+    "Build Time": "15d",
+    "Experience Gained": 1138,
+    "Town Hall Level Required": 16,
+    "Town Hall": "https://static.wikia.nocookie.net/clashofclans/images/6/6e/Pet_House9.png"
+  },
+  {
+    "Level": 10,
+    "Unlocked Pet": "Angry Jelly",
+    "Hitpoints": 1300,
+    "Build Cost Elixir": "21,500,000",
+    "Build Time": "16d",
+    "Experience Gained": 1175,
+    "Town Hall Level Required": 16,
+    "Town Hall": "https://static.wikia.nocookie.net/clashofclans/images/6/60/Pet_House10.png"
+  }
+]

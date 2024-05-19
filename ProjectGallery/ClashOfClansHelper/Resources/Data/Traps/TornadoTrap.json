@@ -1,0 +1,32 @@
+[
+  {
+    "Level": 1,
+    "Duration": "5 seconds",
+    "Total Damage": 39,
+    "Cost Gold": "1,800,000",
+    "Build Time": "N/A",
+    "Experience Gained": "N/A",
+    "Town Hall Level Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/54/Tornado_Trap1.png"
+  },
+  {
+    "Level": 2,
+    "Duration": "6 seconds",
+    "Total Damage": 47,
+    "Cost Gold": "2,800,000",
+    "Build Time": "2d",
+    "Experience Gained": 415,
+    "Town Hall Level Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/54/Tornado_Trap1.png"
+  },
+  {
+    "Level": 3,
+    "Duration": "7 seconds",
+    "Total Damage": 55,
+    "Cost Gold": "3,500,000",
+    "Build Time": "3d",
+    "Experience Gained": 509,
+    "Town Hall Level Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/ab/Tornado_Trap2.png"
+  }
+]

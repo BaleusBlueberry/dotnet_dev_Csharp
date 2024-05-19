@@ -1,0 +1,110 @@
+[
+  {
+    "Level": 1,
+    "Damage": 20,
+    "Cost_Gold": "400",
+    "Build_Time": "N/A",
+    "Experience": "N/A",
+    "Town_Hall": 3,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/a6/Bomb1.png"
+  },
+  {
+    "Level": 2,
+    "Damage": 24,
+    "Cost_Gold": "1,000",
+    "Build_Time": "6m",
+    "Experience": 18,
+    "Town_Hall": 3,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/a6/Bomb1.png"
+  },
+  {
+    "Level": 3,
+    "Damage": 29,
+    "Cost_Gold": "10,000",
+    "Build_Time": "1h",
+    "Experience": 60,
+    "Town_Hall": 5,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/0a/Bomb3.png"
+  },
+  {
+    "Level": 4,
+    "Damage": 35,
+    "Cost_Gold": "75,000",
+    "Build_Time": "2h",
+    "Experience": 84,
+    "Town_Hall": 7,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/0/0a/Bomb3.png"
+  },
+  {
+    "Level": 5,
+    "Damage": 42,
+    "Cost_Gold": "220,000",
+    "Build_Time": "6h",
+    "Experience": 146,
+    "Town_Hall": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/71/Bomb5.png"
+  },
+  {
+    "Level": 6,
+    "Damage": 54,
+    "Cost_Gold": "450,000",
+    "Build_Time": "12h",
+    "Experience": 207,
+    "Town_Hall": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/71/Bomb5.png"
+  },
+  {
+    "Level": 7,
+    "Damage": 72,
+    "Cost_Gold": "650,000",
+    "Build_Time": "18h",
+    "Experience": 254,
+    "Town_Hall": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/62/Bomb7.png"
+  },
+  {
+    "Level": 8,
+    "Damage": 92,
+    "Cost_Gold": "1,100,000",
+    "Build_Time": "1d 12h",
+    "Experience": 360,
+    "Town_Hall": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/62/Bomb7.png"
+  },
+  {
+    "Level": 9,
+    "Damage": 125,
+    "Cost_Gold": "2,000,000",
+    "Build_Time": "2d 18h",
+    "Experience": 487,
+    "Town_Hall": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/5d/Bomb9.png"
+  },
+  {
+    "Level": 10,
+    "Damage": 140,
+    "Cost_Gold": "4,000,000",
+    "Build_Time": "4d",
+    "Experience": 587,
+    "Town_Hall": 14,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/5d/Bomb9.png"
+  },
+  {
+    "Level": 11,
+    "Damage": 155,
+    "Cost_Gold": "8,000,000",
+    "Build_Time": "8d",
+    "Experience": 831,
+    "Town_Hall": 15,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/78/Bomb11.png"
+  },
+  {
+    "Level": 12,
+    "Damage": 170,
+    "Cost_Gold": "9,000,000",
+    "Build_Time": "8d 12h",
+    "Experience": 856,
+    "Town_Hall": 16,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/78/Bomb11.png"
+  }
+]

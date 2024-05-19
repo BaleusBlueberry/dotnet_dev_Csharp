@@ -1,0 +1,102 @@
+[
+  {
+    "Level": 1,
+    "Damage": 175,
+    "Damage Radius": "3 tiles",
+    "Cost Gold": "12,500",
+    "Build Time": "N/A",
+    "Experience Gained": "N/A",
+    "Town Hall Level Required": 6,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/7b/Giant_Bomb1.png"
+  },
+  {
+    "Level": 2,
+    "Damage": 200,
+    "Damage Radius": "3.5 tiles",
+    "Cost Gold": "75,000",
+    "Build Time": "3h",
+    "Experience Gained": 103,
+    "Town Hall Level Required": 6,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/7b/Giant_Bomb1.png"
+  },
+  {
+    "Level": 3,
+    "Damage": 225,
+    "Damage Radius": "3.5 tiles",
+    "Cost Gold": "480,000",
+    "Build Time": "12h",
+    "Experience Gained": 207,
+    "Town Hall Level Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/31/Giant_Bomb3.png"
+  },
+  {
+    "Level": 4,
+    "Damage": 250,
+    "Damage Radius": "4 tiles",
+    "Cost Gold": "1,500,000",
+    "Build Time": "18h",
+    "Experience Gained": 254,
+    "Town Hall Level Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/31/Giant_Bomb3.png"
+  },
+  {
+    "Level": 5,
+    "Damage": 275,
+    "Damage Radius": "4 tiles",
+    "Cost Gold": "2,000,000",
+    "Build Time": "1d",
+    "Experience Gained": 293,
+    "Town Hall Level Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/a4/Giant_Bomb5.png"
+  },
+  {
+    "Level": 6,
+    "Damage": 325,
+    "Damage Radius": "4 tiles",
+    "Cost Gold": "2,500,000",
+    "Build Time": "2d 18h",
+    "Experience Gained": 487,
+    "Town Hall Level Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/a4/Giant_Bomb5.png"
+  },
+  {
+    "Level": 7,
+    "Damage": 375,
+    "Damage Radius": "4 tiles",
+    "Cost Gold": "3,500,000",
+    "Build Time": "4d 18h",
+    "Experience Gained": 640,
+    "Town Hall Level Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/5e/Giant_Bomb7.png"
+  },
+  {
+    "Level": 8,
+    "Damage": 400,
+    "Damage Radius": "4 tiles",
+    "Cost Gold": "6,500,000",
+    "Build Time": "8d 18h",
+    "Experience Gained": 869,
+    "Town Hall Level Required": 14,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/5e/Giant_Bomb7.png"
+  },
+  {
+    "Level": 9,
+    "Damage": 425,
+    "Damage Radius": "4 tiles",
+    "Cost Gold": "10,500,000",
+    "Build Time": "11d 18h",
+    "Experience Gained": 974,
+    "Town Hall Level Required": 15,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/d8/Giant_Bomb9.png"
+  },
+  {
+    "Level": 10,
+    "Damage": 450,
+    "Damage Radius": "4 tiles",
+    "Cost Gold": "12,000,000",
+    "Build Time": "12d 18h",
+    "Experience Gained": 1039,
+    "Town Hall Level Required": 16,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/d8/Giant_Bomb9.png"
+  }
+]

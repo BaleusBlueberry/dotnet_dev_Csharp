@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using ClassLibrary;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
-using ClassLibrary;
 
 namespace Tic_Tac_Toe
 {
@@ -22,8 +17,6 @@ namespace Tic_Tac_Toe
                 return new BitmapImage(uri);
             }
         }
-
-
         public void Run()
         {
             MainWindow window = new MainWindow();

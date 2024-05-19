@@ -1,0 +1,233 @@
+﻿[
+  {
+    "Level": 1,
+    "Damage_per_Second": "9",
+    "Damage_per_Hit": "7.2",
+    "Hitpoints": "420",
+    "Cost_Gold": "250",
+    "Build_Time": "10s",
+    "Experience_Gained": "3",
+    "Town_Hall_Level_Required": "1",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/a1/Cannon1.png"
+  },
+  {
+    "Level": 2,
+    "Damage_per_Second": "11",
+    "Damage_per_Hit": "8.8",
+    "Hitpoints": "470",
+    "Cost_Gold": "1000",
+    "Build_Time": "2m",
+    "Experience_Gained": "10",
+    "Town_Hall_Level_Required": "1",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/dc/Cannon2.png"
+  },
+  {
+    "Level": 3,
+    "Damage_per_Second": "15",
+    "Damage_per_Hit": "12",
+    "Hitpoints": "520",
+    "Cost_Gold": "4000",
+    "Build_Time": "10m",
+    "Experience_Gained": "24",
+    "Town_Hall_Level_Required": "2",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/10/Cannon3.png"
+  },
+  {
+    "Level": 4,
+    "Damage_per_Second": "19",
+    "Damage_per_Hit": "15.2",
+    "Hitpoints": "570",
+    "Cost_Gold": "16000",
+    "Build_Time": "45m",
+    "Experience_Gained": "51",
+    "Town_Hall_Level_Required": "3",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/a5/Cannon4.png"
+  },
+  {
+    "Level": 5,
+    "Damage_per_Second": "25",
+    "Damage_per_Hit": "20",
+    "Hitpoints": "620",
+    "Cost_Gold": "50000",
+    "Build_Time": "1h",
+    "Experience_Gained": "60",
+    "Town_Hall_Level_Required": "4",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/ea/Cannon5.png"
+  },
+  {
+    "Level": 6,
+    "Damage_per_Second": "31",
+    "Damage_per_Hit": "24.8",
+    "Hitpoints": "670",
+    "Cost_Gold": "100000",
+    "Build_Time": "2h",
+    "Experience_Gained": "84",
+    "Town_Hall_Level_Required": "5",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/93/Cannon6.png"
+  },
+  {
+    "Level": 7,
+    "Damage_per_Second": "40",
+    "Damage_per_Hit": "32",
+    "Hitpoints": "730",
+    "Cost_Gold": "150000",
+    "Build_Time": "4h",
+    "Experience_Gained": "120",
+    "Town_Hall_Level_Required": "6",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/16/Cannon7B.png"
+  },
+  {
+    "Level": 8,
+    "Damage_per_Second": "48",
+    "Damage_per_Hit": "38.4",
+    "Hitpoints": "800",
+    "Cost_Gold": "240000",
+    "Build_Time": "8h",
+    "Experience_Gained": "169",
+    "Town_Hall_Level_Required": "7",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/e/e6/Cannon8B.png"
+  },
+  {
+    "Level": 9,
+    "Damage_per_Second": "56",
+    "Damage_per_Hit": "44.8",
+    "Hitpoints": "880",
+    "Cost_Gold": "360000",
+    "Build_Time": "10h",
+    "Experience_Gained": "189",
+    "Town_Hall_Level_Required": "8",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/9b/Cannon9B.png"
+  },
+  {
+    "Level": 10,
+    "Damage_per_Second": "64",
+    "Damage_per_Hit": "51.2",
+    "Hitpoints": "960",
+    "Cost_Gold": "500000",
+    "Build_Time": "10h",
+    "Experience_Gained": "189",
+    "Town_Hall_Level_Required": "8",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/74/Cannon10B.png"
+  },
+  {
+    "Level": 11,
+    "Damage_per_Second": "74",
+    "Damage_per_Hit": "59.2",
+    "Hitpoints": "1060",
+    "Cost_Gold": "800000",
+    "Build_Time": "12h",
+    "Experience_Gained": "207",
+    "Town_Hall_Level_Required": "9",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/8/8c/Cannon11B.png"
+  },
+  {
+    "Level": 12,
+    "Damage_per_Second": "85",
+    "Damage_per_Hit": "68",
+    "Hitpoints": "1160",
+    "Cost_Gold": "900000",
+    "Build_Time": "18h",
+    "Experience_Gained": "254",
+    "Town_Hall_Level_Required": "10",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/5e/Cannon12B.png"
+  },
+  {
+    "Level": 13,
+    "Damage_per_Second": "95",
+    "Damage_per_Hit": "76",
+    "Hitpoints": "1260",
+    "Cost_Gold": "1700000",
+    "Build_Time": "18h",
+    "Experience_Gained": "254",
+    "Town_Hall_Level_Required": "10",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/fb/Cannon13B.png"
+  },
+  {
+    "Level": 14,
+    "Damage_per_Second": "105",
+    "Damage_per_Hit": "84",
+    "Hitpoints": "1380",
+    "Cost_Gold": "2000000",
+    "Build_Time": "1d 6h",
+    "Experience_Gained": "328",
+    "Town_Hall_Level_Required": "11",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/64/Cannon14B.png"
+  },
+  {
+    "Level": 15,
+    "Damage_per_Second": "115",
+    "Damage_per_Hit": "92",
+    "Hitpoints": "1500",
+    "Cost_Gold": "2500000",
+    "Build_Time": "1d 6h",
+    "Experience_Gained": "328",
+    "Town_Hall_Level_Required": "11",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/4f/Cannon15B.png"
+  },
+  {
+    "Level": 16,
+    "Damage_per_Second": "120",
+    "Damage_per_Hit": "96",
+    "Hitpoints": "1620",
+    "Cost_Gold": "4400000",
+    "Build_Time": "3d",
+    "Experience_Gained": "509",
+    "Town_Hall_Level_Required": "12",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/18/Cannon16B.png"
+  },
+  {
+    "Level": 17,
+    "Damage_per_Second": "125",
+    "Damage_per_Hit": "100",
+    "Hitpoints": "1740",
+    "Cost_Gold": "5600000",
+    "Build_Time": "3d",
+    "Experience_Gained": "509",
+    "Town_Hall_Level_Required": "12",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/1/17/Cannon17B.png"
+  },
+  {
+    "Level": 18,
+    "Damage_per_Second": "130",
+    "Damage_per_Hit": "104",
+    "Hitpoints": "1870",
+    "Cost_Gold": "6500000",
+    "Build_Time": "7d",
+    "Experience_Gained": "777",
+    "Town_Hall_Level_Required": "13",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/8/87/Cannon18B.png"
+  },
+  {
+    "Level": 19,
+    "Damage_per_Second": "140",
+    "Damage_per_Hit": "112",
+    "Hitpoints": "2000",
+    "Cost_Gold": "7800000",
+    "Build_Time": "7d",
+    "Experience_Gained": "777",
+    "Town_Hall_Level_Required": "13",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/9d/Cannon19B.png"
+  },
+  {
+    "Level": 20,
+    "Damage_per_Second": "150",
+    "Damage_per_Hit": "120",
+    "Hitpoints": "2150",
+    "Cost_Gold": "11600000",
+    "Build_Time": "9d 12h",
+    "Experience_Gained": "905",
+    "Town_Hall_Level_Required": "14",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/7/71/Cannon20B.png"
+  },
+  {
+    "Level": 21,
+    "Damage_per_Second": "160",
+    "Damage_per_Hit": "128",
+    "Hitpoints": "2250",
+    "Cost_Gold": "16000000",
+    "Build_Time": "13d 6h",
+    "Experience_Gained": "1069",
+    "Town_Hall_Level_Required": "15",
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/8/85/Cannon21B.png"
+  }
+]

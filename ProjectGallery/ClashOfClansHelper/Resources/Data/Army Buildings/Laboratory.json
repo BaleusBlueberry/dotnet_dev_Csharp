@@ -1,0 +1,128 @@
+[
+  {
+    "Level": 1,
+    "Hitpoints": 500,
+    "Build Cost Elixir": "5,000",
+    "Build Time": "1m",
+    "Experience Gained": 7,
+    "Town Hall Level Required": 3,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/3/36/Laboratory1.png"
+  },
+  {
+    "Level": 2,
+    "Hitpoints": 550,
+    "Build Cost Elixir": "25,000",
+    "Build Time": "1h",
+    "Experience Gained": 60,
+    "Town Hall Level Required": 4,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/49/Laboratory2.png"
+  },
+  {
+    "Level": 3,
+    "Hitpoints": 600,
+    "Build Cost Elixir": "50,000",
+    "Build Time": "2h",
+    "Experience Gained": 84,
+    "Town Hall Level Required": 5,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/63/Laboratory3.png"
+  },
+  {
+    "Level": 4,
+    "Hitpoints": 650,
+    "Build Cost Elixir": "100,000",
+    "Build Time": "4h",
+    "Experience Gained": 120,
+    "Town Hall Level Required": 6,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/4/43/Laboratory4.png"
+  },
+  {
+    "Level": 5,
+    "Hitpoints": 700,
+    "Build Cost Elixir": "200,000",
+    "Build Time": "8h",
+    "Experience Gained": 169,
+    "Town Hall Level Required": 7,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/d/d6/Laboratory5.png"
+  },
+  {
+    "Level": 6,
+    "Hitpoints": 750,
+    "Build Cost Elixir": "400,000",
+    "Build Time": "16h",
+    "Experience Gained": 240,
+    "Town Hall Level Required": 8,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/9c/Laboratory6.png"
+  },
+  {
+    "Level": 7,
+    "Hitpoints": 830,
+    "Build Cost Elixir": "800,000",
+    "Build Time": "1d",
+    "Experience Gained": 293,
+    "Town Hall Level Required": 9,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/f/f1/Laboratory7.png"
+  },
+  {
+    "Level": 8,
+    "Hitpoints": 950,
+    "Build Cost Elixir": "1,300,000",
+    "Build Time": "1d 18h",
+    "Experience Gained": 388,
+    "Town Hall Level Required": 10,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/b/b8/Laboratory8.png"
+  },
+  {
+    "Level": 9,
+    "Hitpoints": 1070,
+    "Build Cost Elixir": "2,100,000",
+    "Build Time": "2d 18h",
+    "Experience Gained": 487,
+    "Town Hall Level Required": 11,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/5/58/Laboratory9.png"
+  },
+  {
+    "Level": 10,
+    "Hitpoints": 1140,
+    "Build Cost Elixir": "3,800,000",
+    "Build Time": "4d",
+    "Experience Gained": 587,
+    "Town Hall Level Required": 12,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/a7/Laboratory10.png"
+  },
+  {
+    "Level": 11,
+    "Hitpoints": 1210,
+    "Build Cost Elixir": "5,500,000",
+    "Build Time": "6d",
+    "Experience Gained": 720,
+    "Town Hall Level Required": 13,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/a/a2/Laboratory11.png"
+  },
+  {
+    "Level": 12,
+    "Hitpoints": 1280,
+    "Build Cost Elixir": "8,100,000",
+    "Build Time": "11d 12h",
+    "Experience Gained": 996,
+    "Town Hall Level Required": 14,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/2/27/Laboratory12.png"
+  },
+  {
+    "Level": 13,
+    "Hitpoints": 1350,
+    "Build Cost Elixir": "12,500,000",
+    "Build Time": "12d",
+    "Experience Gained": 1018,
+    "Town Hall Level Required": 15,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/6/62/Laboratory13.png"
+  },
+  {
+    "Level": 14,
+    "Hitpoints": 1400,
+    "Build Cost Elixir": "13,500,000",
+    "Build Time": "16d",
+    "Experience Gained": 1175,
+    "Town Hall Level Required": 16,
+    "picture": "https://static.wikia.nocookie.net/clashofclans/images/9/9b/Laboratory14.png"
+  }
+]
