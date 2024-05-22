@@ -1,34 +1,15 @@
 ﻿using ClashOfClansHelper.Controls;
 using ClassLibrary;
 using System.IO;
-using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-using Newtonsoft.Json.Linq;
 using Path = System.IO.Path;
-using System;
-using System.Web;
-using System.Windows.Data;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Reflection;
 using Newtonsoft.Json;
-using System.Windows.Shapes;
-using System.Text.Json.Serialization;
-using System.Reflection.Emit;
-using System.Net.NetworkInformation;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Diagnostics.Eventing.Reader;
-using System.Windows.Input;
 using System.Windows.Media;
 
 namespace ClashOfClansHelper;
-
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
 public partial class MainWindow : Window
 {
     public MainWindow()

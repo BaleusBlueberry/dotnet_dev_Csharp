@@ -16,6 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="Resources\Styles\TextBoxLabels.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\coc.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
@@ -29,6 +37,9 @@
     <Resource Include="Resources\greenarrow.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <None Include="Resources\Styles\TextBoxLabels.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

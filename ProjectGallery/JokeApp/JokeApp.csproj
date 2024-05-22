@@ -6,10 +6,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\cloun.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Resources\cloun.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\cloun.ico" />
   </ItemGroup>
 
   <ItemGroup>
