@@ -6,6 +6,15 @@
              xmlns:syncfusionskin= "clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="TextBoxLabel" TargetType="TextBlock">
+         <!--Margin="10 10 10 10" Padding="5" FontSize="22" FontWeight="Bold"-->
+
+        <Setter Property="Padding" Value="5"></Setter>
+      <Setter Property="FontSize" Value="22"></Setter>
+      <Setter Property="FontWeight" Value="Bold"></Setter>
+      <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+      <Setter Property="VerticalAlignment" Value="Center"></Setter>
+
+        </Style>
     </Application.Resources>
 </Application>
