@@ -32,10 +32,8 @@ public partial class MainWindow : Window
 
     private void InitializeProjectButtons()
     {
-
         foreach (var project in projects)
         {
-
             ProjectButton button = new ProjectButton(project)
             {
                 Margin = new Thickness(10),
@@ -47,7 +45,6 @@ public partial class MainWindow : Window
 
         foreach ( var project in testProjects)
         {
-
             ProjectButton button = new ProjectButton(project)
             {
                 Margin = new Thickness(10),
@@ -58,7 +55,4 @@ public partial class MainWindow : Window
             ProjectsTestsPanel.Children.Add(button);
         }
     }
-
 }
-/*syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Dark}"*/
-
