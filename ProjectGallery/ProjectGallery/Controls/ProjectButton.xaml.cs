@@ -3,9 +3,6 @@ using System.Windows.Controls;
 
 namespace ProjectGallery.Controls;
 
-/// <summary>
-/// Interaction logic for ProjectButton.xaml
-/// </summary>
 public partial class ProjectButton : UserControl
 {
     public ProjectButton(IProjectMeta project)
@@ -13,7 +10,12 @@ public partial class ProjectButton : UserControl
         InitializeComponent();
         DataContext = project;
 
-        MainButton.Click += (sender, e) => project.Run();
+        LandingPage landingPage = new LandingPage(project);
+        landingPage.DataContext = project;
+
+        MainButton.Click += (sender, e) => landingPage.ShowDialog();
+
+        /*MainButton.Click += (sender, e) => project.Run();*/
     }
 }
 

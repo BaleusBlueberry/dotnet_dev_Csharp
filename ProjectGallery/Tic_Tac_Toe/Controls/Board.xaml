@@ -19,30 +19,14 @@
         </Grid.ColumnDefinitions>
 
 
-        <Border Grid.Row="0" 
-                Grid.Column="0"
-                Margin="10"
-                Padding="10"
-                BorderBrush="DarkRed"
-                BorderThickness="3"
-                CornerRadius="3"
-                Background="DarkCyan">
-
+        <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource tickTackScoreBoard}">
             <StackPanel>
                 <TextBlock Text="Game Mode:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
                 <TextBlock Text="{Binding CurrentGameType}" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
             </StackPanel>
         </Border>
 
-        <Border Grid.Row="0" 
-                Grid.Column="1"
-                Margin="10"
-                Padding="10"
-                BorderBrush="DarkRed"
-                BorderThickness="3"
-                CornerRadius="3"
-                Background="DarkCyan">
-
+        <Border  Grid.Row="0" Grid.Column="1" Style="{StaticResource tickTackScoreBoard}">
             <StackPanel>
                 <TextBlock Text="Current Turn:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
                 <TextBlock Text="{Binding CurrentPlayerTurn}" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
@@ -50,17 +34,9 @@
         </Border>
 
 
-        <Border Grid.Row="1" 
-                Grid.Column="0" 
-                Grid.ColumnSpan="2"
-                Margin="10"
-                Padding="10"
-                BorderBrush="DarkCyan"
-                BorderThickness="3"
-                CornerRadius="3" >
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource tickTackMainBoard}">
 
-        
-        <Grid Name="BoardControl">
+            <Grid Name="BoardControl">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />

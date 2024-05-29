@@ -4,8 +4,6 @@ namespace ClassLibrary;
 
 public static class ThemeHelper
 {
-
-
     public static void SetTheme(Window window)
     {
         var windowsAppThemes = new ClassLibrary.WindowsAppThemes();

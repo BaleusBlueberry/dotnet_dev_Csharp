@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +15,22 @@ using System.Windows.Shapes;
 
 namespace ProjectGallery
 {
-    /// <summary>
-    /// Interaction logic for LandingPage.xaml
-    /// </summary>
     public partial class LandingPage : Window
     {
-        public LandingPage()
+        public LandingPage(IProjectMeta project)
         {
             InitializeComponent();
+            DataContext = project;
+
+            OpenProject.Click += (sender, e) =>
+            {
+                this.Hide();
+                project.Run();
+            };
+        }
+        private void ReturnIcon_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
         }
     }
 }

@@ -13,5 +13,32 @@
             <Setter Property="HorizontalAlignment" Value="Center"></Setter>
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
         </Style>
+        
+        <Style x:Key="JokeFont">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Tell Me A Joke"></Setter>
+            <Setter Property="TextElement.FontSize" Value="30"></Setter>
+        </Style>
+        
+        <Style x:Key="jokeElement" TargetType="CheckBox">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="13"></Setter>
+        </Style>
+
+        <Style x:Key="tickTackScoreBoard" TargetType="Border">
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Padding" Value="10"></Setter>
+            <Setter Property="BorderBrush" Value="DarkRed"></Setter>
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="CornerRadius" Value="3"></Setter>
+            <Setter Property="Background" Value="DarkCyan"></Setter>
+        </Style>
+        <Style x:Key="tickTackMainBoard" TargetType="Border">
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Padding" Value="10"></Setter>
+            <Setter Property="BorderBrush" Value="DarkCyan"></Setter>
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="CornerRadius" Value="3"></Setter>
+        </Style>
+
     </Application.Resources>
 </Application>

@@ -81,8 +81,6 @@ namespace JokeApp
 
             string finalString = GetFinalSubmitString();
 
-            MessageBox.Show($"https://v2.jokeapi.dev/joke/{finalString}");
-
             string response = await client.GetStringAsync($"https://v2.jokeapi.dev/joke/{finalString}");
             return response;
         }

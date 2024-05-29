@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Joke.ttf" />
+    <None Remove="Resources\ReturnKey.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ClashOfClansHelper\ClashOfClansHelper.csproj" />
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
     <ProjectReference Include="..\JokeApp\JokeApp.csproj" />
@@ -19,12 +24,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" Version="25.1.39" />
+    <PackageReference Include="Syncfusion.Themes.Windows11Light.WPF" Version="25.1.39" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" Version="25.1.39" />
-    <PackageReference Include="Syncfusion.Themes.Windows11Light.WPF" Version="25.1.39" />
+    <Resource Include="Fonts\Joke.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\ReturnKey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
