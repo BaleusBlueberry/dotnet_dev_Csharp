@@ -7,8 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-
-
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
             <RowDefinition Height="*" />
@@ -17,7 +15,6 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
 
         <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource tickTackScoreBoard}">
             <StackPanel>
@@ -33,9 +30,7 @@
             </StackPanel>
         </Border>
 
-
         <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource tickTackMainBoard}">
-
             <Grid Name="BoardControl">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -47,8 +42,8 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-            </Grid></Border>
-        
+            </Grid>
+        </Border>
     </Grid>
 
 </UserControl>

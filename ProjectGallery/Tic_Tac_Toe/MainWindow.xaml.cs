@@ -1,6 +1,7 @@
 ﻿using ClassLibrary;
 using System.ComponentModel;
 using System.Windows;
+using System.Windows.Input;
 using Tic_Tac_Toe.Controls;
 using Tic_Tac_Toe.Enums;
 
@@ -17,19 +18,42 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         InitializeComponent();
 
         ThemeHelper.SetTheme(this);
+
+        MyBoard.GameEnded += HandleGameEnded;
+
+        DataContext = this;
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
-    private int playerOneScore = 0;
-    private int playerTwoScore = 0;
-    private string endGameState;
+    public string endGameState;
+    private int _playerOneScore = 0;
+    private int _playerTwoScore = 0;
+    public int PlayerOneScore
+    {
+        get { return _playerOneScore; }
+        set
+        {
+            _playerOneScore = value;
+            OnPropertyChanged(nameof(PlayerOneScore));
+        }
+    }
 
-    private void OnPropertyChanged(string name)
+    public int PlayerTwoScore
+    {
+        get { return _playerTwoScore; }
+        set
+        {
+            _playerTwoScore = value;
+            OnPropertyChanged(nameof(PlayerTwoScore));
+        }
+    }
+
+    public void OnPropertyChanged(string name)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 
-    private void HandleGameEnded(object? sender, GameEndEventArgs e)
+    public void HandleGameEnded(object? sender, GameEndEventArgs e)
     {
         switch (e.GameResult)
         {
@@ -54,32 +78,11 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         {
             endGameState = value;
             OnPropertyChanged(nameof(EndGameState));
+            MessageBox.Show(EndGameState);
         }
     }
 
-    public int PlayerOneScore
-    {
-        get => playerOneScore;
-        set
-        {
-            playerOneScore = value;
-            OnPropertyChanged(nameof(PlayerOneScore));
-        }
-    }
-
-    public int PlayerTwoScore
-    {
-        get => playerTwoScore;
-        set
-        {
-            playerTwoScore = value;
-            OnPropertyChanged(nameof(PlayerTwoScore));
-        }
-    }
-
-
-
-    private void NewGame_Click(object sender, RoutedEventArgs e)
+    public void NewGame_Click(object sender, RoutedEventArgs e)
     {
         GameType gameType;
         if (sender == Btn_PvP)
@@ -102,9 +105,8 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         MyBoard.StartNewGame(gameType);
     }
 
-    private void fileExitMenuItem_Click(object sender, RoutedEventArgs e)
+    public void fileExitMenuItem_Click(object sender, RoutedEventArgs e)
     {
-        // Close the current window
         this.Close();
     }
 

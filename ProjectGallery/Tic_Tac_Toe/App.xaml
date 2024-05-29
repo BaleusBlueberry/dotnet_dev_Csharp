@@ -4,6 +4,20 @@
              xmlns:local="clr-namespace:Tic_Tac_Toe"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="tickTackScoreBoard" TargetType="Border">
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Padding" Value="10"></Setter>
+            <Setter Property="BorderBrush" Value="DarkRed"></Setter>
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="CornerRadius" Value="3"></Setter>
+            <Setter Property="Background" Value="DarkCyan"></Setter>
+        </Style>
+        <Style x:Key="tickTackMainBoard" TargetType="Border">
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Padding" Value="10"></Setter>
+            <Setter Property="BorderBrush" Value="DarkCyan"></Setter>
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="CornerRadius" Value="3"></Setter>
+        </Style>
     </Application.Resources>
 </Application>
