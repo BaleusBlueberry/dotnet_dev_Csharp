@@ -24,7 +24,7 @@ public partial class Board : UserControl, INotifyPropertyChanged
 
     private bool _isPlayerOneTurn = true;
     private bool _gameIsActive = false;
-    private GameType _gameType = GameType.PvP;
+    public GameType? _gameType;
 
 
     public Board()
@@ -37,7 +37,7 @@ public partial class Board : UserControl, INotifyPropertyChanged
 
     }
 
-    public GameType CurrentGameType
+    public GameType? CurrentGameType
     {
         get
         {
@@ -50,7 +50,7 @@ public partial class Board : UserControl, INotifyPropertyChanged
         }
     }
 
-    private void OnPropertyChanged(string name)
+    public void OnPropertyChanged(string name)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
@@ -102,7 +102,12 @@ public partial class Board : UserControl, INotifyPropertyChanged
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
-        if (!_gameIsActive || CurrentGameType == GameType.PvC && !IsPlayerOneTurn || CurrentGameType == GameType.CvC) return;
+        if (!_gameIsActive)
+        {
+            MessageBox.Show("Please Start The Game First");
+            return;
+        }
+        if (CurrentGameType == GameType.PvC && !IsPlayerOneTurn || CurrentGameType == GameType.CvC) return;
 
         Button btn = sender as Button;
 
@@ -111,6 +116,9 @@ public partial class Board : UserControl, INotifyPropertyChanged
         if (btn.Content == null)
         {
             btn.Content = IsPlayerOneTurn ? PlayerOneContent : PlayerTwoContent;
+        } else
+        {
+            return;
         }
 
         if (ProcessEndGame())
@@ -249,6 +257,19 @@ public partial class Board : UserControl, INotifyPropertyChanged
     private bool AreButtonsEqual(Button b1, Button b2, Button b3)
     {
         return b1.Content != null && b1.Content == b2.Content && b2.Content == b3.Content;
+    }
+
+    public void ResetGame()
+    {
+        CurrentGameType = null;
+        _gameType = null;
+        IsPlayerOneTurn = true;
+        _gameIsActive = false;
+
+        foreach (Button btn in _buttons)
+        {
+            btn.Content = null;
+        }
     }
 }
 

@@ -1,9 +1,12 @@
 ﻿using ClassLibrary;
 using System.ComponentModel;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using Tic_Tac_Toe.Controls;
 using Tic_Tac_Toe.Enums;
+using Button = System.Windows.Controls.Button;
 
 
 namespace Tic_Tac_Toe;
@@ -22,8 +25,10 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         MyBoard.GameEnded += HandleGameEnded;
 
         DataContext = this;
-    }
 
+        CreateButtons();
+    }
+    private GameType? gameType;
     public event PropertyChangedEventHandler? PropertyChanged;
     public string endGameState;
     private int _playerOneScore = 0;
@@ -37,6 +42,13 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             OnPropertyChanged(nameof(PlayerOneScore));
         }
     }
+
+    public Dictionary<string, bool> coloredButtons = new Dictionary<string, bool>
+    {
+        { "Btn_PvP", false },
+        { "Btn_PvC", false },
+        { "Btn_CvC", false }
+    };
 
     public int PlayerTwoScore
     {
@@ -82,34 +94,137 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         }
     }
 
-    public void NewGame_Click(object sender, RoutedEventArgs e)
+    public void SelectGameType(object sender, RoutedEventArgs e)
     {
-        GameType gameType;
-        if (sender == Btn_PvP)
+        Button button = sender as Button;
+
+        if (button.Name == "Btn_PvP")
         {
             gameType = GameType.PvP;
+
         }
-        else if (sender == Btn_PvC)
+        else if (button.Name == "Btn_PvC")
         {
             gameType = GameType.PvC;
         }
-        else if (sender == Btn_CvC)
+        else if (button.Name == "Btn_CvC")
         {
             gameType = GameType.CvC;
         }
-        else
-        {
-            return;
-        }
 
-        MyBoard.StartNewGame(gameType);
+        if (AnyOtherButtonIsPressed())
+        {
+            ResetAllColorButtons();
+            ChangeButtonColor(button);
+        } else
+        {
+            ChangeButtonColor(button);
+        }
+        
+
     }
+    private void StartGameButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (gameType == GameType.PvP || gameType == GameType.PvC || gameType == GameType.CvC)
+            MyBoard.StartNewGame((GameType)gameType);
+        else MessageBox.Show("Please Select a Game Type");
+    }
+
 
     public void fileExitMenuItem_Click(object sender, RoutedEventArgs e)
     {
         this.Close();
     }
 
+    private void CreateButtons()
+    {
+        string[] buttonDisplayNames = new string[] {
+            "PvP (Player Vs Player)",
+            "PvC (Player Vs Computer)",
+            "CvC (Computer Vs Computer)"
+        };
+        string[] buttonNames = new string[] {
+            "Btn_PvP",
+            "Btn_PvC",
+            "Btn_CvC"
+        };
 
+        for (int i = 0; i < buttonDisplayNames.Length; i++)
+        {
+            Button button = new Button
+            {
+                Content = buttonDisplayNames[i],
+                Name = buttonNames[i],
+                Margin = new Thickness(10, 10, 10, 10),
+            };
+            button.Click += SelectGameType;
 
+            buttonList.Children.Add(button);
+        };
+    }
+
+    private void ResetAllColorButtons()
+    {
+        foreach (KeyValuePair<string, bool> keyValue in coloredButtons)
+        {
+            coloredButtons[keyValue.Key] = false;
+        }
+
+        foreach (Button button in buttonList.Children)
+        {
+            ResetColorButton(button);
+        }
+    }
+
+    private void ChangeButtonColor(Button button)
+    {
+        string buttonName = button.Name;
+
+        if (coloredButtons[buttonName])
+        {
+            button.Background = new SolidColorBrush(Colors.White);
+            button.Foreground = new SolidColorBrush(Colors.Black);
+        } else
+        {
+            button.Background = new SolidColorBrush(Colors.Red);
+            button.Foreground = new SolidColorBrush(Colors.Yellow);
+        }
+       
+        coloredButtons[buttonName] = !coloredButtons[buttonName];
+
+    }
+    private void ResetColorButton(object sender)
+    {
+        Button currentButton = sender as Button;
+        {
+
+            currentButton.Background = new SolidColorBrush(Colors.White);
+            currentButton.Foreground = new SolidColorBrush(Colors.Black);
+            return;
+        }
+    }
+
+    private bool AnyOtherButtonIsPressed()
+    {
+        foreach (KeyValuePair<string, bool> keyValue in coloredButtons)
+        {
+            if (coloredButtons[keyValue.Key] = true)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void ResetGame_Click(object sender, RoutedEventArgs e)
+    {
+        MyBoard.ResetGame();
+        ResetAllColorButtons();
+        gameType = null;
+    }
+
+    private void btn_Exit_Click(object sender, RoutedEventArgs e)
+    {
+        this.Close();
+    }
 }
