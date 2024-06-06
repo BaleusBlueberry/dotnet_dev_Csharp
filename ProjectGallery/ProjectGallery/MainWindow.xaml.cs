@@ -1,6 +1,9 @@
 ﻿using ClassLibrary;
 using ProjectGallery.Controls;
+using System.Runtime.InteropServices;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 
 namespace ProjectGallery;
@@ -17,9 +20,9 @@ public partial class MainWindow : Window
 
     private IProjectMeta[] testProjects = new IProjectMeta[]
     {
-        /*new PersonManager.Project(),
+        new PersonManager.Project(),
         new UsersAPI.Project(),
-        new UsersCRUDApi.Project(),*/
+        new UsersCRUDApi.Project(),
     };
 
     public MainWindow()
@@ -28,6 +31,7 @@ public partial class MainWindow : Window
         InitializeProjectButtons();
 
         ThemeHelper.SetTheme(this);
+        WindowHelper.EnableWindowDragging(this);
     }
 
     private void InitializeProjectButtons()
@@ -54,5 +58,14 @@ public partial class MainWindow : Window
 
             ProjectsTestsPanel.Children.Add(button);
         }
+    }
+
+    private void closeWindow(object sender, RoutedEventArgs e)
+    {
+        this.Close();
+    }
+    private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+    {
+        // This event handler will be called when the window is clicked, and it will trigger the window dragging functionality
     }
 }

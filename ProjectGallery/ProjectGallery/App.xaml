@@ -5,28 +5,136 @@
              xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!-- Define colors as StaticResources -->
+        <SolidColorBrush x:Key="BackgroundColor" Color="#000000"/>
+        <SolidColorBrush x:Key="BorderColor" Color="#00FFFF"/>
 
-        <Style x:Key="tickTackScoreBoard" TargetType="Border">
-            <Setter Property="Margin" Value="10"></Setter>
-            <Setter Property="Padding" Value="10"></Setter>
-            <Setter Property="BorderBrush" Value="DarkRed"></Setter>
-            <Setter Property="BorderThickness" Value="3"></Setter>
-            <Setter Property="CornerRadius" Value="3"></Setter>
-            <Setter Property="Background" Value="DarkCyan"></Setter>
-        </Style>
-        <Style x:Key="tickTackMainBoard" TargetType="Border">
-            <Setter Property="Margin" Value="10"></Setter>
-            <Setter Property="Padding" Value="10"></Setter>
-            <Setter Property="BorderBrush" Value="DarkCyan"></Setter>
-            <Setter Property="BorderThickness" Value="3"></Setter>
-            <Setter Property="CornerRadius" Value="3"></Setter>
+        <Style x:Key="mainBorder" TargetType="Border">
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Cyan"></Setter>
         </Style>
 
+        <!-- TextBlock style for landing page buttons -->
         <Style x:Key="landingpageButtonText" TargetType="TextBlock">
-            <Setter Property="TextWrapping" Value="Wrap"></Setter>
-            <Setter Property="TextAlignment" Value="Center"></Setter>
-            <Setter Property="Padding" Value="10 0 10 0"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10 0 10 0"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="{StaticResource BorderColor}"></Setter>
+        </Style>
+
+        <!-- Border style for tick-tack score board -->
+        <Style x:Key="tickTackScoreBoard" TargetType="Border">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="10"/>
+            <!-- Ensure that the Background and BorderBrush are set using StaticResource -->
+            <Setter Property="BorderBrush" Value="{StaticResource BorderColor}"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Background" Value="{StaticResource BackgroundColor}"/>
+        </Style>
+
+        <!-- Border style for tick-tack main board -->
+        <Style x:Key="tickTackMainBoard" TargetType="Border">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="10"/>
+            <!-- Ensure that the Background and BorderBrush are set using StaticResource -->
+            <Setter Property="BorderBrush" Value="{StaticResource BorderColor}"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Background" Value="{StaticResource BackgroundColor}"/>
+        </Style>
+
+        <Style x:Key="openButton" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Width" Value="155"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
             <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Background" Value="{StaticResource BorderColor}"></Setter>
+            <Setter Property="Foreground" Value="{StaticResource BackgroundColor}"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value=" DarkCyan"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="Cyan"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="closeButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Cyan"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value=" SlateBlue"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="DarkSlateBlue"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="projectCard" TargetType="Button">
+            <Setter Property="Foreground" Value="Cyan"/>
+            <Setter Property="Background" Value="DarkSlateGray"></Setter>
+            <Setter Property="BorderBrush" Value="Cyan"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="7">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="LightBlue"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
     </Application.Resources>

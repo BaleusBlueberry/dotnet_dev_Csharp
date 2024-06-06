@@ -20,6 +20,7 @@ namespace ProjectGallery
         public LandingPage(IProjectMeta project)
         {
             InitializeComponent();
+            WindowHelper.EnableWindowDragging(this);
             DataContext = project;
 
             OpenProject.Click += (sender, e) =>
@@ -31,6 +32,10 @@ namespace ProjectGallery
         private void ReturnIcon_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
+        }
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // This event handler will be called when the window is clicked, and it will trigger the window dragging functionality
         }
     }
 }

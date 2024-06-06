@@ -3,51 +3,52 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ProjectGallery"
         mc:Ignorable="d"
-        Title="LandingPage" Height="450" Width="800">
-    <Border>
+        Title="LandingPage" Height="650" Width="1100"
+        WindowStyle="None">
+
+    <Border Style="{StaticResource mainBorder}">
         <Viewbox>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="7*"></RowDefinition>
                 </Grid.RowDefinitions>
-
                 <Grid.ColumnDefinitions>
+
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
+                <TextBlock Text="About Page" FontSize="30" Grid.ColumnSpan="2" Grid.Row="1" TextAlignment="Center" Foreground="Cyan" Margin="10"/>
+                <TextBlock Text="This page showcases the tools used for the project and explains its functionality." 
+                           Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="LightGray" Margin="10"/>
 
-                <TextBlock Text="About Page" FontSize="30" Grid.ColumnSpan="2" TextAlignment="Center"></TextBlock>
-                <TextBlock Text="This page is here to show the tools used for the project, and some explanations about what's inside of it" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
+                <WrapPanel Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                    <!-- Add icons or buttons representing tools used -->
+                </WrapPanel>
 
+                <Border Grid.Row="4" Grid.Column="1" Background="DarkSlateGray" CornerRadius="10" Margin="10">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="{Binding Icon}" Width="100" Height="100" Margin="20"/>
+                        <TextBlock Text='Click The Button Below' Style="{StaticResource landingpageButtonText}"/>
+                        <TextBlock Text='To Open the Project' Style="{StaticResource landingpageButtonText}"/>
+                        <Button Name="OpenProject" Style="{StaticResource openButton}">Open Project</Button>
+                    </StackPanel>
+                </Border>
 
-                <!--Wrappannel of icons for the tools used-->
-                <WrapPanel Grid.Column="1" Grid.Row="2"></WrapPanel>
-
-                <!--building info panel-->
-                <StackPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                    <Image Source="{Binding Icon}" Width="100" Height="100" Margin="20"/>
-                    <TextBlock Text='Click The Button Below' Style="{StaticResource landingpageButtonText}"></TextBlock>
-                    <TextBlock Text='To Open the Project' Style="{StaticResource landingpageButtonText}"></TextBlock>
-                    <Button Width="155" Height="40" FontSize="20" FontWeight="Bold" Name="OpenProject">Open Project</Button>
-                </StackPanel>
-
-
-                <StackPanel Grid.Row="3" Grid.Column="0">
-                    <Label Content="{Binding Name}" HorizontalAlignment="Center" Margin="10" FontWeight="Bold" FontSize="26"></Label>
-                    <TextBlock Margin="40 10 40 10" Text="{Binding ProjectDescription}"></TextBlock>
-                </StackPanel>
-                <Button x:Name="ReturnIcon" Click="ReturnIcon_Click" Grid.Column="1" HorizontalAlignment="Right" Margin="10 10 10 10" Height="25" Width="25">
-                    <Image  Source="/Resources/ReturnKey.png"/>
+                <Border Grid.Row="4" Grid.Column="0" Background="DarkSlateGray" CornerRadius="10" Margin="10">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Label Content="{Binding Name}" HorizontalAlignment="Center" Margin="10" FontWeight="Bold" FontSize="26" Foreground="Cyan"/>
+                        <TextBlock Margin="40 10 40 10" Text="{Binding ProjectDescription}" Foreground="LightGray"/>
+                    </StackPanel>
+                </Border>
+                <Button x:Name="ReturnIcon" Click="ReturnIcon_Click" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="25">
+                    <Image Source="/Resources/ReturnKey.png"/>
                 </Button>
-
-                <!--<Button Grid.Column="1" Content="Return to main Window" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top"/>-->
-
             </Grid>
         </Viewbox>
     </Border>

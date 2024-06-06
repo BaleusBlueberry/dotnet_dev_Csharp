@@ -6,21 +6,41 @@
         xmlns:local="clr-namespace:ProjectGallery"
         mc:Ignorable="d"
         xmlns:syncfusionskin= "clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
-        Title="MainWindow" Height="450" Width="800">
-    
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0">
-            <TextBlock Text="This is my ticTakToeElement Gallery" FontSize="35" TextAlignment="Center" Margin="10"/>
-            <TextBlock Text="This projects showcases my talents and a few of my applications, Enjoy!" TextAlignment="Center" />
-            <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ProjectsPanel"></WrapPanel>
-        </StackPanel>
-        <StackPanel Grid.Row="1">
-            <TextBlock Text="Those Are Some Test Projects And Studies" FontSize="20" TextAlignment="Center"/>
-            <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ProjectsTestsPanel"></WrapPanel>
-        </StackPanel>
+        <Button Grid.Column="1" Grid.Row="0" Content="X" Style="{StaticResource closeButtonStyle}" Click="closeWindow"></Button>
+        <Border Style="{StaticResource mainBorder}" Grid.Row="1" Grid.ColumnSpan="2">
+            <Viewbox>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text="This is my Project Gallery" FontSize="35" TextAlignment="Center" Foreground="Cyan" Margin="10"/>
+                        <TextBlock Text="This projects showcases my talents and a few of my applications, Enjoy!" Foreground="Cyan" TextAlignment="Center" />
+                        <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ProjectsPanel"></WrapPanel>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1">
+                        <TextBlock Text="Those Are Some Test Projects And Studies" FontSize="20" TextAlignment="Center" Foreground="Cyan"/>
+                        <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ProjectsTestsPanel"></WrapPanel>
+                    </StackPanel>
+                </Grid>
+            </Viewbox>
+        </Border>
     </Grid>
+    
 </Window>
