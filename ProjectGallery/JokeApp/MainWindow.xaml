@@ -28,8 +28,8 @@
             <!--The Joke button and section-->
                 <StackPanel VerticalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3" Height="217" Margin="10,0,0,0">
                     <Button Content="Tell me a 𝓙𝓸𝓴𝓮!" Click="ButtonBase_OnClick" Style="{StaticResource mainJokeButton}"></Button>
-                    <Border Background="White" BorderBrush="Black" BorderThickness="2" Padding="10" Margin="10"
-                            HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border Name="jokeBoarder" Background="White" BorderBrush="Black" BorderThickness="2" Padding="10" Margin="10"
+                            HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden">
                         <TextBlock Name="TB_Joke" TextWrapping="Wrap" MaxWidth="700" Margin="10" HorizontalAlignment="Center" Style="{StaticResource JokeFont}"></TextBlock>
                     </Border>
                 </StackPanel>
@@ -44,7 +44,7 @@
                     <CheckBox Content="Dark" Style="{StaticResource jokeElement}"></CheckBox>
                     <CheckBox Content="Pun" Style="{StaticResource jokeElement}"></CheckBox>
                     <CheckBox Content="Spooky" Style="{StaticResource jokeElement}"></CheckBox>
-                    <CheckBox Content="Christmas" ></CheckBox>
+                        <CheckBox Content="Christmas" Style="{StaticResource jokeElement}"></CheckBox>
                 </WrapPanel>
             </StackPanel>
 
@@ -65,7 +65,7 @@
                 <TextBox Width="100" HorizontalAlignment="Center" Margin="5 5 5 27" FontSize="18" Name="JokeSearch"/>
             </StackPanel>
 
-            <TextBlock Text="𝓙𝓸𝓴𝓮 𝓑𝓾𝓽𝓽𝓸𝓷 𝓐𝓹𝓹" FontSize="40" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Text="𝓙𝓸𝓴𝓮 𝓑𝓾𝓽𝓽𝓸𝓷 𝓐𝓹𝓹" FontSize="40" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         </Grid>
         </Viewbox>

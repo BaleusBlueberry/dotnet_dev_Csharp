@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Tic_Tac_Toe.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Button>
+    <Button Style="{StaticResource ticTakCard}">
         
     </Button>
 </UserControl>

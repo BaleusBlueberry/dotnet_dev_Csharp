@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Threading;
 using Tic_Tac_Toe.Enums;
 
@@ -85,7 +86,8 @@ public partial class Board : UserControl, INotifyPropertyChanged
                     FontSize = 45,
                     FontWeight = FontWeights.Bold,
                     Margin = new Thickness(5),
-
+                    Background = new SolidColorBrush(Colors.DarkSlateGray),
+                    Foreground = new SolidColorBrush(Colors.Cyan),
                 };
 
                 btn.Click += Button_Click;

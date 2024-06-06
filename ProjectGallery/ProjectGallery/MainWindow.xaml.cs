@@ -1,5 +1,6 @@
 ﻿using ClassLibrary;
 using ProjectGallery.Controls;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
@@ -60,9 +61,21 @@ public partial class MainWindow : Window
         }
     }
 
+    private void CloseProject()
+    {
+        // Get the current process
+        Process currentProcess = Process.GetCurrentProcess();
+
+        // Kill all associated processes (including subprocesses)
+        foreach (Process process in Process.GetProcessesByName(currentProcess.ProcessName))
+        {
+            process.Kill();
+        }
+    }
+
     private void closeWindow(object sender, RoutedEventArgs e)
     {
-        this.Close();
+        CloseProject();
     }
     private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
     {

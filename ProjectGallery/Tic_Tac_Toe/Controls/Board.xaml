@@ -18,15 +18,15 @@
 
         <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource tickTackScoreBoard}">
             <StackPanel>
-                <TextBlock Text="Game Mode:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <TextBlock Text="{Binding CurrentGameType}" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Text="Game Mode:" Style="{StaticResource BoardText}"/>
+                <TextBlock Text="{Binding CurrentGameType}" Style="{StaticResource BoardText}"/>
             </StackPanel>
         </Border>
 
         <Border  Grid.Row="0" Grid.Column="1" Style="{StaticResource tickTackScoreBoard}">
             <StackPanel>
-                <TextBlock Text="Current Turn:" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <TextBlock Text="{Binding CurrentPlayerTurn}" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Text="Current Turn:" Style="{StaticResource BoardText}"/>
+                <TextBlock Text="{Binding CurrentPlayerTurn}" Style="{StaticResource BoardText}"/>
             </StackPanel>
         </Border>
 

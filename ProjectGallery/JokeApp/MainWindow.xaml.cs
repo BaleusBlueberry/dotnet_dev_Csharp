@@ -49,6 +49,7 @@ namespace JokeApp
 
         private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
+            jokeBoarder.Visibility = Visibility.Visible;
             TB_Joke.Text = "Loading joke...";
             try
             {
@@ -75,6 +76,7 @@ namespace JokeApp
             catch (Exception ex)
             {
                 MessageBox.Show($"failed to get joke: {ex.Message}");
+                jokeBoarder.Visibility = Visibility.Hidden;
             }
         }
 

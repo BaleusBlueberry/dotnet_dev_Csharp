@@ -21,6 +21,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         InitializeComponent();
 
         ThemeHelper.SetTheme(this);
+        WindowHelper.EnableWindowDragging(this);
 
         MyBoard.GameEnded += HandleGameEnded;
 
@@ -130,12 +131,6 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         else MessageBox.Show("Please Select a Game Type");
     }
 
-
-    public void fileExitMenuItem_Click(object sender, RoutedEventArgs e)
-    {
-        this.Close();
-    }
-
     private void CreateButtons()
     {
         string[] buttonDisplayNames = new string[] {
@@ -156,7 +151,9 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                 Content = buttonDisplayNames[i],
                 Name = buttonNames[i],
                 Margin = new Thickness(10, 10, 10, 10),
-            };
+                Background = new SolidColorBrush(Colors.Cyan),
+                Foreground = new SolidColorBrush(Colors.Black),
+        };
             button.Click += SelectGameType;
 
             buttonList.Children.Add(button);
@@ -182,7 +179,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
         if (coloredButtons[buttonName])
         {
-            button.Background = new SolidColorBrush(Colors.White);
+            button.Background = new SolidColorBrush(Colors.Cyan);
             button.Foreground = new SolidColorBrush(Colors.Black);
         } else
         {
@@ -198,7 +195,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         Button currentButton = sender as Button;
         {
 
-            currentButton.Background = new SolidColorBrush(Colors.White);
+            currentButton.Background = new SolidColorBrush(Colors.Cyan);
             currentButton.Foreground = new SolidColorBrush(Colors.Black);
             return;
         }
@@ -223,8 +220,12 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         gameType = null;
     }
 
-    private void btn_Exit_Click(object sender, RoutedEventArgs e)
+    private void closeWindow(object sender, RoutedEventArgs e)
     {
         this.Close();
+    }
+    private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+    {
+        // This event handler will be called when the window is clicked, and it will trigger the window dragging functionality
     }
 }
