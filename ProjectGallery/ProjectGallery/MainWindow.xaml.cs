@@ -17,9 +17,9 @@ public partial class MainWindow : Window
 
     private IProjectMeta[] testProjects = new IProjectMeta[]
     {
-        new PersonManager.Project(),
+        /*new PersonManager.Project(),
         new UsersAPI.Project(),
-        new UsersCRUDApi.Project(),
+        new UsersCRUDApi.Project(),*/
     };
 
     public MainWindow()

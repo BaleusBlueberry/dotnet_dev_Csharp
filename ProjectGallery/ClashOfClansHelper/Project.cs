@@ -1,4 +1,5 @@
 ﻿using ClassLibrary;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 
@@ -7,6 +8,8 @@ namespace ClashOfClansHelper
     public class Project : IProjectMeta
     {
         public string Name { get; set; } = "Clash Of Clans Helper";
+
+        public string ProjectName { get; set; } = "ClashOfClansHelper.exe";
 
         public BitmapImage Icon
         {
@@ -18,10 +21,18 @@ namespace ClashOfClansHelper
             }
         }
 
-        public void Run()
+        private void Run()
         {
-            MainWindow winodw = new MainWindow();
-            winodw.ShowDialog();
+            Process appProcess = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = ProjectName,
+                    UseShellExecute = true
+                }
+            };
+            appProcess.Start();
+            appProcess.WaitForExit();
         }
     }
 }

@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Fonts\Joke.ttf" />
     <None Remove="Resources\ReturnKey.png" />
   </ItemGroup>
 
@@ -29,9 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fonts\Joke.ttf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Resources\ReturnKey.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

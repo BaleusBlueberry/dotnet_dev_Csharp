@@ -1,4 +1,5 @@
 ﻿using ClassLibrary;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 
@@ -7,6 +8,8 @@ namespace Tic_Tac_Toe
     public class Project : IProjectMeta
     {
         public string Name { get; set; } = "Tic-Tac-Toe";
+
+        public string ProjectName { get; set; } = "Tic_Tac_Toe.exe";
 
         public BitmapImage Icon
         {
@@ -17,10 +20,18 @@ namespace Tic_Tac_Toe
                 return new BitmapImage(uri);
             }
         }
-        public void Run()
+        private void Run()
         {
-            MainWindow window = new MainWindow();
-            window.ShowDialog();
+            Process appProcess = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = ProjectName,
+                    UseShellExecute = true
+                }
+            };
+            appProcess.Start();
+            appProcess.WaitForExit();
         }
     }
 }

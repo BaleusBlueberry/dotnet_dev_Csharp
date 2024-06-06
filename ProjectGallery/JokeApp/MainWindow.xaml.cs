@@ -6,6 +6,7 @@ using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
+using JokeApp.Functions;
 
 namespace JokeApp
 {
@@ -28,6 +29,8 @@ namespace JokeApp
 
             CategoryChoiceAny.Checked += CategoryCheckBoxAny_Checked;
         }
+
+        Formatter formatter = new Formatter();
 
         private void CategoryCheckBox_Checked(object sender, RoutedEventArgs e)
         {
@@ -73,7 +76,6 @@ namespace JokeApp
             {
                 MessageBox.Show($"failed to get joke: {ex.Message}");
             }
-
         }
 
         private async Task<string> GetJokeAPI()
@@ -87,6 +89,8 @@ namespace JokeApp
 
         private string GetChoices()
         {
+            bool anyChecked = false;
+
             List<string> selectedChoices = new();
 
             // If "Any" checkbox is checked, return all categories
@@ -94,17 +98,17 @@ namespace JokeApp
             {
                 if (CategoryChoiceAny.IsChecked == true)
                 {
-
                     selectedChoices.Add(CategoryChoiceAny.Content.ToString());
-
                 }
                 else // If "Any" checkbox is not checked, only return selected checkboxes
                 {
                     foreach (CheckBox checkBox in CategoryChoices.Children)
                     {
+                        
                         if (checkBox.IsChecked == true)
                         {
                             selectedChoices.Add(checkBox.Content.ToString());
+                            anyChecked = true;
                         }
                     }
                 }
@@ -115,7 +119,9 @@ namespace JokeApp
                 selectedChoices.Add("Any");
             }
 
-            return FormatListToString(selectedChoices);
+            if (!anyChecked) selectedChoices.Add("Any");
+
+            return formatter.FormatList(selectedChoices);
         }
 
         private string GetBlacklists()
@@ -135,10 +141,9 @@ namespace JokeApp
                             blacklistsChoices.Add(checkBox.Content.ToString());
                         }
                     }
-                    string formatedBlackList = FormatListToString(blacklistsChoices);
+                    string formatedBlackList = formatter.FormatList(blacklistsChoices);
 
                     finalString = string.Concat("?blacklistFlags=", formatedBlackList);
-                    MessageBox.Show(finalString);
 
                 }
             }
@@ -171,24 +176,6 @@ namespace JokeApp
             return choicesFilterd;
         }
 
-        private string FormatListToString(List<string> list)
-        {
-            string outputString = "";
-
-            if (list.Count == 1)
-            {
-                outputString = list[0];
-            }
-            else
-            {
-                foreach (string choice in list)
-                {
-                    outputString += choice + ",";
-                }
-                outputString = outputString[..^1];
-            }
-            return outputString;
-        }
         private bool IsAnyCheckboxChecked()
         {
             foreach (CheckBox checkBox in BlacklistChoices.Children)
@@ -209,11 +196,5 @@ namespace JokeApp
 
             return "contains=" + JokeSearch.Text;
         }
-
-        private void Button_Click(object? sender, object e) {
-            MessageBox.Show("Welcome to my button app, where i used an api to to to get random jokes, and set up diffrent imputs for the using to use to the the spasific kind of joke");
-        }
-
-        
     }
 }

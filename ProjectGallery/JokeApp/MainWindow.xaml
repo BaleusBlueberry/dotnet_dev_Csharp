@@ -9,11 +9,9 @@
         inWindow" Height="450" Width="800">
     <Border>
         <Border.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="#FFF9E616" Offset="0.171"/>
-            </LinearGradientBrush>
+            <ImageBrush ImageSource="/Circus.jpg"/>
         </Border.Background>
+
         <Viewbox>
             <Grid Height="450" Width="800">
                 <Grid.ColumnDefinitions>
@@ -28,17 +26,17 @@
             </Grid.RowDefinitions>
 
             <!--The Joke button and section-->
-            <StackPanel VerticalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3" Height="217" Margin="10,0,0,0">
-                <Button Content="Tell me a 𝓙𝓸𝓴𝓮!" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonBase_OnClick" Width="140" Height="40" FontSize="17" FontWeight="Bold" Background="#FF536EDE" Margin="10"></Button>
-                <TextBlock Name="TB_Joke" TextWrapping="Wrap" MaxWidth="700" Margin="10" HorizontalAlignment="Center" Style="{StaticResource JokeFont}"></TextBlock>
-            </StackPanel>
+                <StackPanel VerticalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3" Height="217" Margin="10,0,0,0">
+                    <Button Content="Tell me a 𝓙𝓸𝓴𝓮!" Click="ButtonBase_OnClick" Style="{StaticResource mainJokeButton}"></Button>
+                    <Border Background="White" BorderBrush="Black" BorderThickness="2" Padding="10" Margin="10"
+                            HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Name="TB_Joke" TextWrapping="Wrap" MaxWidth="700" Margin="10" HorizontalAlignment="Center" Style="{StaticResource JokeFont}"></TextBlock>
+                    </Border>
+                </StackPanel>
 
-            <!--language setting-->
-
-
-            <!--Settings of the joke-->
+                <!--Settings of the joke-->
             <StackPanel VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Background="#FFBD1313" Height="144" Width="266">
-                <TextBlock Text="Category / Categories:" HorizontalAlignment="Center" Margin="5" FontSize="15"/>
+                    <TextBlock Text="Category / Categories:" Style="{StaticResource setterOfSettings}"/>
                 <CheckBox Content="Any" HorizontalAlignment="Center" Name="CategoryChoiceAny" IsChecked="True"/>
                 <WrapPanel Margin="10" HorizontalAlignment="Center" Name="CategoryChoices">
                     <CheckBox Content="Programming" Style="{StaticResource jokeElement}"></CheckBox>
@@ -51,7 +49,7 @@
             </StackPanel>
 
             <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Background="#FFD45A21" Height="144" Width="267">
-                <TextBlock Text="Select flags to blacklist:" HorizontalAlignment="Center" Margin="5" FontSize="15"/>
+                    <TextBlock Text="Select flags to blacklist:" Style="{StaticResource setterOfSettings}"/>
                 <WrapPanel Margin="10" HorizontalAlignment="Center" Name="BlacklistChoices">
                     <CheckBox Content="nsfw" Style="{StaticResource jokeElement}"></CheckBox>
                     <CheckBox Content="religious" Style="{StaticResource jokeElement}"></CheckBox>
@@ -63,11 +61,11 @@
             </StackPanel>
 
             <StackPanel VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" Background="#FFEF8021" Height="144" Width="266">
-                <TextBlock TextWrapping="Wrap" Text="Search for a joke that contains this search string:" HorizontalAlignment="Center" Margin="5" FontSize="15"/>
-                <TextBox Width="100" HorizontalAlignment="Center" Margin="5 5 5 27" FontSize="15" Name="JokeSearch"/>
+                <TextBlock TextWrapping="Wrap" Text="Search for a joke that contains this search string:" Style="{StaticResource setterOfSettings}"/>
+                <TextBox Width="100" HorizontalAlignment="Center" Margin="5 5 5 27" FontSize="18" Name="JokeSearch"/>
             </StackPanel>
 
-            <TextBlock Text="𝓙𝓸𝓴𝓮 𝓑𝓾𝓽𝓽𝓸𝓷 𝓐𝓹𝓹" FontSize="40" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="𝓙𝓸𝓴𝓮 𝓑𝓾𝓽𝓽𝓸𝓷 𝓐𝓹𝓹" FontSize="40" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
         </Grid>
         </Viewbox>

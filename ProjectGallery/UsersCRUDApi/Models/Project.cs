@@ -7,6 +7,8 @@ namespace UsersCRUDApi;
 public class Project : IProjectMeta
 {
     public string Name { get; set; } = "Users CRUD Api";
+
+    public string ProjectName { get; set; } = "UsersCRUDApi.exe";
     public BitmapImage Icon
     {
         get

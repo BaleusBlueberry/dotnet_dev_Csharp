@@ -4,12 +4,50 @@
              xmlns:local="clr-namespace:JokeApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style x:Key="JokeFont">
-            <Setter Property="TextElement.FontFamily" Value="Tell Me A Joke"></Setter>
+        <Style x:Key="JokeFont" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Fonts/#Tell Me A Joke"></Setter>
         </Style>
         <Style x:Key="jokeElement" TargetType="CheckBox">
             <Setter Property="Margin" Value="5"></Setter>
-            <Setter Property="FontSize" Value="13"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+        </Style>
+        <Style x:Key="setterOfSettings" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style x:Key="mainJokeButton" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Width" Value="140"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+            <Setter Property="FontSize" Value="17"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Background" Value="RoyalBlue"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="30">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value=" SlateBlue"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="DarkSlateBlue"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Application.Resources>
 </Application>

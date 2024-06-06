@@ -1,4 +1,5 @@
 ﻿using ClassLibrary;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 
@@ -7,6 +8,8 @@ namespace UsersAPI
     public class Project : IProjectMeta
     {
         public string Name { get; set; } = "UsersAPI";
+
+        public string ProjectName { get; set; } = "UsersAPI.exe";
         public BitmapImage Icon
         {
             get
@@ -16,10 +19,18 @@ namespace UsersAPI
                 return new BitmapImage(uri);
             }
         }
-        public void Run()
+        private void Run()
         {
-            MainWindow window = new MainWindow();
-            window.ShowDialog();
+            Process appProcess = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = ProjectName,
+                    UseShellExecute = true
+                }
+            };
+            appProcess.Start();
+            appProcess.WaitForExit();
         }
     }
 }

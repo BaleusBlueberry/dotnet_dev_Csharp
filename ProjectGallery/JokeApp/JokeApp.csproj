@@ -10,7 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Circus.jpg" />
     <None Remove="Fonts\Joke.ttf" />
+    <None Remove="Resources\Circus.jpg" />
     <None Remove="Resources\cloun.png" />
   </ItemGroup>
 
@@ -23,7 +25,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Circus.jpg" />
     <Resource Include="Fonts\Joke.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Circus.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\cloun.png">

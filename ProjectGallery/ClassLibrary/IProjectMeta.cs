@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Diagnostics;
+using System.Reflection;
 using System.Windows.Media.Imaging;
 
 namespace ClassLibrary;
@@ -6,6 +7,8 @@ namespace ClassLibrary;
 public interface IProjectMeta
 {
     public string Name { get; }
+
+    public string ProjectName { get; } //added
 
     public BitmapImage Icon
     {
@@ -17,6 +20,20 @@ public interface IProjectMeta
         }
     }
 
-    public void Run();
+    /*public void Run();*/
+
+    public void Run()
+    {
+        Process appProcess = new Process
+        {
+            StartInfo = new ProcessStartInfo
+            {
+                FileName = ProjectName,
+                UseShellExecute = true
+            }
+        };
+        appProcess.Start();
+        appProcess.WaitForExit();
+    }
 
 }

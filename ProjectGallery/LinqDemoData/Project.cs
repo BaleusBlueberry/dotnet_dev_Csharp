@@ -1,4 +1,5 @@
 ﻿using ClassLibrary;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 
@@ -7,6 +8,8 @@ namespace LinqDemoData;
 public class Project : IProjectMeta
 {
     public string Name { get; set; } = "Joker-App";
+
+    public string ProjectName { get; set; } = "LinqDemoData.exe";
 
     public BitmapImage Icon
     {
@@ -19,10 +22,18 @@ public class Project : IProjectMeta
     }
 
 
-    public void Run()
+    private void Run()
     {
-        MainWindow window = new MainWindow();
-        window.ShowDialog();
+        Process appProcess = new Process
+        {
+            StartInfo = new ProcessStartInfo
+            {
+                FileName = ProjectName,
+                UseShellExecute = true
+            }
+        };
+        appProcess.Start();
+        appProcess.WaitForExit();
     }
 }
 
