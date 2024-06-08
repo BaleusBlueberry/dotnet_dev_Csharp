@@ -6,15 +6,30 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\MainApp.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\IconAlgorithem.png" />
+    <None Remove="Resources\IconApi.png" />
+    <None Remove="Resources\IconDynamic.png" />
+    <None Remove="Resources\IconError.png" />
+    <None Remove="Resources\IconWpf.png" />
+    <None Remove="Resources\MainAppIcon.png" />
     <None Remove="Resources\ReturnKey.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\IconError.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MainApp.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ClashOfClansHelper\ClashOfClansHelper.csproj" />
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
+    <ProjectReference Include="..\Four in a row\Four in a row.csproj" />
     <ProjectReference Include="..\JokeApp\JokeApp.csproj" />
     <ProjectReference Include="..\PersonManager\PersonManager.csproj" />
     <ProjectReference Include="..\Tic_Tac_Toe\Tic_Tac_Toe.csproj" />
@@ -28,6 +43,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\IconAlgorithem.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\IconApi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\IconDynamic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\IconWpf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\MainAppIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\ReturnKey.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

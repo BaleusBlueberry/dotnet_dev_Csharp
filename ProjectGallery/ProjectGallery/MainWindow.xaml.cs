@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Four_in_a_row;
 
 
 namespace ProjectGallery;
@@ -17,6 +18,7 @@ public partial class MainWindow : Window
         new Tic_Tac_Toe.Project(),
         new ClashOfClansHelper.Project(),
         new JokeApp.Project(),
+        new Four_in_a_row.Project(),
     };
 
     private IProjectMeta[] testProjects = new IProjectMeta[]

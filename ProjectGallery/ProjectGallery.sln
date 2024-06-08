@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqDemoData", "LinqDemoDat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pong", "Pong\Pong.csproj", "{DABFCBF6-1AE7-46D5-A5BC-C73F4641F4E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Four in a row", "Four in a row\Four in a row.csproj", "{4682A4BE-D9AC-4AF1-8ADD-834CFF04D1DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{DABFCBF6-1AE7-46D5-A5BC-C73F4641F4E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DABFCBF6-1AE7-46D5-A5BC-C73F4641F4E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DABFCBF6-1AE7-46D5-A5BC-C73F4641F4E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4682A4BE-D9AC-4AF1-8ADD-834CFF04D1DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4682A4BE-D9AC-4AF1-8ADD-834CFF04D1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4682A4BE-D9AC-4AF1-8ADD-834CFF04D1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4682A4BE-D9AC-4AF1-8ADD-834CFF04D1DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

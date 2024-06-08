@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Tic_Tac_Toe"
         xmlns:controls="clr-namespace:Tic_Tac_Toe.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="700" WindowStartupLocation="CenterOwner"
+        Title="Tic Tac Toe" Height="500" Width="700" WindowStartupLocation="CenterOwner"
         WindowStyle="None">
 
     <Grid>
@@ -18,6 +18,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" Grid.Column="0">
+            <Image Width="30" Source="pack://application:,,,/resources/tic.png" HorizontalAlignment="Left" Margin="20 0 10 0"></Image>
+            <Label Foreground="Cyan" FontSize="16">Tic Tac Toe</Label>
+        </WrapPanel>
         <Button Grid.Column="1" Grid.Row="0" Content="X" Style="{StaticResource closeButtonStyle}" Click="closeWindow"></Button>
         <Border Style="{StaticResource mainBorder}" Grid.Row="1" Grid.ColumnSpan="2">
             <Viewbox>

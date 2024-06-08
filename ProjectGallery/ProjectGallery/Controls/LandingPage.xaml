@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="LandingPage" Height="650" Width="1100"
-        WindowStyle="None">
+        WindowStyle="None" Background="DarkSlateGray">
 
     <Border Style="{StaticResource mainBorder}">
         <Viewbox>
@@ -27,8 +27,12 @@
                 <TextBlock Text="This page showcases the tools used for the project and explains its functionality." 
                            Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="LightGray" Margin="10"/>
 
-                <WrapPanel Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-                    <!-- Add icons or buttons representing tools used -->
+                <WrapPanel Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 0 10 0">
+                    <Image Width="40" Height="40" Source="pack://application:,,,/Resources/IconApi.png" Margin="10 0 10 10"></Image>
+                    <Image Width="40" Height="40" Source="pack://application:,,,/Resources/IconAlgorithem.png" Margin="10 0 10 10"></Image>
+                    <Image Width="40" Height="40" Source="pack://application:,,,/Resources/IconDynamic.png" Margin="10 0 10 10"></Image>
+                    <Image Width="40" Height="40" Source="pack://application:,,,/Resources/IconError.png" Margin="10 0 10 10"></Image>
+                    <Image Width="40" Height="40" Source="pack://application:,,,/Resources/IconWpf.png" Margin="10 0 10 10"></Image>
                 </WrapPanel>
 
                 <Border Grid.Row="4" Grid.Column="1" Background="DarkSlateGray" CornerRadius="10" Margin="10">

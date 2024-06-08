@@ -6,10 +6,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>resources\Tic.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="resources\tic.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="resources\Tic.ico" />
   </ItemGroup>
 
   <ItemGroup>

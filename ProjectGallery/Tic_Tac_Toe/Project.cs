@@ -3,8 +3,8 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 
-namespace Tic_Tac_Toe
-{
+namespace Tic_Tac_Toe;
+
     public class Project : IProjectMeta
     {
         public string Name { get; set; } = "Tic-Tac-Toe";
@@ -34,4 +34,4 @@ namespace Tic_Tac_Toe
             appProcess.WaitForExit();
         }
     }
-}
+

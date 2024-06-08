@@ -3,108 +3,108 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ClashOfClansHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1350">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="3*"></RowDefinition>
-            <RowDefinition Height="7*"></RowDefinition>
-        </Grid.RowDefinitions>
+        Title="Clash Of Clans Helper" Height="800" Width="1350" WindowStartupLocation="CenterOwner">
+    <Viewbox Stretch="Uniform" StretchDirection="Both">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="7*"></RowDefinition>
+            </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-        <Grid.Background>
-            <ImageBrush Opacity="0.3" ImageSource="https://wallpapers.com/images/high/clash-of-clans-battle-mejez09j0x7vpknn.webp" Stretch="UniformToFill"/>
-        </Grid.Background>
+            <Grid.Background>
+                <ImageBrush Opacity="0.3" ImageSource="https://wallpapers.com/images/high/clash-of-clans-battle-mejez09j0x7vpknn.webp" Stretch="UniformToFill"/>
+            </Grid.Background>
 
-        <!--clash of clans helper text-->
-        <Image Source="{Binding Icon}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center"></Image>
+            <!--clash of clans helper text-->
+            <Image Source="{Binding Icon}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Width="750" Margin="10"></Image>
 
-        <StackPanel HorizontalAlignment="Center"  Grid.Row="1" Orientation="Horizontal">
-            <StackPanel>
-                <TextBlock Text="Select Town Hall:" Style="{StaticResource TextBoxLabel}"/>
-                <ComboBox Margin="10,10,0,13" SelectionChanged="DropListSelectedTownHall_OnSelectionChanged" x:Name="DropListSelectTownhall" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
-                </ComboBox>
-                <Image Source="https://static.wikia.nocookie.net/clashofclans/images/5/53/Town_Hall16.png" x:Name="TownHallImage" Width="100" Height="100" Margin="10 -5 0 10"></Image>
-            </StackPanel>
-            <StackPanel>
-                <TextBlock Text="Select Building Type:" Style="{StaticResource TextBoxLabel}"/>
-                <ComboBox  Margin="10,10,0,13" SelectionChanged="DropListBuildingType_OnSelectionChanged" x:Name="DropListSelectBuildingType" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
-                </ComboBox>
-                <TextBlock Text="Select Building:" Style="{StaticResource TextBoxLabel}"/>
-                <ComboBox  Margin="10,10,0,13" SelectionChanged="DropListSelectedBuilding_OnSelectionChanged" x:Name="DropListSelectBuilding" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
-                </ComboBox>
-            </StackPanel>
-        </StackPanel>
-
-        <!--list of buildings panel-->
-        <StackPanel Grid.Column="1" Grid.RowSpan="3" Margin="0,185,0,2">
-            <TextBlock Text="List of Buildings:" HorizontalAlignment="Center" Padding="10" FontSize="22" FontWeight="Bold"></TextBlock>
-            <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ListOfBuildings"></WrapPanel>
-        </StackPanel>
-
-
-        <!--building info panel-->
-        <StackPanel Grid.Row="2" Grid.Column="0">
-            <StackPanel Orientation="Horizontal" Margin="10 10 10 0">
-                <Button Content="Gold Pass Toggle"
-                        Name="GoldPassToggle"
-                        Click="GoldPassToggle_Click"
-                        FontSize="22" FontWeight="Bold"
-                        Margin="10 10 10 10"
-                        Padding="10 5 5 5"
-                        BorderThickness="2"
-                        >
-                </Button>
-                <TextBlock Text="Building's Info:" HorizontalAlignment="Center" Style="{StaticResource TextBoxLabel}" Margin="10"></TextBlock>
+            <StackPanel HorizontalAlignment="Center"  Grid.Row="1" Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock Text="Select Town Hall:" Style="{StaticResource TextBoxLabel}"/>
+                    <ComboBox Margin="10,10,0,13" SelectionChanged="DropListSelectedTownHall_OnSelectionChanged" x:Name="DropListSelectTownhall" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
+                    </ComboBox>
+                    <Image Source="https://static.wikia.nocookie.net/clashofclans/images/5/53/Town_Hall16.png" x:Name="TownHallImage" Width="100" Height="100" Margin="10 -5 0 10"></Image>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Select Building Type:" Style="{StaticResource TextBoxLabel}"/>
+                    <ComboBox  Margin="10,10,0,13" SelectionChanged="DropListBuildingType_OnSelectionChanged" x:Name="DropListSelectBuildingType" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
+                    </ComboBox>
+                    <TextBlock Text="Select Building:" Style="{StaticResource TextBoxLabel}"/>
+                    <ComboBox  Margin="10,10,0,13" SelectionChanged="DropListSelectedBuilding_OnSelectionChanged" x:Name="DropListSelectBuilding" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="30">
+                    </ComboBox>
+                </StackPanel>
             </StackPanel>
 
-            <ListBox Margin="10 10 10 0" Height="250" Name="UsersListBox" Background="LightGoldenrodYellow" Grid.Row="2">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Height="20" >
-                            <TextBlock Text="{Binding Key}" FontWeight="Bold" FontSize="15" ></TextBlock>
-                            <TextBlock Text="{Binding Value}" FontSize="15">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock">
-                                        <Style.Triggers>
-                                            <!-- Condition to apply Strikethrough -->
-                                            <DataTrigger Binding="{Binding IsStrikethrough}" Value="True">
-                                                <Setter Property="TextDecorations" Value="Strikethrough"/>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
-                            <Image Source="/ClashOfClansHelper;component/Resources/greenarrow.png"
-                                    Width="19" Height="19" Margin="10 1 10 0">
-                                <Image.Style>
-                                    <Style TargetType="Image">
-                                        <Setter Property="Visibility" Value="Collapsed"/>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding ShowArrow}" Value="True">
-                                                <Setter Property="Visibility" Value="Visible"/>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Image.Style>
-                            </Image>
-                            <TextBlock Text="{Binding SecondValue}" FontSize="15">
-                            </TextBlock>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            <StackPanel Orientation="Horizontal" Margin="10 10 10 0" HorizontalAlignment="Center">
-                <Image x:Name="PreviusBuildingInfoImage" Width="100" Height="100"/>
-                <Image x:Name="BuildingUpgradeArrow" Width="50" Height="50" Source="/ClashOfClansHelper;component/Resources/greenarrow.png" Visibility="Hidden"/>
-                <Image x:Name="BuildingInfoImage" Width="100" Height="100"/>
+            <!--list of buildings panel-->
+            <StackPanel Grid.Column="1" Grid.RowSpan="3" Margin="0,185,0,2">
+                <TextBlock Text="List of Buildings:" HorizontalAlignment="Center" Padding="10" FontSize="22" FontWeight="Bold"></TextBlock>
+                <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ListOfBuildings"></WrapPanel>
             </StackPanel>
-        </StackPanel>
-    </Grid>
+
+
+            <!--building info panel-->
+            <StackPanel Grid.Row="2" Grid.Column="0">
+                <StackPanel Orientation="Horizontal" Margin="10 10 10 0">
+                    <Button Content="Gold Pass Toggle"
+                    Name="GoldPassToggle"
+                    Click="GoldPassToggle_Click"
+                    FontSize="22" FontWeight="Bold"
+                    Margin="10 10 10 10"
+                    Padding="10 5 5 5"
+                    BorderThickness="2"
+                    >
+                    </Button>
+                    <TextBlock Text="Building's Info:" HorizontalAlignment="Center" Style="{StaticResource TextBoxLabel}" Margin="10"></TextBlock>
+                </StackPanel>
+
+                <ListBox Margin="10 10 10 0" Height="250" Name="UsersListBox" Background="LightGoldenrodYellow" Grid.Row="2">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Height="20" >
+                                <TextBlock Text="{Binding Key}" FontWeight="Bold" FontSize="15" ></TextBlock>
+                                <TextBlock Text="{Binding Value}" FontSize="15">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsStrikethrough}" Value="True">
+                                                    <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                                <Image Source="/ClashOfClansHelper;component/Resources/greenarrow.png"
+                                Width="19" Height="19" Margin="10 1 10 0">
+                                    <Image.Style>
+                                        <Style TargetType="Image">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ShowArrow}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                </Image>
+                                <TextBlock Text="{Binding SecondValue}" FontSize="15">
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <StackPanel Orientation="Horizontal" Margin="10 10 10 0" HorizontalAlignment="Center">
+                    <Image x:Name="PreviusBuildingInfoImage" Width="100" Height="100"/>
+                    <Image x:Name="BuildingUpgradeArrow" Width="50" Height="50" Source="/ClashOfClansHelper;component/Resources/greenarrow.png" Visibility="Hidden"/>
+                    <Image x:Name="BuildingInfoImage" Width="100" Height="100"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Viewbox>
 </Window>

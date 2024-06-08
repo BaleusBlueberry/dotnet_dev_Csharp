@@ -25,7 +25,6 @@ public partial class MainWindow : Window
         ImageLoader cocGreenArrow = new ImageLoader("greenarrow.png");
 
         DataContext = cocImage;
-
     }
     public TownHallLevel selectedTownHall = new TownHallLevel();
 
@@ -78,7 +77,7 @@ public partial class MainWindow : Window
     {
         DropListSelectBuilding.Items.Clear();
 
-        string dataFolderPath = @".\Resources\Data\";
+        const string dataFolderPath = @".\Resources\Data\";
         // Get all files in the "Data" folder
 
         // gets the folder of the current buidling type
@@ -224,14 +223,12 @@ public partial class MainWindow : Window
             {
                 // Assuming the selected item is a string sets it ass a string
                 selection = selectedItem.ToString();
-
             }
             else
             {
                 MessageBox.Show("error: selected bulding type is invalid");
                 return;
             }
-
             // puts the name of the building in the AsembleBuldingDropList
             AsembleBuldingDropList(selection);
             PrintBuildings();
@@ -243,12 +240,10 @@ public partial class MainWindow : Window
 
     private void DropListSelectedBuilding_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-
         ListOfBuildings.Children.Clear();
 
         PrintBuildings();
         return;
-
     }
 
     private async void DropListSelectedTownHall_OnSelectionChanged(object sender, SelectionChangedEventArgs e)

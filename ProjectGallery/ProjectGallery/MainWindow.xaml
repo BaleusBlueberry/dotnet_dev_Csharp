@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectGallery"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="Project Gallery" Height="450" Width="800"
         WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -17,6 +17,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Button Grid.Column="1" Grid.Row="0" Content="X" Style="{StaticResource closeButtonStyle}" Click="closeWindow"></Button>
+        <WrapPanel Grid.Row="0" Grid.Column="0">
+            <Image Width="30" Source="pack://application:,,,/Resources/MainAppIcon.png" HorizontalAlignment="Left" Margin="20 0 10 0"></Image>
+            <Label Foreground="Cyan" FontSize="16">Project Gallery</Label>
+        </WrapPanel>
+        
         <Border Style="{StaticResource mainBorder}" Grid.Row="1" Grid.ColumnSpan="2">
             <Viewbox>
                 <Grid>
