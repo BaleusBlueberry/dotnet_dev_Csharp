@@ -45,7 +45,7 @@
             <!--list of buildings panel-->
             <StackPanel Grid.Column="1" Grid.RowSpan="3" Margin="0,185,0,2">
                 <TextBlock Text="List of Buildings:" HorizontalAlignment="Center" Padding="10" FontSize="22" FontWeight="Bold"></TextBlock>
-                <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ListOfBuildings"></WrapPanel>
+                <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ListOfBuildings" Width="790"></WrapPanel>
             </StackPanel>
 
 

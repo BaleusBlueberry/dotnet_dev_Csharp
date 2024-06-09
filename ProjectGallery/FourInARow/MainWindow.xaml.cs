@@ -1,15 +1,16 @@
-﻿using ClassLibrary;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using Four_in_a_row.Enums;
-using Four_in_a_row.Controls;
-using Button = System.Windows.Controls.Button;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
-
-namespace Four_in_a_row;
+namespace FourInARow;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
@@ -230,4 +231,4 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     {
         // This event handler will be called when the window is clicked, and it will trigger the window dragging functionality
     }
-} 
+}

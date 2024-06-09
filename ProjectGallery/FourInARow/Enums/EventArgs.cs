@@ -1,6 +1,4 @@
-﻿using Four_in_a_row.Enums;
-
-namespace Tic_Tac_Toe.Controls;
+﻿namespace FourInARow.Enums;
 
 public class GameEndEventArgs : EventArgs
 {

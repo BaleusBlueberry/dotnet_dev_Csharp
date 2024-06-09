@@ -3,11 +3,9 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <RootNamespace>Four_in_a_row</RootNamespace>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>resources\4InaRow.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,28 +19,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
+    <Folder Include="Controls\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="resources\4InaRow.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="resources\4InaRow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="resources\arrowDown.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Controls\ButtonMen.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Enums\EventArgs.cs">
-      <Generator>MSBuild:Compile</Generator>
-    </Compile>
   </ItemGroup>
 
 </Project>

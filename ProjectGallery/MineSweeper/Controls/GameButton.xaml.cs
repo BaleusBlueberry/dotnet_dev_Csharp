@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Four_in_a_row.Controls
+namespace MineSweeper
 {
     /// <summary>
-    /// Interaction logic for Button.xaml
+    /// Interaction logic for GameButton.xaml
     /// </summary>
-    public partial class ButtonMen : Button
+    public partial class GameButton : Button
     {
-        public ButtonMen()
+        public GameButton()
         {
             InitializeComponent();
-            DataContext = DataContext;
         }
     }
 }

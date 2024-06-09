@@ -137,10 +137,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\Data\Resource Buildings\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
   </ItemGroup>
 

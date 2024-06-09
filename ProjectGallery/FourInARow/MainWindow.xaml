@@ -1,9 +1,9 @@
-﻿<Window x:Class="Four_in_a_row.MainWindow"
+﻿<Window x:Class="FourInARow.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:controls="clr-namespace:Four_in_a_row.Controls"
+
         mc:Ignorable="d"
         Title="Four in a row" Height="750" Width="900" WindowStartupLocation="CenterOwner"
         WindowStyle="None">
@@ -29,7 +29,7 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <controls:FourBoard Grid.Column="0" x:Name="MyBoard"/>
+                <FourBoard Grid.Column="0" x:Name="MyBoard"/>
                 <StackPanel Grid.Column="1" Margin="10">
                     <TextBlock Text="Tic-Tac-Toe Game" FontSize="24" Margin="10" Style="{StaticResource BoardMainText}"/>
 

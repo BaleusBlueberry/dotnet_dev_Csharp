@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,18 +8,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MineSweeper.Pages;
 
-namespace Four_in_a_row.Controls
+namespace MineSweeper
 {
     /// <summary>
-    /// Interaction logic for Button.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class ButtonMen : Button
+    public partial class MainWindow : Window
     {
-        public ButtonMen()
+        public MainWindow()
         {
             InitializeComponent();
-            DataContext = DataContext;
+            MainFrame.Navigate(new SelectionPage());
         }
     }
 }

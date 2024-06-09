@@ -157,6 +157,7 @@ public partial class Board : UserControl, INotifyPropertyChanged
             } while (btn.Content != null);
 
             btn.Content = IsPlayerOneTurn ? PlayerOneContent : PlayerTwoContent;
+
             if (ProcessEndGame()) return;
 
             IsPlayerOneTurn = !IsPlayerOneTurn;

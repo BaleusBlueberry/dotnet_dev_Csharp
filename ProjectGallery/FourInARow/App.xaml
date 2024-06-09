@@ -1,7 +1,7 @@
-﻿<Application x:Class="Four_in_a_row.App"
+﻿<Application x:Class="FourInARow.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Four_in_a_row"
+             xmlns:local="clr-namespace:FourInARow"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <SolidColorBrush x:Key="BackgroundColor" Color="#000000"/>

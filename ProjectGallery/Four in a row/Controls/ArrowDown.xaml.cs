@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace Four_in_a_row.Controls
 {
     /// <summary>
-    /// Interaction logic for Button.xaml
+    /// Interaction logic for ArrowDown.xaml
     /// </summary>
-    public partial class ButtonMen : Button
+    public partial class ArrowDown : Button
     {
-        public ButtonMen()
+        public ArrowDown()
         {
             InitializeComponent();
-            DataContext = DataContext;
         }
     }
 }

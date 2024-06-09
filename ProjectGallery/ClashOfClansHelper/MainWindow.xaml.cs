@@ -54,7 +54,7 @@ public partial class MainWindow : Window
     // asembles the townhall droplist and the droplist of the buldings types
     {
         string[] ListOfBuildingTypes = new string[] {
-        "Defensive Buildings", "Army Buildings", "Traps", "Resource Buildings",
+        "Defensive Buildings", "Army Buildings", "Traps",
         };
 
         ConvertTownHallJsonToList();
