@@ -7,6 +7,8 @@
              d:DesignHeight="16" d:DesignWidth="16"
              BorderThickness="0"
              Padding="0"
-             Margin="0">
-    <Image Source="/resources/ButtonUnclicked.png" Stretch="Fill" ></Image>
+             Margin="0"
+             Style="{StaticResource mineCard}"
+             >
+    <Image x:Name="BtnImage" Stretch="Fill"/>
 </Button>

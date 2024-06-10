@@ -1,28 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MineSweeper
 {
-    /// <summary>
-    /// Interaction logic for GameButton.xaml
-    /// </summary>
     public partial class GameButton : Button
     {
+        private bool _isMouseDown;
+
         public GameButton()
         {
             InitializeComponent();
+            BtnImage = new Image();
+            Content = BtnImage;
+
+            BtnImage.Source = new BitmapImage(new Uri("pack://application:,,,/resources/ButtonUnclicked.png"));
+
+            PreviewMouseDown += GameButton_PreviewMouseDown;
+            PreviewMouseUp += GameButton_PreviewMouseUp;
+            MouseLeave += GameButton_MouseLeave;
+        }
+
+        private void GameButton_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                _isMouseDown = true;
+                BtnImage.Source = new BitmapImage(new Uri("pack://application:,,,/resources/ButtonClicked.png"));
+            }
+        }
+
+        private void GameButton_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            _isMouseDown = false;
+            BtnImage.Source = new BitmapImage(new Uri("pack://application:,,,/resources/ButtonUnclicked.png"));
+        }
+
+        private void GameButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (_isMouseDown)
+            {
+                BtnImage.Source = new BitmapImage(new Uri("pack://application:,,,/resources/ButtonUnclicked.png"));
+            }
         }
     }
 }

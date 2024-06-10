@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:MineSweeper"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="mineCard" TargetType="Button">
+             <Setter Property="Padding" Value="1 0 0 0"></Setter>
+         </Style>
     </Application.Resources>
 </Application>
