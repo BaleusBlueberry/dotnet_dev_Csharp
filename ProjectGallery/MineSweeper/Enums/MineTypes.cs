@@ -13,5 +13,5 @@ public enum LocationType
 
 public enum UserInput
 {
-    flag, qestionMark, empty, clicked
+    empty, qestionMark, flag, clicked
 }
