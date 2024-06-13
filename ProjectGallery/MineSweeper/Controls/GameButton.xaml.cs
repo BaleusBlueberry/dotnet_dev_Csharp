@@ -12,8 +12,10 @@ namespace MineSweeper
     public partial class GameButton : Button
     {
         private bool _isMouseDown;
-        public UserInput userInput=UserInput.empty;
+        public UserInput userInput = UserInput.empty;
         public LocationType locationType = LocationType.empty;
+        public int Row { set; get; }
+        public int Col{ set; get; }
 
         public GameButton()
         {

@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MineSweeper.Enums;
 
 namespace MineSweeper.Generation
 {
     internal class GenerateRandomSpot
     {
-        private Random _random = new Random();
-        private HashSet<(int, int)> _takenSpots = new HashSet<(int, int)>();
+        private static Random _random = new Random();
 
-        public (int, int) GenerateUniqueRandomSpot()
+        public static (int, int) GenerateUniqueRandomSpot()
         {
             int row, col;
             do
@@ -19,13 +14,25 @@ namespace MineSweeper.Generation
                 row = _random.Next(0, 16);
                 col = _random.Next(0, 16);
             }
-            while (_takenSpots.Contains((row, col)));
+            while (GlobalSettings.TakenMineSpots[row, col]);
 
-            _takenSpots.Add((row, col));
+            GlobalSettings.TakenMineSpots[row, col] = true;
+
             return (row, col);
+        }
+
+        public static List<(int, int)> GenerateRandomSpots(int amount)
+        {
+            List<(int, int)> _newBombs = new List<(int, int)>();
+
+            for (int i = 0; i < amount; i++)
+            {
+                _newBombs.Add(GenerateUniqueRandomSpot());
+            }
+
+            return _newBombs;
         }
 
 
     }
-    
 }
