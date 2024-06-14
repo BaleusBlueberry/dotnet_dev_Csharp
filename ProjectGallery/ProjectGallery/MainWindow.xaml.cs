@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Four_in_a_row;
+using MineSweeper;
 
 
 namespace ProjectGallery;
@@ -19,6 +20,7 @@ public partial class MainWindow : Window
         new ClashOfClansHelper.Project(),
         new JokeApp.Project(),
         new Four_in_a_row.Project(),
+        new MineSweeper.Project(),
     };
 
     private IProjectMeta[] testProjects = new IProjectMeta[]

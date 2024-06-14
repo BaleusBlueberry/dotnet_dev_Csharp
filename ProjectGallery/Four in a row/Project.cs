@@ -15,7 +15,20 @@ public class Project : IProjectMeta
     public string Name { get; set; } = "Four in a row";
 
     public string ProjectName { get; set; } = "Four in a row.exe";
+    public string ProjectDescription { get; set; } = "Four in a Row Game App: This application allows players to enjoy the classic Four in a Row game with various gameplay modes.\n" +
+                                                     "Players can challenge each other or play against the computer in different difficulty levels.\n" +
 
+                                                     "Features:\n" +
+                                                     "1. Game Modes: Choose from PvP (Player vs Player), PvC (Player vs Computer), or CvC (Computer vs Computer) modes.\n" +
+                                                     "2. Interactive Grid: Click on arrows above the board to drop tokens and strategically connect four tokens in a row to win.\n" +
+                                                     "3. Turn-Based Gameplay: Alternate turns between players or watch as computer players battle it out.\n" +
+                                                     "4. Dynamic Scoring: Keep track of wins for both players and recognize draws.\n" +
+                                                     "5. Responsive UI: Modern interface with customizable game settings and intuitive controls for seamless gameplay.\n\n" +
+                                                     "Technical Details:\n" +
+                                                     "- Event Handling: Implements event-driven programming to manage player moves and game outcomes.\n" +
+                                                     "- AI Implementation: Utilizes randomized moves and strategic algorithms for computer opponents.\n" +
+                                                     "- Error Handling: Ensures smooth gameplay experience by handling user input and game state transitions.\n\n" +
+                                                     "This project demonstrates interactive game development, AI integration, and user interface design using WPF controls.";
     public BitmapImage Icon
     {
         get

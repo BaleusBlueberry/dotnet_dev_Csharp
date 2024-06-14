@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Globalization;
+using System.Text.RegularExpressions;
 using System.Windows;
 
 namespace ClashOfClansHelper;
@@ -44,7 +45,18 @@ public static class Utils
             {
                 double result = valueAsInt * 0.8;
                 string output = result.ToString();
-                return output;
+                string finalOutput = "";
+                string reversedString = Reverse(output);
+
+                for (int i = 0; i < reversedString.Length; i++)
+                {
+                    if ((i % 3 == 0) & i > 0)
+                    {
+                        finalOutput += ",";
+                    }
+                    finalOutput += reversedString[i];
+                }
+                return Reverse(finalOutput);
             }
             // finds if the key has a build in it to assemble the discounted time
         }
@@ -101,6 +113,14 @@ public static class Utils
 
         return value;
     }
+
+    public static string Reverse(string s)
+    {
+        char[] charArray = s.ToCharArray();
+        Array.Reverse(charArray);
+        return new string(charArray);
+    }
+
     private static int StringToNumber(string stringValue)
     {
 

@@ -16,6 +16,27 @@ namespace MineSweeper
 
         public string ProjectName { get; set; } = "MineSweeper.exe";
 
+        public string ProjectDescription { get; set; } =
+            "Minesweeper Game App: A classic Minesweeper game where players uncover tiles to avoid mines and reveal numbers indicating adjacent mines.\n" +
+            "Players can choose from Easy, Medium, or Hard difficulty levels, each with different grid sizes and bomb counts.\n\n" +
+
+            "Features:\n" +
+            "1. Grid Layout: Navigate through a grid of tiles, avoiding hidden mines and strategically uncovering safe tiles.\n" +
+            "2. Flagging System: Mark potential mine locations with flags to aid in navigation.\n" +
+            "3. Timer: Track elapsed time to compete for the fastest completion times.\n" +
+            "4. End Game Handling: Display game over messages and options to restart or return to difficulty selection.\n" +
+            "5. Interactive UI: Intuitive interface with clickable buttons and visual indicators for gameplay actions.\n\n" +
+
+            "Technical Details:\n" +
+            "- Game Initialization: Generates random bomb placements based on selected difficulty and ensures initial click does not hit a mine.\n" +
+            "- Tile Numbering: Calculates and displays numbers on tiles to indicate nearby mines.\n" +
+            "- Recursive Uncovering: Automatically uncovers adjacent empty tiles when an empty tile is clicked.\n" +
+            "- Event Handling: Manages mouse events for clicking tiles and right-clicking for flagging mines.\n" +
+            "- UI Updates: Updates tile visuals dynamically based on game events and user interactions.\n\n" +
+
+            "This project showcases fundamental game mechanics, user interface design, and event-driven programming using WPF.";
+
+
         public BitmapImage Icon
         {
             get

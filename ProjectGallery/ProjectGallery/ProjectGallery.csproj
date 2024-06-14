@@ -31,6 +31,7 @@
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
     <ProjectReference Include="..\Four in a row\Four in a row.csproj" />
     <ProjectReference Include="..\JokeApp\JokeApp.csproj" />
+    <ProjectReference Include="..\MineSweeper\MineSweeper.csproj" />
     <ProjectReference Include="..\PersonManager\PersonManager.csproj" />
     <ProjectReference Include="..\Tic_Tac_Toe\Tic_Tac_Toe.csproj" />
     <ProjectReference Include="..\UsersAPI\UsersAPI.csproj" />
