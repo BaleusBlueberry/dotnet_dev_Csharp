@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Four in a row", "Four in a 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MineSweeper", "MineSweeper\MineSweeper.csproj", "{A509D401-0919-4592-B9B2-0004326B8B88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeGame", "SnakeGame\SnakeGame.csproj", "{8EBB705A-8CFD-4629-95EF-E37D1999F9FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{A509D401-0919-4592-B9B2-0004326B8B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A509D401-0919-4592-B9B2-0004326B8B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A509D401-0919-4592-B9B2-0004326B8B88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EBB705A-8CFD-4629-95EF-E37D1999F9FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EBB705A-8CFD-4629-95EF-E37D1999F9FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EBB705A-8CFD-4629-95EF-E37D1999F9FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBB705A-8CFD-4629-95EF-E37D1999F9FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
