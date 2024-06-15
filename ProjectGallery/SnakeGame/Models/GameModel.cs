@@ -10,8 +10,12 @@ using System.Windows.Threading;
 
 namespace SnakeGame.Models;
 
+public enum DifficultyLevel { Easy, Medium, Hard }
 public class Game
 {
+
+    public DifficultyLevel Difficulty { get; set; } = DifficultyLevel.Medium;
+
     private Canvas _canvas;
     private Snake _snake;
     private Apple _apple;
@@ -27,6 +31,12 @@ public class Game
 
     public void InitializeGame()
     {
+        _appleCounter = 0;
+
+        // Clear existing game objects from the canvas
+        _canvas.Children.Clear();
+
+        // Re-initialize the snake and place a new apple
         _snake.Initialize(_canvas);
         PlaceApple();
     }
@@ -81,7 +91,6 @@ public class Game
 
     public void ResetGame()
     {
-        _appleCounter = 0;
         InitializeGame();
     }
 

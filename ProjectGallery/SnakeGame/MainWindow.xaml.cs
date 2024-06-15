@@ -1,4 +1,5 @@
 ﻿using SnakeGame.Models;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,7 +20,8 @@ namespace SnakeGame;
 public partial class MainWindow : Window
 {
     private Game _game;
-    private DispatcherTimer _gameTimer;
+    private Stopwatch _stopwatch = new Stopwatch();
+    private const long UpdateInterval = 100;
 
     public MainWindow()
     {
@@ -27,6 +29,16 @@ public partial class MainWindow : Window
         GameCanvas.Loaded += GameCanvas_Loaded;
         GameCanvas.SizeChanged += GameCanvas_SizeChanged;
         this.KeyDown += Window_KeyDown;
+        CompositionTarget.Rendering += CompositionTarget_Rendering;
+    }
+
+    private void CompositionTarget_Rendering(object sender, EventArgs e)
+    {
+        if (_stopwatch.ElapsedMilliseconds > UpdateInterval)
+        {
+            _game.UpdateGame();
+            _stopwatch.Restart();
+        }
     }
 
     private void GameCanvas_Loaded(object sender, RoutedEventArgs e)
@@ -37,19 +49,10 @@ public partial class MainWindow : Window
 
     private void StartGame()
     {
+        GameCanvas.Children.Clear();
+        _game.ResetGame();
         _game.InitializeGame();
-
-        _gameTimer = new DispatcherTimer
-        {
-            Interval = TimeSpan.FromMilliseconds(100)
-        };
-        _gameTimer.Tick += GameTimer_Tick;
-        _gameTimer.Start();
-    }
-
-    private void GameTimer_Tick(object sender, EventArgs e)
-    {
-        _game.UpdateGame();
+        _stopwatch.Start();
     }
 
     private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -72,17 +75,12 @@ public partial class MainWindow : Window
 
     public void StopGame()
     {
-        if (_gameTimer != null)
-        {
-            _gameTimer.Stop();
-        }
+        _stopwatch.Stop();
     }
 
     public void RestartGame()
     {
         StopGame();
-        GameCanvas.Children.Clear();
-        _game.ResetGame();
-        _gameTimer.Start();
+        StartGame(); // Use StartGame() instead of manually starting the timer
     }
 }
