@@ -48,6 +48,7 @@ public partial class GamePage : Page
         _bombCount = difficulty == "Easy" ? 20 : difficulty == "Medium" ? 37 : difficulty == "Hard" ? 54 : 0;
         BombCount.Text = _bombCount.ToString();
 
+        // generates the board itself 
         for (int i = 0; i < 16; i++)
         {
             for (int j = 0; j < 16; j++)
@@ -62,8 +63,6 @@ public partial class GamePage : Page
 
                 btn.Row = i;
                 btn.Col = j;
-
-                // btn.KeyDown += BoardKeyDown;//?
 
                 btn.PreviewMouseLeftButtonDown += BoardKeyDown;
                 btn.PreviewMouseRightButtonDown += GameButton_RightButtonDown;
@@ -123,7 +122,6 @@ public partial class GamePage : Page
             return;
         }
 
-
         bool mine = false;
         // expose bomb or or number
         switch (btn.locationType)
@@ -143,31 +141,36 @@ public partial class GamePage : Page
         btn.userInput = UserInput.clicked;
 
         CheckNearbyTiles(btn);
-
+        CheckIFWin();
     }
 
     private void DoFirstMove(GameButton btn)
     {
-        // test if the button is in corner
-
         int row = btn.Row;
         int col = btn.Col;
 
         int rows = _buttons.GetLength(0);
         int cols = _buttons.GetLength(1);
 
+        // test if the button is in corner or side 
+
         List<(int, int)> checkSposts = FindAllowdSpaces.Find(row, col, rows, cols);
 
+        int takenMinesOut = 0;
         foreach ((int r, int c) in checkSposts)
         {
             if (_buttons[r, c].locationType == LocationType.mine)
             {
                 _buttons[r, c].locationType = LocationType.empty;
+                takenMinesOut++;
             }
         }
 
+        _bombCount = _bombCount - takenMinesOut;
+
         GenerateBoardNumbers();
 
+        // make the app know the next move will not be the first one
         firstMove = false;
 
         btn.BtnImage.Source = Images._bitmapImages["ButtonClicked"];
@@ -208,7 +211,7 @@ public partial class GamePage : Page
         }
 
         BombCount.Text = _bombCount.ToString();
-        e.Handled = true; // Prevent further handling of the event
+        CheckIFWin();
     }
 
     private void ShowRestOfGameBoard()
@@ -217,8 +220,8 @@ public partial class GamePage : Page
         foreach (GameButton btn in _buttons)
         {
             if (btn.userInput == UserInput.clicked) continue;
-            if (btn.locationType == LocationType.mine) btn.BtnImage.Source = Images._bitmapImages["mine"];
-            else if (btn.locationType == LocationType.empty & btn.userInput == UserInput.flag) btn.BtnImage.Source = Images._bitmapImages["ButtonMineWrongGuess"];
+            if (btn.locationType == LocationType.mine & btn.userInput != UserInput.flag) btn.BtnImage.Source = Images._bitmapImages["mine"];
+            else if (btn is { locationType: LocationType.empty, userInput: UserInput.flag }) btn.BtnImage.Source = Images._bitmapImages["ButtonMineWrongGuess"];
         }
     }
 
@@ -292,8 +295,6 @@ public partial class GamePage : Page
 
         foreach (var (r, c) in listOfConnectedTiles)
         {
-            // Example: Change button image or other properties
-
             int row = _buttons[r, c].Row;
             int col = _buttons[r, c].Col;
 
@@ -375,5 +376,25 @@ public partial class GamePage : Page
     {
         _timeElapsed++;
         Timer.Text = _timeElapsed.ToString();
+    }
+
+    private void CheckIFWin()
+    {
+        foreach (GameButton button in _buttons)
+        {
+            switch (button.userInput)
+            {
+                case UserInput.flag:
+                    if (button.locationType != LocationType.mine) return;
+                    break;
+            }
+
+            if ((button.locationType != LocationType.mine) & button.userInput != UserInput.clicked)
+            {
+                return;
+            }
+        }
+
+        RenderEndOfGame(true);
     }
 }

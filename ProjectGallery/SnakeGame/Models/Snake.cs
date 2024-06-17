@@ -13,13 +13,13 @@ namespace SnakeGame.Models;
 public class Snake
 {
     private List<Rectangle> _body;
-    private int _direction; // 0=Up, 1=Right, 2=Down, 3=Left
+    private Direction _direction;
     private Canvas _canvas;
 
     public Snake()
     {
         _body = new List<Rectangle>();
-        _direction = 1; // Initial direction is right
+        _direction = Direction.Right; // Initial direction is right
     }
 
     public double HeadX => Canvas.GetLeft(_body[0]);
@@ -41,19 +41,20 @@ public class Snake
         double x = HeadX;
         double y = HeadY;
 
+        // Calculate new head position based on current direction
         switch (_direction)
         {
-            case 0:
-                y -= 10; // Move up
+            case Direction.Up:
+                y -= 10;
                 break;
-            case 1:
-                x += 10; // Move right
+            case Direction.Right:
+                x += 10;
                 break;
-            case 2:
-                y += 10; // Move down
+            case Direction.Down:
+                y += 10;
                 break;
-            case 3:
-                x -= 10; // Move left
+            case Direction.Left:
+                x -= 10;
                 break;
         }
 
@@ -70,22 +71,15 @@ public class Snake
         _body.RemoveAt(_body.Count - 1);
     }
 
-    public void ChangeDirection(Key key)
+    public void ChangeDirection(Direction direction)
     {
-        switch (key)
+        // Prevent the snake from reversing direction
+        if ((_direction == Direction.Up && direction != Direction.Down) ||
+            (_direction == Direction.Right && direction != Direction.Left) ||
+            (_direction == Direction.Down && direction != Direction.Up) ||
+            (_direction == Direction.Left && direction != Direction.Right))
         {
-            case Key.Up:
-                if (_direction != 2) _direction = 0;
-                break;
-            case Key.Right:
-                if (_direction != 3) _direction = 1;
-                break;
-            case Key.Down:
-                if (_direction != 0) _direction = 2;
-                break;
-            case Key.Left:
-                if (_direction != 1) _direction = 3;
-                break;
+            _direction = direction;
         }
     }
 
@@ -94,6 +88,7 @@ public class Snake
         Rectangle newPart = new Rectangle { Width = 10, Height = 10, Fill = Brushes.Green };
         _body.Add(newPart);
     }
+
     public bool IsDead(Canvas canvas)
     {
         // Check if the snake collides with canvas boundaries
@@ -116,6 +111,7 @@ public class Snake
 
         return false;
     }
+
     public void Reset()
     {
         _body.Clear();
@@ -124,6 +120,6 @@ public class Snake
         Canvas.SetLeft(head, 50);
         Canvas.SetTop(head, 50);
         _body.Add(head);
-        _direction = 1; // Reset direction to default (right)
+        _direction = Direction.Right; // Reset direction to default (right)
     }
 }

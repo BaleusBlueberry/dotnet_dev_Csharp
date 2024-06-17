@@ -24,6 +24,10 @@ namespace ClashOfClansHelper
                                                          "- Data Integration: Parses JSON files to retrieve building data and displays it dynamically.\n" +
                                                          "- Customization: Processes user selections to provide tailored information.\n" +
                                                          "- Error Handling: Manages file read errors and invalid selections gracefully.\n\n" +
+                                                         "Challenges: \n" +
+                                                         "-I had to dynamically read data and use it without having a class for every value.\n" +
+                                                         "-Figure out i should use await for a function that takes time to process.\n" +
+                                                         "-Displaying everything in a dynamic and interactive way was the biggest challenge.\n" +
                                                          "This project showcases data integration, dynamic UI updates, and error handling in a WPF application.";
 
 

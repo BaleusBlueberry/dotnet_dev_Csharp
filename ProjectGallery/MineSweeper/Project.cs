@@ -34,7 +34,13 @@ namespace MineSweeper
             "- Event Handling: Manages mouse events for clicking tiles and right-clicking for flagging mines.\n" +
             "- UI Updates: Updates tile visuals dynamically based on game events and user interactions.\n\n" +
 
-            "This project showcases fundamental game mechanics, user interface design, and event-driven programming using WPF.";
+            "Challenges: \n" +
+            "- Dynamically saving to data for easy access, ended up storing in an enum as a variable inside each button.\n" +
+            "- Figure how to make each button calculate if it should be empty, have a number when next to a mine.\n" +
+            "- Making sure the game works as the original game, implementing all the rules and mechanics.\n" +
+
+            "This project showcases fundamental game mechanics, user interface design, and event-driven programming using WPF.\n" +
+            "By far the hardest project i have dose so far";
 
 
         public BitmapImage Icon

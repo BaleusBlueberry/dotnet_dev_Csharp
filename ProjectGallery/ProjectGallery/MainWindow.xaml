@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectGallery"
         mc:Ignorable="d"
-        Title="Project Gallery" Height="450" Width="800"
+        Title="Project Gallery" Height="750" Width="1200"
         WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -35,13 +35,10 @@
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Row="0">
                         <TextBlock Text="This is my Project Gallery" FontSize="35" TextAlignment="Center" Foreground="Cyan" Margin="10"/>
-                        <TextBlock Text="This projects showcases my talents and a few of my applications, Enjoy!" Foreground="Cyan" TextAlignment="Center" />
-                        <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ProjectsPanel"></WrapPanel>
+                        <TextBlock Text="This projects showcases my talents and a few of my applications, using WPF!" Foreground="Cyan" TextAlignment="Center" />
+                        <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ProjectsPanel" MaxWidth="600"></WrapPanel>
                     </StackPanel>
-                    <StackPanel Grid.Row="1">
-                        <TextBlock Text="Those Are Some Test Projects And Studies" FontSize="20" TextAlignment="Center" Foreground="Cyan"/>
-                        <WrapPanel Margin="10" HorizontalAlignment="Center" Name="ProjectsTestsPanel"></WrapPanel>
-                    </StackPanel>
+                    
                 </Grid>
             </Viewbox>
         </Border>

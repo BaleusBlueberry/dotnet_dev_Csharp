@@ -32,7 +32,5 @@ namespace MineSweeper.Generation
 
             return _newBombs;
         }
-
-
     }
 }

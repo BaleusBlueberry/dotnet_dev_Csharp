@@ -23,11 +23,15 @@ public class Project : IProjectMeta
                                                      "2. Interactive Grid: Click on arrows above the board to drop tokens and strategically connect four tokens in a row to win.\n" +
                                                      "3. Turn-Based Gameplay: Alternate turns between players or watch as computer players battle it out.\n" +
                                                      "4. Dynamic Scoring: Keep track of wins for both players and recognize draws.\n" +
-                                                     "5. Responsive UI: Modern interface with customizable game settings and intuitive controls for seamless gameplay.\n\n" +
+                                                     "5. Responsive UI: Modern interface with customizable game settings and intuitive controls for seamless gameplay.\n" +
+                                                     "5. Re-using Elements and logic from other projects such as tic-tac-toe to save time.\n\n" +
                                                      "Technical Details:\n" +
                                                      "- Event Handling: Implements event-driven programming to manage player moves and game outcomes.\n" +
                                                      "- AI Implementation: Utilizes randomized moves and strategic algorithms for computer opponents.\n" +
                                                      "- Error Handling: Ensures smooth gameplay experience by handling user input and game state transitions.\n\n" +
+                                                     "Challenges: \n" +
+                                                     "-Testing if anyone has won the game was very challenging that required long sessions of debugging and imprisonments.\n" +
+                                                     "-Testing if the move or check  i want to dynamically make is in bound and will not crash the game.\n" +
                                                      "This project demonstrates interactive game development, AI integration, and user interface design using WPF controls.";
     public BitmapImage Icon
     {

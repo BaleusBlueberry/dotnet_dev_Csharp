@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SnakeGame.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,26 @@ namespace SnakeGame.Pages
         public MenuePage()
         {
             InitializeComponent();
+        }
+        private void Easy_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateToGame(DifficultyLevel.Easy);
+        }
+
+        private void Medium_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateToGame(DifficultyLevel.Medium);
+        }
+
+        private void Hard_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateToGame(DifficultyLevel.Hard);
+        }
+
+        private void NavigateToGame(DifficultyLevel difficulty)
+        {
+            GamePage gamePage = new GamePage(difficulty);
+            NavigationService.Navigate(gamePage);
         }
     }
 }

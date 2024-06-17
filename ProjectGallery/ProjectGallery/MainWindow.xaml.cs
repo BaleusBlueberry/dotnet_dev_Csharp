@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using Four_in_a_row;
 using MineSweeper;
+using SnakeGame;
 
 
 namespace ProjectGallery;
@@ -21,13 +22,8 @@ public partial class MainWindow : Window
         new JokeApp.Project(),
         new Four_in_a_row.Project(),
         new MineSweeper.Project(),
-    };
+        new SnakeGame.Project(),
 
-    private IProjectMeta[] testProjects = new IProjectMeta[]
-    {
-        new PersonManager.Project(),
-        new UsersAPI.Project(),
-        new UsersCRUDApi.Project(),
     };
 
     public MainWindow()
@@ -50,18 +46,6 @@ public partial class MainWindow : Window
                 Height = 160
             };
             ProjectsPanel.Children.Add(button);
-        }
-
-        foreach ( var project in testProjects)
-        {
-            ProjectButton button = new ProjectButton(project)
-            {
-                Margin = new Thickness(10),
-                Width = 80,
-                Height = 80
-            };
-
-            ProjectsTestsPanel.Children.Add(button);
         }
     }
 

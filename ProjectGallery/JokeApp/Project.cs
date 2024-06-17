@@ -11,20 +11,25 @@ public class Project : IProjectMeta
 
     public string ProjectName { get; set; } = "JokeApp.exe";
 
-    public string ProjectDescription { get; set; } = "Joke Button App: This application uses the JokeAPI to fetch and display various jokes.\n" +
-                                                     "Users can customize joke preferences, including categories and blacklist flags.\n" +
+    public string ProjectDescription { get; set; } =
+        "Joke Button App: This application uses the JokeAPI to fetch and display various jokes.\n" +
+        "Users can customize joke preferences, including categories and blacklist flags.\n" +
 
-                                                     "Features:\n" +
-                                                     "1. Fetch Jokes: Click the 'Tell me a 𝓙𝓸𝓴𝓮!' button to retrieve a joke from the API.\n" +
-                                                     "2. Category Selection: Choose from categories like Programming, Miscellaneous Christmas.\n" +
-                                                     "3. Blacklist Flags: Exclude jokes with flags like nsfw, religious, political, racist, sexist, and explicit.\n" +
-                                                     "4. Search: Find jokes containing specific keywords.\n" +
-                                                     "5. Dynamic UI: Stylish buttons, checkboxes, and text elements for a smooth user experience.\n\n" +
-                                                     "Technical Details:\n" +
-                                                     "- API Integration: Asynchronous HTTP requests for responsive interactions.\n" +
-                                                     "- Customization: Process user inputs to form API requests.\n" +
-                                                     "- Error Handling: Manages API request failures and errors.\n\n" +
-                                                     "This project showcases API integration, dynamic UI updates, and error handling in a WPF application.";
+        "Features:\n" +
+        "1. Fetch Jokes: Click the 'Tell me a 𝓙𝓸𝓴𝓮!' button to retrieve a joke from the API.\n" +
+        "2. Category Selection: Choose from categories like Programming, Miscellaneous Christmas.\n" +
+        "3. Blacklist Flags: Exclude jokes with flags like nsfw, religious, political, racist, sexist, and explicit.\n" +
+        "4. Search: Find jokes containing specific keywords.\n" +
+        "5. Dynamic UI: Stylish buttons, checkboxes, and text elements for a smooth user experience.\n\n" +
+        "Technical Details:\n" +
+        "- API Integration: Asynchronous HTTP requests for responsive interactions.\n" +
+        "- Customization: Process user inputs to form API requests.\n" +
+        "- Error Handling: Manages API request failures and errors.\n\n" +
+        "Challenges: \n" +
+        "-Learning all the different ways the user can interact with the api and how to prevent it from braking.\n" +
+        "-Displaying the Data in a good looking and interactive manner.\n" +
+        "This project showcases API integration, dynamic UI updates, and error handling in a WPF application. \n" +
+        "Even if its simple, not every app should be complicated to be good";
 
 
 
